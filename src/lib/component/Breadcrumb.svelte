@@ -1,8 +1,5 @@
 <script lang="ts">
-	interface Route {
-		path: string;
-		title: string;
-	}
+	import routes from "$lib/routes";
 </script>
 
 <div class="breadcrumb"></div>

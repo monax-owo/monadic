@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Textarea from '$lib/component/Textarea.svelte';
+	import Textarea from "$lib/component/Textarea.svelte";
 	// tweet text
-	let text: string = '';
+	let text: string = "";
 	let tweet: string;
-	$: tweet = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+	$: tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
 	// textarea
 	let ratio: number = 8;
 	let aspectRatio: string;

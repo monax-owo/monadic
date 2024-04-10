@@ -1,7 +1,7 @@
 <script lang="ts">
-	import '@unocss/reset/normalize.css';
-	export let value: string = '';
-	export let placeholder: string = '';
+	import "@unocss/reset/normalize.css";
+	export let value: string = "";
+	export let placeholder: string = "";
 	let minH: string;
 	let maxH: string;
 	$: minH = `4rem`;

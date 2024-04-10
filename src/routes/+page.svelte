@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
+	import routes from "$lib/routes";
 </script>
 
-<h1>aaaaa</h1>
-<a href="/color">color</a>
-<a href="/post">post</a>
+<div class="flex flex-col">
+	{#each routes as route}
+		<a href={route.link}>{route.title}</a>
+	{/each}
+</div>
+
+<button
+	on:click={() => {
+		console.log(routes);
+	}}
+></button>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let color = '';
+	let color = "";
 </script>
 
 <div class="watcher">

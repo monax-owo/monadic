@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: "main"
+    branches: 
+    - "main"
 
 jobs:
   build_site:
@@ -10,11 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
 
       - uses: pnpm/action-setup@v3
         name: Install pnpm

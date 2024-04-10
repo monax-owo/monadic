@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.11.1
+          cache: 'pnpm'
 
 
       - uses: pnpm/action-setup@v3
@@ -34,11 +35,10 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-            
+            ${{ runner.os }}-pnpm-store-    
+            
       - name: Install dependencies
         run: pnpm install
-
-
 
       - name: build
         env:

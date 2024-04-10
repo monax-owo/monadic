@@ -5,14 +5,19 @@
 	import { page } from "$app/stores";
 </script>
 
-<div id="app" class="m-0 p-0">
-	<Breadcrumb></Breadcrumb>
-	<h1>{$page.route.id}</h1>
+<div id="app">
+	<header class="b">
+		<Breadcrumb></Breadcrumb>
+		<div>{$page.route.id}</div>
+	</header>
+
 	<div class="p-4rem">
 		<slot />
 	</div>
 </div>
-
+<!-- 
 <style lang="scss">
-	//
-</style>
+	#header {
+		border-bottom: 1px solid black;
+	}
+</style> -->

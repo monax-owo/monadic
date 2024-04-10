@@ -5,16 +5,16 @@
 		text = event.key;
 		histories = [event.key, ...histories];
 	}
+	$: if (histories.length > 10) histories.pop();
 </script>
 
 <svelte:window on:keydown={keyTester} />
-
-{#if histories.length !== 0}
-	<ul>
+<div class="b-solid">
+	{#if histories.length !== 0}
 		{#each histories as history}
 			<li>{`${history}`}</li>
 		{/each}
-	</ul>
-{:else}
-	<div>press key!</div>
-{/if}
+	{:else}
+		<div>press key!</div>
+	{/if}
+</div>

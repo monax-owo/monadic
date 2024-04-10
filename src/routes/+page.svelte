@@ -7,9 +7,3 @@
 		<a href={route.link}>{route.title}</a>
 	{/each}
 </div>
-
-<button
-	on:click={() => {
-		console.log(routes);
-	}}
-></button>

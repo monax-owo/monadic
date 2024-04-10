@@ -7,7 +7,7 @@
 	<div>{color}</div>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
 	.watcher {
 	}
 </style>

@@ -1,13 +1,17 @@
 <script lang="ts">
-	import Breadcrumb from '$lib/component/Breadcrumb.svelte';
+	import 'virtual:uno.css';
 	import '@unocss/reset/normalize.css';
+	import Breadcrumb from '$lib/component/Breadcrumb.svelte';
 </script>
 
-<div class="app">
+<div id="app" class="m-0 p-0">
 	<Breadcrumb></Breadcrumb>
-	<slot />
-	<div></div>
+	<div class="p-4rem">
+		<slot />
+	</div>
 </div>
 
-<style>
+<style lang="scss">
+	#app {
+	}
 </style>

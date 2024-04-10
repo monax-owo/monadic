@@ -1,10 +1,10 @@
 import { defineConfig } from 'unocss';
-import presetUno from '@unocss/preset-uno';
+import { presetMini } from 'unocss'
 import extractorSvelte from '@unocss/extractor-svelte';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
 
 export default defineConfig({
-	presets: [presetUno()],
+	presets: [presetMini()],
 	extractors: [extractorSvelte()],
 	transformers: [transformerVariantGroup()]
 });

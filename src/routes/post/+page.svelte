@@ -1,26 +1,24 @@
 <script lang="ts">
+	import Textarea from '$lib/component/Textarea.svelte';
+	// tweet text
 	let text: string = '';
 	let tweet: string;
 	$: tweet = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
-	let ratio: number = 3;
+	// textarea
+	let ratio: number = 8;
 	let aspectRatio: string;
-	$: aspectRatio = `10/${ratio}`;
+	$: aspectRatio = `100/${ratio}`;
 </script>
 
 <svelte:head>
 	<title>Post</title>
 </svelte:head>
-<div class="page">
-	<div class="input-ratio">
-		<label>
-			<input type="range" min="0" max="20" bind:value={ratio} />{aspectRatio}
-		</label>
-	</div>
-
+<div class="flex flex-col justify-center p-4">
+	<input class="my-4" type="range" min="10" max="60" bind:value={ratio} />
 	<textarea
-		class="round"
-		bind:value={text}
+		class="h-auto"
 		placeholder="type tweet..."
+		bind:value={text}
 		style:aspect-ratio={aspectRatio}
 	></textarea>
 	<div class="link">
@@ -33,36 +31,20 @@
 		</button>
 		{tweet}
 	</div>
+	<Textarea></Textarea>
 </div>
 
-<style lang="postcss">
-	.page {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		& > * {
-			display: block;
-		}
-		& .input-ratio {
-		}
-		& textarea {
-			resize: none;
-			width: 100%;
-			aspect-ratio: 5/2;
-		}
-		& .link {
-			text-align: center;
-			margin: 20px 0px;
-			& a {
-				font-size: 1.2rem;
-			}
-		}
+<style lang="scss">
+	* {
+		display: block;
 	}
-	.round {
-		border: 1px solid rgb(145, 145, 145);
-		border-radius: 6px;
-		&:focus {
-			border: 1px;
-		}
+	textarea {
+		resize: none;
+		width: 100%;
+		aspect-ratio: 5/2;
+	}
+	.link {
+		text-align: center;
+		margin: 20px 0px;
 	}
 </style>

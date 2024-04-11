@@ -1,4 +1,5 @@
 // "Link":"Name"
+import { base } from "$app/paths";
 export const routeList = {
   "/": "Mon tools",
   "/color/watcher": "Color Watcher",
@@ -6,6 +7,6 @@ export const routeList = {
   "/other/post": "Post"
 };
 
-const routes = Object.entries(routeList).map(([link, title]) => ({ link, title }));
-
-export default routes;
+export const routes = Object.entries(routeList)
+  .map((list) => [`${base}${list[0]}`, list[1]])
+  .map(([link, title]) => ({ link, title }));

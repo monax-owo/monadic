@@ -30,4 +30,4 @@ export const hiddenRoutes = Object.entries(hiddenRouteList)
 // 	.map((list) => [`${base}${list[0]}`, list[1]])
 // 	.map(([link, title]) => ({ link, title }));
 
-export const routes = routeListToRoutes(toolsRouteList, toolsBase);
+export const toolsRoutes = routeListToRoutes(toolsRouteList, toolsBase);

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { routes } from "$lib/routes";
+	import { toolsRoutes } from "$lib/routes";
 </script>
 
 <div class="flex flex-col">
-	{#each routes as route}
+	{#each toolsRoutes as route}
 		<a href={route.link}>{route.title}</a>
 	{/each}
 </div>

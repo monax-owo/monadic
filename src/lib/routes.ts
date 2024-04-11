@@ -12,7 +12,7 @@ export const hiddenRouteList = {
 	"/hidden-tester": "TEST PAGE",
 	"/post": "Post",
 };
-export const hiddenRoutes = routeListToRoutes(hiddenRouteList, hiddenBase);
+// export const hiddenRoutes = routeListToRoutes(hiddenRouteList, hiddenBase);
 
 const toolsBase = `${base}/tools`;
 export const toolsRouteList = {
@@ -20,12 +20,12 @@ export const toolsRouteList = {
 	"/color/watcher": "Color Watcher",
 	"/other/key-tester": "Key tester",
 };
-export const toolsRoutes = routeListToRoutes(toolsRouteList, toolsBase);
+// export const toolsRoutes = routeListToRoutes(toolsRouteList, toolsBase);
 
-// export const routes = Object.entries(routeList)
-// 	.map((list) => [`${base}${list[0]}`, list[1]])
-// 	.map(([link, title]) => ({ link, title }));
+export const toolsRoutes = Object.entries(toolsRouteList)
+	.map((list) => [`${toolsBase}${list[0]}`, list[1]])
+	.map(([link, title]) => ({ link, title }));
 
-// export const hiddenRoutes = Object.entries(hiddenRouteList)
-// 	.map((list) => [`${hiddenBase}${list[0]}`, list[1]])
-// 	.map(([link, title]) => ({ link, title }));
+export const hiddenRoutes = Object.entries(hiddenRouteList)
+	.map((list) => [`${hiddenBase}${list[0]}`, list[1]])
+	.map(([link, title]) => ({ link, title }));

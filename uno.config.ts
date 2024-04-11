@@ -7,5 +7,5 @@ import transformerVariantGroup from "@unocss/transformer-variant-group";
 export default defineConfig({
 	presets: [presetUno()],
 	extractors: [extractorSvelte()],
-	transformers: [transformerVariantGroup()]
+	transformers: [transformerVariantGroup()],
 });

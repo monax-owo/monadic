@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [sveltekit(), UnoCSS()],
 	css: {
 		postcss: {
-			plugins: [autoprefixer()]
-		}
-	}
+			plugins: [autoprefixer()],
+		},
+	},
 });

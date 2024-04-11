@@ -6,7 +6,7 @@
 </script>
 
 <div id="app">
-	<header class="b">
+	<header id="header">
 		<Breadcrumb></Breadcrumb>
 		<div>{$page.route.id}</div>
 	</header>
@@ -15,9 +15,9 @@
 		<slot />
 	</div>
 </div>
-<!-- 
+
 <style lang="scss">
 	#header {
 		border-bottom: 1px solid black;
 	}
-</style> -->
+</style>

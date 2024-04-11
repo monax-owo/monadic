@@ -3,7 +3,7 @@
 </script>
 
 <div class="watcher">
-	<input type="text" name="color" bind:value={color} />
+	<input type="color" bind:value={color} />
 	<div>{color}</div>
 	#TODO
 </div>

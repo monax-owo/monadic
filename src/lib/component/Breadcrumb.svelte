@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let path: string;
 </script>
 
-<div class="breadcrumb"></div>
+<div class="breadcrumb">#TODO</div>

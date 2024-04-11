@@ -4,23 +4,25 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [15]
-
+        pnpm:
+          - 8.15.6
+        os:
+          - ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - uses: pnpm/action-setup@v3
         with:
           version: 8
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -28,8 +30,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: "/${{ github.event.repository.name }}"
-        run: |
-          pnpm run build
+        run: pnpm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
@@ -37,7 +38,7 @@ jobs:
           path: "build/"
 
   deploy:
-    needs: build_site
+    needs: [build]
     runs-on: ubuntu-latest
 
     permissions:

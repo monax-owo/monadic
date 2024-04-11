@@ -15,12 +15,7 @@
 </svelte:head>
 <div class="flex flex-col justify-center p-4">
 	<input class="my-4" type="range" min="10" max="60" bind:value={ratio} />
-	<textarea
-		class="h-auto"
-		placeholder="type tweet..."
-		bind:value={text}
-		style:aspect-ratio={aspectRatio}
-	></textarea>
+	<textarea class="h-auto" placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
 	<div class="link">
 		<button
 			on:click={() => {

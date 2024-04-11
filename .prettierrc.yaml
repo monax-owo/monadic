@@ -1,8 +1,10 @@
 useTabs: true
 singleQuote: false
 trailingComma: all
-printWidth: 100
+printWidth: 140
 quoteProps: as-needed
+
+# Add from Svelte
 plugins:
   - prettier-plugin-svelte
 overrides:

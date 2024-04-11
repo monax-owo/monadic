@@ -1,6 +1,7 @@
 <script lang="ts">
 	import "virtual:uno.css";
-	import "@unocss/reset/normalize.css";
+	import "@unocss/reset/sanitize/sanitize.css";
+	import "@unocss/reset/sanitize/assets.css";
 	import Breadcrumb from "$lib/component/Breadcrumb.svelte";
 	import { page } from "$app/stores";
 </script>
@@ -17,6 +18,10 @@
 </div>
 
 <style lang="scss">
+	#app {
+		width: 100vh;
+		height: 100vh;
+	}
 	#header {
 		border-bottom: 1px solid black;
 	}

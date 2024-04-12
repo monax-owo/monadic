@@ -16,9 +16,9 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	#app {
-		width: 100vh;
-		height: 100vh;
+		background: #dedede;
+		display: grid;
 	}
 </style>

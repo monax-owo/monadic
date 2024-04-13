@@ -20,5 +20,6 @@
 	#app {
 		background: #dedede;
 		display: grid;
+		grid-template-columns: 1;
 	}
 </style>

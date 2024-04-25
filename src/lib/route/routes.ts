@@ -3,20 +3,21 @@ import { base } from "$app/paths";
 // base = base path
 // route = $page.url.id
 
-export const routeListToRoutes = (OBJ: object, BASE: string) => {
+export const routeObjToRoutes = (OBJ: object, BASE: string) => {
 	return Object.entries(OBJ)
 		.map((list) => [`${BASE}${list[0]}`, list[1]])
 		.map(([link, title]): Route => ({ link, title }));
 };
+// TODO
 // export const regPath = new RegExp("$g");
 // export const createRouteList = (/* path: string */) => {
-// 	allRoute.filter((path) => {
+// 	allRoutes.filter((path) => {
 // 		regPath.test(path.link);
 // 	});
 // };
 
-export const setTitle = (route: string): string => allRoute.find((value: Route) => value.link === route)?.title ?? "";
-export const allRouteList = {
+export const setTitle = (route: string): string => allRoutes.find((value: Route) => value.link === route)?.title ?? "";
+export const allRoutesList = {
 	"/tools": "Mon tools",
 	"/tools/color/watcher": "Color Watcher",
 	"/tools/other/key-tester": "Key tester",
@@ -25,9 +26,9 @@ export const allRouteList = {
 	"/tools/hidden/post": "Post",
 };
 
-export const allRoute = routeListToRoutes(allRouteList, base);
+export const allRoutes = routeObjToRoutes(allRoutesList, base);
 
-type Route = {
+export type Route = {
 	link: string;
 	title: string;
 };

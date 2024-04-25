@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { allRoute } from "$lib/route/routes";
-	const toolsRoutes = allRoute;
+	import { allRoutes } from "$lib/route/routes";
+	const toolsRoutes = allRoutes;
 </script>
 
 <div class="flex flex-col">

@@ -6,7 +6,7 @@
 	import { setTitle } from "$lib/route/routes";
 	import { page } from "$app/stores";
 	let title: string;
-	$: title = setTitle($page.route.id ?? "/");
+	$: title = setTitle($page.route.id ?? "");
 </script>
 
 <svelte:head>

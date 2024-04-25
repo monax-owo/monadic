@@ -21,8 +21,8 @@ export const allRouteList = {
 	"/tools/color/watcher": "Color Watcher",
 	"/tools/other/key-tester": "Key tester",
 	"/tools/other/test": "Test",
-	"/hidden": "Hidden",
-	"/hidden/post": "Post",
+	"/tools/hidden": "Hidden",
+	"/tools/hidden/post": "Post",
 };
 
 export const allRoute = routeListToRoutes(allRouteList, base);

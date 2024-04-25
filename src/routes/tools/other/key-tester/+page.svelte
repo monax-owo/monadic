@@ -1,8 +1,6 @@
 <script lang="ts">
 	let histories: string[] = [];
-	let text: string;
 	function keyTester(event: { key: string }) {
-		text = event.key;
 		histories = [event.key, ...histories];
 	}
 	$: if (histories.length > 10) histories.pop();

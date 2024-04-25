@@ -1,26 +1,38 @@
 <script lang="ts">
+	import { base } from "$app/paths";
 </script>
 
-<div class="header flex justify-between p-4 m-a w-100% bg-amber-1">
-	<div class="header-content">
-		<div class="logo">LOGO HEAR</div>
-		<div class="nav-main flex flex-row justify-between">
-			<div class="nav-link">a</div>
-			<div class="nav-link">b</div>
-			<div class="nav-link">c</div>
-		</div>
+<header class="w-100% bg-amber-1">
+	<div class="header flex justify-between items-center w-100% max-w-5xl mx-a my-0 p-8 h-16">
+		<a class="logo p-2 flex items-center" href="{base}/">LOGO HERE</a>
+		<nav class="flex flex-row justify-between w-80 items-center">
+			<span class="nav-link">a</span>
+			<span class="nav-link">b</span>
+			<span class="nav-link">c</span>
+		</nav>
 	</div>
+</header>
+<div>
+	<button class="btn">Example</button>
 </div>
 
 <style>
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+	header {
+	}
 	.header {
-		& .header-content {
-			& .logo {
-				background: #9d7777;
-			}
-			& .nav-main {
-				--uno: bg-blue m-a w-40px;
-			}
-		}
+	}
+	.logo {
+		--uno: bg-[#9d7777];
+	}
+	nav {
+		--uno: bg-blue;
+	}
+	.nav-link {
+		--uno: h-100% w-16 text-center bg-[#2abfda];
 	}
 </style>

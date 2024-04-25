@@ -12,8 +12,8 @@ const config = {
 			base: process.argv.includes("dev") ? "" : process.env.BASE_PATH,
 		},
 		files: {
-      serviceWorker: 'src/sw.ts',
-    }
+			serviceWorker: "src/sw.ts",
+		},
 	},
 };
 

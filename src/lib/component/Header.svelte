@@ -6,7 +6,7 @@
 
 <header class="w-100% bg-amber-1">
 	<div class="header flex justify-between items-center w-100% max-w-6xl mx-a my-0 p-8 h-16">
-		<a class="logo p-2 flex items-center" href={base}>Monadic</a>
+		<a class="logo p-2 flex items-center" href="{base}/">Monadic</a>
 		<div class="flex flex-row justify-around">
 			<nav class="flex flex-row justify-between items-center">
 				<slot name="nav-link"></slot>

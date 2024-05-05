@@ -13,4 +13,4 @@ let hex: string
 
 <style lang="scss">
 	//
-</style><inputtype=bind<inputtype=bind<inputtype=bind<inputtype=bind<inputtype=bind
+</style>

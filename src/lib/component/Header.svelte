@@ -18,21 +18,23 @@
 
 	.header {
 		width: 100vw;
+
 		& .header-content {
-			width: 80vw;
-			height: 64px;
-			max-width: 1152px;
-			margin: 0 auto;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			width: 80vw;
+			max-width: 1152px;
+			height: 64px;
+			margin: 0 auto;
 
 			& slot[name="logo"] {
 				--uno: bg-[#9d7777];
-				padding: 8px;
+
 				display: flex;
 				align-items: center;
+				padding: 8px;
 			}
 		}
 	}

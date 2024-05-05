@@ -16,16 +16,18 @@
 <style lang="scss">
 	#textarea {
 		position: relative;
+
 		& > * {
-			padding: 0.5rem;
 			box-sizing: border-box;
+			padding: 0.5rem;
 			overflow: hidden;
 		}
+
 		& > textarea {
 			position: absolute;
+			top: 0;
 			width: 100%;
 			height: 100%;
-			top: 0;
 			resize: none;
 		}
 	}

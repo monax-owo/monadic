@@ -36,13 +36,15 @@
 	* {
 		display: block;
 	}
+
 	textarea {
-		resize: none;
 		width: 100%;
 		aspect-ratio: 5/2;
+		resize: none;
 	}
+
 	.link {
+		margin: 20px 0;
 		text-align: center;
-		margin: 20px 0px;
 	}
 </style>

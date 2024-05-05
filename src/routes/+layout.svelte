@@ -1,15 +1,15 @@
 <script lang="ts">
-import "virtual:uno.css"
-import "@unocss/reset/sanitize/sanitize.css"
-import "@unocss/reset/sanitize/assets.css"
-import { base } from "$app/paths"
-import { page } from "$app/stores"
-import Header from "$lib/component/Header.svelte"
-import { setTitle } from "$lib/route/routes"
-import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte"
-import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte"
+	import "virtual:uno.css";
+	import "@unocss/reset/sanitize/sanitize.css";
+	import "@unocss/reset/sanitize/assets.css";
+	import { base } from "$app/paths";
+	import { page } from "$app/stores";
+	import Header from "$lib/component/Header.svelte";
+	import { setTitle } from "$lib/route/routes";
+	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
+	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
 
-$: title = setTitle($page.route.id ?? "")
+	$: title = setTitle($page.route.id ?? "");
 </script>
 
 <svelte:head>
@@ -25,10 +25,10 @@ $: title = setTitle($page.route.id ?? "")
 			</nav>
 			<div class="sns-link">
 				<a href="https://github.com/monax-owo/monadic">
-					<IconBrandGithub stroke="{2}" />
+					<IconBrandGithub stroke={2} />
 				</a>
 				<a href="https://kit.svelte.jp">
-					<IconBrandSvelte stroke="{2}" />
+					<IconBrandSvelte stroke={2} />
 				</a>
 			</div>
 		</div>

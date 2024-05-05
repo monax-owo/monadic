@@ -13,7 +13,7 @@
 	<textarea bind:value {placeholder}></textarea>
 </div>
 
-<style lang="scss">
+<style>
 	#textarea {
 		position: relative;
 

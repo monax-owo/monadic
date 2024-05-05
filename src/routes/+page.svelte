@@ -1,6 +1,6 @@
 <script lang="ts">
-import { base } from "$app/paths"
-import { allRoutes } from "$lib/route/routes"
+	import { base } from "$app/paths";
+	import { allRoutes } from "$lib/route/routes";
 </script>
 
 <div>工事中です</div>

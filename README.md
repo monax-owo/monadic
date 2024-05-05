@@ -6,7 +6,6 @@
   </a>
 </div>
 
-
 - Svelte kit
 - Scss
 - UnoCSS

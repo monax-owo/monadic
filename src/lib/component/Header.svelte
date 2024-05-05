@@ -21,12 +21,13 @@
 
 		& .header-content {
 			display: flex;
+			height: 64px;
 			flex-direction: row;
+			max-width: 1152px;
 			align-items: center;
 			justify-content: space-between;
 			width: 80vw;
-			max-width: 1152px;
-			height: 64px;
+
 			margin: 0 auto;
 
 			& slot[name="logo"] {

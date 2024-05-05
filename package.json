@@ -26,6 +26,7 @@
 		"@unocss/transformer-directives": "^0.59.4",
 		"@unocss/transformer-variant-group": "^0.59.4",
 		"autoprefixer": "^10.4.19",
+		"css-declaration-sorter": "^7.2.0",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.38.0",
@@ -42,8 +43,6 @@
 	"type": "module",
 	"dependencies": {
 		"@tabler/icons-svelte": "^3.3.0",
-		"@unocss/reset": "^0.59.4",
-		"stylelint-config-html": "^1.1.0",
-		"stylelint-config-recess-order": "^5.0.1"
+		"@unocss/reset": "^0.59.4"
 	}
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-//
+	//
 </script>
 
 <header class="header">
@@ -21,12 +21,13 @@
 		& .header-content {
 			width: 80vw;
 			height: 64px;
+			max-width: 1152px;
+			margin: 0 auto;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			max-width: 1152px;
-			margin: 0 auto;
+
 			& slot[name="logo"] {
 				--uno: bg-[#9d7777];
 				padding: 8px;

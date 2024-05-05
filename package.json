@@ -8,7 +8,8 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"style": "stylelint --fix ./src",
+		"lint:stylelint": "stylelint --ignore-path .gitignore ./**/*.{css,svelte}",
+		"fix:stylelint": "stylelint --fix --ignore-path .gitignore ./**/*.{css,svelte}",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
@@ -32,6 +33,8 @@
 		"eslint-plugin-svelte": "^2.38.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.3",
+		"stylelint": "^16.5.0",
+		"stylelint-config-standard": "^36.0.0",
 		"svelte": "^4.2.15",
 		"svelte-check": "^3.7.1",
 		"tslib": "^2.6.2",
@@ -43,6 +46,7 @@
 	"type": "module",
 	"dependencies": {
 		"@tabler/icons-svelte": "^3.3.0",
-		"@unocss/reset": "^0.59.4"
+		"@unocss/reset": "^0.59.4",
+		"stylelint-config-recess-order": "^5.0.1"
 	}
 }

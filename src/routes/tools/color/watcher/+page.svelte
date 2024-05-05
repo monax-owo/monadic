@@ -10,7 +10,3 @@ let hex: string
 	<input type="color" bind:value />
 	#TODO
 </div>
-
-<style lang="scss">
-	//
-</style>

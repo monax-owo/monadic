@@ -1,7 +1,7 @@
 <script lang="ts">
-	// const hexReg = new RegExp("a");
-	let value = "";
-	let hex: string;
+// const hexReg = new RegExp("a");
+let value = ""
+let hex: string
 </script>
 
 <div class="watcher">
@@ -13,4 +13,4 @@
 
 <style lang="scss">
 	//
-</style>
+</style><inputtype=bind<inputtype=bind<inputtype=bind<inputtype=bind<inputtype=bind

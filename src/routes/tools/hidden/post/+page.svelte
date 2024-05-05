@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Textarea from "$lib/component/Textarea.svelte";
 	// tweet text
-	let text: string = "";
-	let tweet: string;
+	let text = "";
 	$: tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
 	// textarea
-	let ratio: number = 8;
-	let aspectRatio: string;
+	let ratio = 8;
 	$: aspectRatio = `100/${ratio}`;
 </script>
 
@@ -14,13 +12,18 @@
 	<title>Post</title>
 </svelte:head>
 <div class="flex flex-col justify-center p-4">
-	<input class="my-4" type="range" min="10" max="60" bind:value={ratio} />
-	<textarea class="h-auto" placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
+	<input class="my-4" type="range" min="10" max="60" bind:value="{ratio}" />
+	<textarea
+		class="h-auto"
+		placeholder="type tweet..."
+		bind:value="{text}"
+		style:aspect-ratio="{aspectRatio}"
+	></textarea>
 	<div class="link">
 		<button
-			on:click={() => {
+			on:click="{() => {
 				window.open(tweet);
-			}}
+			}}"
 		>
 			Post
 		</button>
@@ -29,7 +32,7 @@
 	<Textarea></Textarea>
 </div>
 
-<style lang="scss">
+<style>
 	* {
 		display: block;
 	}

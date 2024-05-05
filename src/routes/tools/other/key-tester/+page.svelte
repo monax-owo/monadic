@@ -1,9 +1,9 @@
 <script lang="ts">
-	let histories: string[] = [];
-	function keyTester(event: { key: string }) {
-		histories = [event.key, ...histories];
-	}
-	$: if (histories.length > 10) histories.pop();
+let histories: string[] = []
+function keyTester(event: { key: string }) {
+	histories = [event.key, ...histories]
+}
+$: if (histories.length > 10) histories.pop()
 </script>
 
 <svelte:window on:keydown={keyTester} />

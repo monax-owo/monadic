@@ -1,5 +1,5 @@
 {
-	"name": "mon-tools",
+	"name": "monadic",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -22,27 +22,25 @@
 		"@typescript-eslint/eslint-plugin": "^7.7.1",
 		"@typescript-eslint/parser": "^7.7.1",
 		"@unocss/extractor-svelte": "^0.59.4",
-		"@unocss/preset-rem-to-px": "^0.59.4",
 		"@unocss/preset-uno": "^0.59.4",
 		"@unocss/transformer-directives": "^0.59.4",
 		"@unocss/transformer-variant-group": "^0.59.4",
 		"autoprefixer": "^10.4.19",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.38.0",
-		"prettier": "^3.2.5",
-		"prettier-plugin-svelte": "^3.2.3",
-		"sass": "^1.75.0",
+		"sass": "^1.76.0",
+		"stylelint": "^16.5.0",
+		"stylelint-config-standard": "^36.0.0",
+		"stylelint-order": "^6.0.4",
 		"svelte": "^4.2.15",
-		"svelte-check": "^3.7.0",
+		"svelte-check": "^3.7.1",
 		"tslib": "^2.6.2",
 		"typescript": "^5.4.5",
 		"unocss": "^0.59.4",
-		"vite": "^5.2.10"
+		"vite": "^5.2.11",
+		"zod": "^3.23.6"
 	},
 	"type": "module",
 	"dependencies": {
-		"@tabler/icons-svelte": "^3.2.0",
+		"@tabler/icons-svelte": "^3.3.0",
 		"@unocss/reset": "^0.59.4"
 	}
 }

@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import { sveltekit } from "@sveltejs/kit/vite";
-import UnoCSS from "unocss/vite";
-import autoprefixer from "autoprefixer";
+import { defineConfig } from "vite"
+import { sveltekit } from "@sveltejs/kit/vite"
+import UnoCSS from "unocss/vite"
+import autoprefixer from "autoprefixer"
 
 export default defineConfig({
 	plugins: [UnoCSS(), sveltekit()],
@@ -10,4 +10,4 @@ export default defineConfig({
 			plugins: [autoprefixer()],
 		},
 	},
-});
+})

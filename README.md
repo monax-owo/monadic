@@ -7,7 +7,6 @@
 </div>
 
 - Svelte kit
-- Scss
 - UnoCSS
 - Vite
 - Github Actions

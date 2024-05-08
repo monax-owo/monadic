@@ -13,7 +13,7 @@
 	<textarea bind:value {placeholder}></textarea>
 </div>
 
-<style>
+<style lang="postcss">
 	#textarea {
 		position: relative;
 

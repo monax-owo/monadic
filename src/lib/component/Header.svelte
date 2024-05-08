@@ -9,7 +9,7 @@
 	</div>
 </header>
 
-<style>
+<style lang="postcss">
 	*,
 	*::before,
 	*::after {
@@ -21,12 +21,12 @@
 
 		& .header-content {
 			display: flex;
-			height: 64px;
 			flex-direction: row;
-			max-width: 1152px;
+			width: 80vw;
 			align-items: center;
 			justify-content: space-between;
-			width: 80vw;
+			max-width: 1152px;
+			height: 64px;
 
 			margin: 0 auto;
 

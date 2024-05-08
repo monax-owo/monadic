@@ -40,7 +40,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	:global(html) {
 		background: #fafafa;
 	}

@@ -5,13 +5,10 @@ import autoprefixer from "autoprefixer";
 import { cssDeclarationSorter } from "css-declaration-sorter";
 
 export default defineConfig({
-	plugins: [sveltekit(), UnoCSS(),],
+	plugins: [sveltekit(), UnoCSS()],
 	css: {
 		postcss: {
-			plugins: [
-				autoprefixer(),
-				// cssDeclarationSorter({ order: "smacss" })
-			],
+			plugins: [autoprefixer(), cssDeclarationSorter({ order: "smacss" })],
 		},
 	},
 });

@@ -7,7 +7,14 @@ const config = {
 			overrideBrowserslist: ["last 2 versions"],
 		}),
 		cssDeclarationSorter({ order: "smacss" }),
-		cssnano()
+		cssnano({
+			preset: [
+				"default",
+				{
+					cssDeclarationSorter: false,
+				},
+			],
+		}),
 	],
 };
 export default config;

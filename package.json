@@ -2,6 +2,7 @@
 	"name": "monadic",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -28,7 +29,6 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.39.0",
 		"postcss": "^8.4.38",
-		"postcss-cli": "^11.0.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.3",
 		"svelte": "^4.2.16",
@@ -40,7 +40,6 @@
 		"vite": "^5.2.11",
 		"zod": "^3.23.8"
 	},
-	"type": "module",
 	"dependencies": {
 		"@tabler/icons-svelte": "^3.3.0",
 		"@unocss/reset": "^0.59.4"

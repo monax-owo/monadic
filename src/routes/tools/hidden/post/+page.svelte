@@ -33,8 +33,8 @@
 	}
 
 	textarea {
-		width: 100%;
 		aspect-ratio: 5/2;
+		width: 100%;
 		resize: none;
 	}
 

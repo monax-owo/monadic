@@ -22,13 +22,13 @@
 		& .header-content {
 			display: flex;
 			flex-direction: row;
-			width: 80vw;
-			align-items: center;
 			justify-content: space-between;
-			max-width: 1152px;
-			height: 64px;
+			align-items: center;
 
 			margin: 0 auto;
+			width: 80vw;
+			max-width: 1152px;
+			height: 64px;
 
 			& slot[name="logo"] {
 				--uno: bg-[#9d7777];

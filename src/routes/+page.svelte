@@ -1,10 +1,24 @@
 <script lang="ts">
 	import { base } from "$app/paths";
-	import { allRoutes } from "$lib/route/routes";
+	import { routeObjToRoutes } from "$lib/route/routes";
+	const allRoutes = routeObjToRoutes(
+		{
+			"/style": "Style",
+			"/style/pixel": "Pixel Art CSS",
+			"/tools": "Mon tools",
+			"/tools/color/watcher": "Color Watcher",
+			"/tools/other/key-tester": "Key tester",
+			"/tools/other/test": "Test",
+			"/tools/hidden": "Hidden",
+			"/tools/hidden/post": "Post",
+		},
+		base,
+	);
 </script>
 
-<div>工事中です</div>
-<a href="{base}/tools">Tools</a>
+<svelte:head>
+	<title>Monadic</title>
+</svelte:head>
 <div class="flex flex-col">
 	{#each allRoutes as route}
 		<a href={route.link}>{route.title}</a>

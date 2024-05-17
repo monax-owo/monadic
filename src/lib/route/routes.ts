@@ -18,6 +18,8 @@ export const routeObjToRoutes = (OBJ: object, BASE: string) => {
 
 export const setTitle = (route: string): string => allRoutes.find((value: Route) => value.link === route)?.title ?? "";
 const allRoutesList = {
+	"/style": "Style",
+	"/style/pixel": "Pixel Art CSS",
 	"/tools": "Mon tools",
 	"/tools/color/watcher": "Color Watcher",
 	"/tools/other/key-tester": "Key tester",

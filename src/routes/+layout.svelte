@@ -35,7 +35,7 @@
 	</Header>
 
 	<div class="p-16">
-		<pre>{$page.url.pathname}</pre>
+		<pre class="h-6">{$page.url.pathname}</pre>
 		<slot />
 	</div>
 </div>

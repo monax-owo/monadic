@@ -34,14 +34,25 @@
 		</div>
 	</Header>
 
-	<div class="p-16">
-		<pre class="h-6">{$page.url.pathname}</pre>
+	<div class="content p">
+		<pre class="h-6 pb-4">{$page.url.pathname}</pre>
 		<slot />
 	</div>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
 	:global(html) {
 		background: #fafafa;
+	}
+	#app {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.content {
+		margin: 0 auto;
+		padding: 0 2rem;
+		width: 100%;
+		max-width: 1024px;
 	}
 </style>

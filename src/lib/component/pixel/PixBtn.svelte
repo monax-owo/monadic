@@ -1,10 +1,17 @@
 <script lang="ts">
-	//
+	import "@fontsource/press-start-2p";
+	let buttonMode: boolean = true;
 </script>
 
-<button class="pixel btn">
+<button class="btn" class:pixel={buttonMode}>
 	<slot></slot>
 </button>
+<button
+	type="button"
+	on:click={() => {
+		buttonMode = !buttonMode;
+	}}>toggle</button
+>
 
 <style lang="scss">
 	$PIXEL_SIZE: 6px;
@@ -52,17 +59,31 @@
 		}
 		@return $tmp;
 	}
+	//
 
-	@layer one {
-		.pixel {
-			appearance: none;
-			box-shadow: bs-border(gray), bs-border(black, 2), bs-x(black);
-			border: p(1);
-			border-radius: 0%;
+	.pixel {
+		appearance: none;
+		margin: p(2);
+		box-shadow: bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2), bs-x(dimgray);
+		border: none;
+		border-radius: 0%;
+		background: rgb(163, 162, 162);
+		// padding: 2px 0 1px;
+		padding: 0;
+		overflow: hidden;
+		font-size: p(9);
+
+		font-family: "Press Start 2P";
+		text-align: center;
+		&::before {
+			width: p(1);
+			height: p(1);
 		}
 	}
+
 	.btn {
-		width: p(20);
-		height: p(6);
+		display: block;
+		width: p(55);
+		height: p(11);
 	}
 </style>

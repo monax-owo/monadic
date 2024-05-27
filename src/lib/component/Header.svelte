@@ -3,7 +3,7 @@
 </script>
 
 <header class="header">
-	<div class="header-content">
+	<div class="header-content mw">
 		<slot name="logo">LOGO HERE</slot>
 		<slot></slot>
 	</div>
@@ -27,7 +27,7 @@
 
 			margin: 0 auto;
 			width: 80vw;
-			max-width: 1152px;
+			max-width: 1024px;
 			height: 64px;
 
 			& slot[name="logo"] {

@@ -42,6 +42,7 @@
 		"zod": "^3.23.8"
 	},
 	"dependencies": {
+		"@fontsource/press-start-2p": "^5.0.20",
 		"@tabler/icons-svelte": "^3.3.0",
 		"@unocss/reset": "^0.59.4"
 	}

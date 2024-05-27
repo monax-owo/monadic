@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/press-start-2p':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@tabler/icons-svelte':
         specifier: ^3.3.0
         version: 3.3.0(svelte@4.2.16)
@@ -417,6 +420,9 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fontsource/press-start-2p@5.0.20':
+    resolution: {integrity: sha512-URkenVoJlx1wtmpY+zoMFWxftWmm1H3CJnrGwjoy1e5G+qTjJnctxDIXDs65mvluFmSPsFNaULA2CEQBOli+eQ==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -2193,6 +2199,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@fontsource/press-start-2p@5.0.20': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:

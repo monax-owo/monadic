@@ -2,4 +2,4 @@
 	import PixBtn from "$lib/component/pixel/PixBtn.svelte";
 </script>
 
-<PixBtn>TEXT</PixBtn>
+<PixBtn>1bc123</PixBtn>

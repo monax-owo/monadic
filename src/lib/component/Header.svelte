@@ -3,13 +3,13 @@
 </script>
 
 <header class="header">
-	<div class="header-content mw">
+	<div class="header-content">
 		<slot name="logo">LOGO HERE</slot>
 		<slot></slot>
 	</div>
 </header>
 
-<style lang="postcss">
+<style>
 	*,
 	*::before,
 	*::after {
@@ -24,17 +24,17 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-
-			margin: 0 auto;
+			margin: 12px auto;
+			border: 1px solid transparent;
+			border-radius: 10px;
+			background: hsl(0, 0%, 92%);
 			width: 80vw;
 			max-width: 1024px;
-			height: 64px;
-
-			& slot[name="logo"] {
-				--uno: bg-[#9d7777];
-
+			height: 56px;
+			& [slot="logo"] {
 				display: flex;
 				align-items: center;
+				margin: 0 8px;
 				padding: 8px;
 			}
 		}

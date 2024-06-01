@@ -3,8 +3,6 @@
 /* eslint-disable no-undef */
 // @ts-nocheck
 class PixelPainter {
-  paint(_ctx, _geom, _properties){
-    
-  }
+	paint(_ctx, _geom, _properties) {}
 }
-registerPaint("pixel",PixelPainter)
+registerPaint("pixel", PixelPainter);

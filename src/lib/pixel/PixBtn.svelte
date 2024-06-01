@@ -71,8 +71,6 @@
 		background: rgb(163, 162, 162);
 		// padding: 2px 0 1px;
 
-
-
 		font-family: "Press Start 2P";
 		text-align: center;
 		&::before {
@@ -83,10 +81,11 @@
 
 	.btn {
 		display: block;
+		margin: p(2);
+		padding: 0;
 		width: p(55);
 		height: p(11);
-				margin: p(2);		padding: 0;
-						overflow: hidden;
+		overflow: hidden;
 		font-size: p(9);
 	}
 </style>

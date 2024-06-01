@@ -8,6 +8,7 @@
 			"/tools": "Mon tools",
 			"/tools/color/watcher": "Color Watcher",
 			"/tools/other/key-tester": "Key tester",
+			"/tools/other/href": "Url Jumper",
 			"/tools/other/test": "Test",
 			"/tools/hidden": "Hidden",
 			"/tools/hidden/post": "Post",

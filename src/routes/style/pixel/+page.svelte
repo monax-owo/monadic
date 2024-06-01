@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PixBtn from "$lib/component/pixel/PixBtn.svelte";
+	import PixBtn from "$lib/pixel/PixBtn.svelte";
 </script>
 
-<PixBtn>1bc123</PixBtn>
+<PixBtn>abc123</PixBtn>

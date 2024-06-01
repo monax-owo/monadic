@@ -34,7 +34,7 @@
 	}
 	// 上下左右のxyを短くするために使う
 	// 添え字と倍率を渡すとインデックス個目の値に倍率をかけて返す
-	@function border-xy($index, $scale: 1) {
+	@function border-pos($index, $scale: 1) {
 		$axis: ((0, -$scale), (0, $scale), (-$scale, 0), ($scale, 0));
 		@return index4($axis, $index);
 	}
@@ -42,36 +42,36 @@
 	@function bs-border($color, $scale: 1) {
 		$tmp: ();
 		@for $i from 1 through 4 {
-			$tmp: append($tmp, shadow-axis(border-xy($i, $scale), $color), comma);
+			$tmp: append($tmp, shadow-axis(border-pos($i, $scale), $color), comma);
 		}
 		@return $tmp;
 	}
 	// 斜めのxy
-	@function x-xy($index, $scale: 1) {
+	@function corner-pos($index, $scale: 1) {
 		$axis: ((-$scale, -$scale), ($scale, -$scale), ($scale, $scale), (-$scale, $scale));
 		@return index4($axis, $index);
 	}
 	// 斜めにボーダーを付ける
-	@function bs-x($color, $scale: 1) {
+	@function bs-corner($color, $scale: 1) {
 		$tmp: ();
 		@for $i from 1 through 4 {
-			$tmp: append($tmp, shadow-axis(x-xy($i, $scale), $color), comma);
+			$tmp: append($tmp, shadow-axis(corner-pos($i, $scale), $color), comma);
 		}
 		@return $tmp;
 	}
+	@debug corner-pos(1, 1);
 	//
 
 	.pixel {
 		appearance: none;
-		margin: p(2);
-		box-shadow: bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2), bs-x(dimgray);
+
+		box-shadow: bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2), bs-corner(dimgray);
 		border: none;
 		border-radius: 0%;
 		background: rgb(163, 162, 162);
 		// padding: 2px 0 1px;
-		padding: 0;
-		overflow: hidden;
-		font-size: p(9);
+
+
 
 		font-family: "Press Start 2P";
 		text-align: center;
@@ -85,5 +85,8 @@
 		display: block;
 		width: p(55);
 		height: p(11);
+				margin: p(2);		padding: 0;
+						overflow: hidden;
+		font-size: p(9);
 	}
 </style>

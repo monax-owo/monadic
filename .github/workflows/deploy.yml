@@ -2,6 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+    tags:
+      - 'v*'
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -9,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         pnpm:
-          - 8.15.6
+          - 9.1.0
         os:
           - ubuntu-latest
     steps:

@@ -36,7 +36,7 @@
 	</Header>
 
 	<div class="content p">
-		<pre class="h-6 mb-4">{$page.url.pathname}</pre>
+		<pre class="h-6 mb-4">{$page.route.id}</pre>
 		<slot />
 	</div>
 </div>

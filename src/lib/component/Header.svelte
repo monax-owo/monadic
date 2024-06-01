@@ -3,7 +3,7 @@
 </script>
 
 <header class="header">
-	<div class="header-content shadow">
+	<div class="header-content shadow1">
 		<slot name="logo">LOGO HERE</slot>
 		<slot></slot>
 	</div>
@@ -39,7 +39,7 @@
 			}
 		}
 	}
-	.shadow {
+	.shadow1 {
 		box-shadow:  0 0  12px 0px rgba(0, 0, 0, .08);
 	}
 </style>

@@ -40,6 +40,6 @@
 		}
 	}
 	.shadow {
-		box-shadow:  0 0  13px 0px rgba(0, 0, 0, .08);
+		box-shadow:  0 0  12px 0px rgba(0, 0, 0, .08);
 	}
 </style>

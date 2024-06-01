@@ -1,9 +1,9 @@
 <script lang="ts">
-	//
+		import "$lib/global.scss"
 </script>
 
 <header class="header">
-	<div class="header-content">
+	<div class="header-content shadow">
 		<slot name="logo">LOGO HERE</slot>
 		<slot></slot>
 	</div>
@@ -25,18 +25,21 @@
 			justify-content: space-between;
 			align-items: center;
 			margin: 12px auto;
+			padding: 0 24px;
 			border: 1px solid transparent;
-			border-radius: 10px;
-			background: hsl(0, 0%, 92%);
-			width: 80vw;
+			border-radius: 12px;
+			background: var(--bg);
+			width: 1024px;
 			max-width: 1024px;
 			height: 56px;
 			& [slot="logo"] {
 				display: flex;
 				align-items: center;
-				margin: 0 8px;
-				padding: 8px;
+
 			}
 		}
+	}
+	.shadow {
+		box-shadow: inset 0 0  13px 0px rgba(0, 0, 0, .08);
 	}
 </style>

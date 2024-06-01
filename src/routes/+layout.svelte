@@ -2,6 +2,7 @@
 	import "virtual:uno.css";
 	import "@unocss/reset/sanitize/sanitize.css";
 	import "@unocss/reset/sanitize/assets.css";
+	import "$lib/global.scss";
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
 	import Header from "$lib/component/Header.svelte";
@@ -35,14 +36,14 @@
 	</Header>
 
 	<div class="content p">
-		<pre class="h-6 pb-4">{$page.url.pathname}</pre>
+		<pre class="h-6 mb-4">{$page.url.pathname}</pre>
 		<slot />
 	</div>
 </div>
 
 <style lang="scss">
 	:global(html) {
-		background: #fafafa;
+		background: var(--bg);
 	}
 	#app {
 		display: flex;

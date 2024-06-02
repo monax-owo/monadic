@@ -19,13 +19,13 @@
 
 	.header {
 		width: 100vw;
-
+		padding: 0 24px;
 		& .header-content {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-			margin: 12px 24px;
+			margin: 12px auto;
 			border: 1px solid transparent;
 			border-radius: 12px;
 			background: var(--bg);

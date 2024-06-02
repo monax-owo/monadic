@@ -59,19 +59,13 @@
 		}
 		@return $tmp;
 	}
-	@debug corner-pos(1, 1);
-	//
-
 	.pixel {
 		appearance: none;
-
 		box-shadow: bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2), bs-corner(dimgray);
 		border: none;
 		border-radius: 0%;
 		background: rgb(163, 162, 162);
-		// padding: 2px 0 1px;
-
-		font-family: "Press Start 2P";
+		font-family: "Press Start 2P", sans-serif;
 		text-align: center;
 		&::before {
 			width: p(1);

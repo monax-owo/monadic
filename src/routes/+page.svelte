@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import { routeObjToRoutes } from "$lib/route/routes";
-	const allRoutes = routeObjToRoutes(
+	import Linker from "$lib/component/Linker.svelte";
+	const Routes = routeObjToRoutes(
 		{
 			"/style": "Style",
 			"/style/pixel": "Pixel Art CSS",
@@ -20,8 +21,5 @@
 <svelte:head>
 	<title>Monadic</title>
 </svelte:head>
-<div class="flex flex-col">
-	{#each allRoutes as route}
-		<a href={route.link}>{route.title}</a>
-	{/each}
-</div>
+
+<Linker routes={Routes}></Linker>

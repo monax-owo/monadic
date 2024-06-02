@@ -5,8 +5,8 @@
 
 <pre class="test">{JSON.stringify(allRoutes, null, "\t")}</pre>
 
-<style lang="postcss">
+<style lang="scss">
 	.test {
-		@apply bg-black;
+		background: black;
 	}
 </style>

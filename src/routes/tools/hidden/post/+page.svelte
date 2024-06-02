@@ -27,7 +27,7 @@
 	<Textarea></Textarea>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
 	* {
 		display: block;
 	}

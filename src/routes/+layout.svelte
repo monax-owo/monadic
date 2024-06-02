@@ -1,9 +1,8 @@
 <script lang="ts">
-	//
-	import "virtual:uno.css";
-	import "@unocss/reset/sanitize/sanitize.css";
-	import "@unocss/reset/sanitize/assets.css";
-	import { onMount } from "svelte";
+	// rest css
+	import "sanitize.css/sanitize.css";
+	import "sanitize.css/assets.css";
+	// 
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
 	import "$lib/global.scss";
@@ -35,7 +34,7 @@
 			return theme;
 		};
 		let theme: string = defaultTheme();
-		document.documentElement.setAttribute("theme",theme)
+		document.documentElement.setAttribute("theme", theme);
 	</script>
 </svelte:head>
 

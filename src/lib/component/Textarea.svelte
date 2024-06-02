@@ -1,5 +1,4 @@
 <script lang="ts">
-	import "@unocss/reset/normalize.css";
 	export let value: string = "";
 	export let placeholder: string = "";
 	let minH: string;

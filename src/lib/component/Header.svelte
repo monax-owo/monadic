@@ -18,6 +18,7 @@
 	}
 
 	.header {
+<<<<<<< HEAD
 		width: 100%;
 	}
 	.header-content {
@@ -33,8 +34,14 @@
 		max-width: 1024px;
 		height: 56px;
 		:global(> [slot="logo"]) {
+=======
+		width: 100vw;
+		padding: 0 24px;
+		& .header-content {
+>>>>>>> b214cf9b6262b19723d24029d1628428bccbe981
 			display: flex;
 			align-items: center;
+<<<<<<< HEAD
 			color: var(--text);
 			font-size: 16px;
 			font-weight: 500;
@@ -42,6 +49,19 @@
 		}
 		:global(*){
 			color: var(--text);
+=======
+			margin: 12px auto;
+			border: 1px solid transparent;
+			border-radius: 12px;
+			background: var(--bg);
+			padding: 0 24px;
+			max-width: 1024px;
+			height: 56px;
+			& [slot="logo"] {
+				display: flex;
+				align-items: center;
+			}
+>>>>>>> b214cf9b6262b19723d24029d1628428bccbe981
 		}
 	}
 

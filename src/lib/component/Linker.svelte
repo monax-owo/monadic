@@ -15,6 +15,7 @@
 		flex-direction: column;
 		a {
 			text-decoration: none;
+			color: var(--text);
 		}
 	}
 </style>

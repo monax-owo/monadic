@@ -1,3 +1,25 @@
-:root {
+@mixin light{
 	--bg: #fafafa;
+	--text: #2e2e2e;
+	// shadow
+	--s-bg: #00000015;
 }
+@mixin dark{
+	--bg: #2c2c2c;
+	--text: #d1d1d1;
+	// shadow
+	--s-bg: #ffffff96;
+}
+
+:root {
+	&[theme="light"] {
+    @include light;
+	}
+	&[theme="dark"] {
+		@include dark;
+	}
+}
+.shadow1 {
+	box-shadow: 0 0 16px 0px var(--s-bg);
+}
+

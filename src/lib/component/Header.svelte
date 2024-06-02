@@ -1,5 +1,5 @@
 <script lang="ts">
-	import "$lib/global.scss";
+	// 
 </script>
 
 <header class="header">
@@ -10,7 +10,7 @@
 	</div>
 </header>
 
-<style>
+<style lang="scss">
 	*,
 	*::before,
 	*::after {
@@ -18,27 +18,31 @@
 	}
 
 	.header {
-		width: 100vw;
-
-		& .header-content {
+		width: 100%;
+	}
+	.header-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin: 12px 24px;
+		border: 0 solid transparent;
+		border-radius: 12px;
+		background: var(--bg);
+		padding: 0 24px;
+		max-width: 1024px;
+		height: 56px;
+		:global(> [slot="logo"]) {
 			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
 			align-items: center;
-			margin: 12px 24px;
-			border: 1px solid transparent;
-			border-radius: 12px;
-			background: var(--bg);
-			padding: 0 24px;
-			max-width: 1024px;
-			height: 56px;
-			& [slot="logo"] {
-				display: flex;
-				align-items: center;
-			}
+			color: var(--text);
+			font-size: 16px;
+			font-weight: 500;
+			text-decoration: none;
+		}
+		:global(*){
+			color: var(--text);
 		}
 	}
-	.shadow1 {
-		box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
-	}
+
 </style>

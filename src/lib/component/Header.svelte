@@ -1,14 +1,16 @@
 <script lang="ts">
-	// 
+	// import "$lib/global.scss";
 </script>
 
-<header class="header">
-	<div class="header-content shadow1">
-		<slot name="logo">LOGO HERE</slot>
-		<slot></slot>
-		<slot name="link">SNS LINK HERE</slot>
-	</div>
-</header>
+<div id="Header">
+	<header class="header">
+		<div class="header-content shadow-1">
+			<slot name="logo">LOGO HERE</slot>
+			<slot></slot>
+			<slot name="link">SNS LINK HERE</slot>
+		</div>
+	</header>
+</div>
 
 <style lang="scss">
 	*,
@@ -18,8 +20,8 @@
 	}
 
 	.header {
-		width: 100%;
 		padding: 0 24px;
+		width: 100%;
 	}
 	.header-content {
 		display: flex;
@@ -32,18 +34,20 @@
 		background: var(--bg);
 		padding: 0 24px;
 		max-width: 1024px;
-		height: 56px;
+		height: var(--Header-h);
+		& :global() {
+			gap: 8px;
+		}
+		:global(> *) {
+			color: var(--text);
+		}
 		:global(> [slot="logo"]) {
 			display: flex;
 			align-items: center;
 			color: var(--text);
+			font-weight: 600;
 			font-size: 16px;
-			font-weight: 500;
 			text-decoration: none;
 		}
-		:global(*){
-			color: var(--text);
-		}
 	}
-
 </style>

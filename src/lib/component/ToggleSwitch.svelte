@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="Layout"></div>
+<div id="ToggleSwitch"></div>
 
 <style lang="scss">
 </style>

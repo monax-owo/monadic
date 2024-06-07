@@ -3,19 +3,22 @@
 	export let routes: Route[];
 </script>
 
-<div class="link-container">
+<div id="Linker">
 	{#each routes as route}
 		<a href={route.link}>{route.title}</a>
 	{/each}
 </div>
 
 <style lang="scss">
-	.link-container {
+	#Linker {
 		display: flex;
 		flex-direction: column;
 		a {
-			text-decoration: none;
 			color: var(--text);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 </style>

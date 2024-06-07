@@ -2,7 +2,7 @@
 	// rest css
 	import "sanitize.css/sanitize.css";
 	import "sanitize.css/assets.css";
-	// 
+	//
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
 	import "$lib/global.scss";
@@ -18,14 +18,14 @@
 	// icons
 	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
 	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
-	const iconStrokeWidth = 1.6;
+	const iconStrokeWidth = 2;
 	// title
 	import { setTitle } from "$lib/route/routes";
-	$: title = setTitle($page.route.id ?? "");
+	$: title = setTitle($page.route.id ?? "no title");
 </script>
 
 <svelte:head>
-	<title>{title.length > 0 ? `${title} |` : ""} Monadic</title>
+	<title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
 	<!-- setting Theme -->
 	<script lang="ts">
 		const defaultTheme = (): string => {
@@ -41,6 +41,9 @@
 <div id="app">
 	<Header>
 		<a class="logo" href="{base}/" slot="logo">Monadic</a>
+		<div class="url-input">
+			<input type="text" />
+		</div>
 		<div class="sns-link" slot="link">
 			<a href="https://github.com/monax-owo/monadic">
 				<IconBrandGithub stroke={iconStrokeWidth} />
@@ -78,6 +81,33 @@
 		& .route-id {
 			margin-bottom: 16px;
 			height: 24px;
+		}
+	}
+	.url-input {
+		// border: 2px solid var(--b-bg);
+		// border-radius: 6px;
+		width: 100%;
+		&:focus {
+			border: 0 solid transparent;
+		}
+		& input {
+			appearance: none;
+			border: 0 solid transparent;
+			border-radius: 6px;
+			background: var(--bg);
+			padding: 10px;
+			width: 100%;
+			height: calc(var(--Header-h) / 2);
+			&:focus {
+				outline: var(--highlight-size) solid var(--highlight-bg);
+			}
+		}
+	}
+	.sns-link {
+		display: flex;
+		flex-direction: row;
+		& a {
+			color: var(--text);
 		}
 	}
 </style>

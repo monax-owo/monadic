@@ -1,25 +1,45 @@
-@mixin light{
+// mixin
+@mixin light {
 	--bg: #fafafa;
 	--text: #2e2e2e;
 	// shadow
 	--s-bg: #00000015;
+	--b-bg: #2e2e2e;
 }
-@mixin dark{
+
+@mixin dark {
 	--bg: #2c2c2c;
 	--text: #d1d1d1;
 	// shadow
 	--s-bg: #ffffff96;
+	// border
+	--b-bg: #8f8f8f;
+	// highlight
+	--highlight-bg: rgb(0, 179, 170);
 }
 
+@mixin variable {
+	--Header-h: 56px;
+	--highlight-size: 1px;
+}
+
+@mixin shadow-1($blur) {
+	box-shadow: 0 0 $blur 0px var(--s-bg);
+}
+
+// include
 :root {
+	& {
+		@include variable;
+	}
 	&[theme="light"] {
-    @include light;
+		@include light;
 	}
 	&[theme="dark"] {
 		@include dark;
 	}
 }
-.shadow1 {
-	box-shadow: 0 0 16px 0px var(--s-bg);
-}
 
+.shadow-1 {
+	@include shadow-1(16px);
+}

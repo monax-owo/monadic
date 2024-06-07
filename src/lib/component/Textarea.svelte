@@ -7,13 +7,13 @@
 	$: maxH = `auto`;
 </script>
 
-<div id="textarea">
+<div id="Textarea">
 	<div aria-hidden="true" style:min-height={minH} style:max-height={maxH}>{value}</div>
 	<textarea bind:value {placeholder}></textarea>
 </div>
 
 <style lang="scss">
-	#textarea {
+	#Textarea {
 		position: relative;
 
 		& > * {

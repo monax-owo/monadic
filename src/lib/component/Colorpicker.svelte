@@ -2,6 +2,7 @@
 	//
 </script>
 
+<div id="Colorpicker"></div>
+
 <style lang="scss">
-	//
 </style>

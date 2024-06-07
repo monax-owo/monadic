@@ -3,15 +3,16 @@
 	let buttonMode: boolean = true;
 </script>
 
-<button class="btn" class:pixel={buttonMode}>
-	<slot></slot>
-</button>
 <button
+	class="btn"
+	class:pixel={buttonMode}
 	type="button"
 	on:click={() => {
 		buttonMode = !buttonMode;
-	}}>toggle</button
+	}}
 >
+	<slot></slot>
+</button>
 
 <style lang="scss">
 	$PIXEL_SIZE: 6px;

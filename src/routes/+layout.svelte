@@ -71,7 +71,7 @@
 		justify-content: center;
 	}
 	.content {
-		margin: 0 auto;
+		margin: 16px auto 0;
 		padding: 0 2rem;
 		width: 100%;
 		max-width: 1024px;

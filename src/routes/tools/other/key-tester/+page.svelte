@@ -7,7 +7,8 @@
 </script>
 
 <svelte:window on:keydown={keyTester} />
-<div class="b-solid">
+
+<div class="histories shadow-1">
 	{#if histories.length !== 0}
 		{#each histories as history}
 			<li>{history}</li>
@@ -16,3 +17,12 @@
 		<div>press key!</div>
 	{/if}
 </div>
+
+<style lang="scss">
+	.histories {
+		margin: 32px auto;
+		border-radius: var(--Header-radius);
+		padding: 16px;
+		width: 600px;
+	}
+</style>

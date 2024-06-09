@@ -30,7 +30,7 @@
 		align-items: center;
 		margin: 12px auto;
 		border: 0 solid transparent;
-		border-radius: 12px;
+		border-radius: var(--Header-radius);
 		background: var(--bg);
 		padding: 0 24px;
 		max-width: 1024px;

@@ -22,8 +22,10 @@ const allRoutesList = {
 	"/style/pixel": "Pixel Art CSS",
 	"/tools": "Mon tools",
 	"/tools/color/watcher": "Color Watcher",
+	"/tools/other/href": "Url Jumper",
 	"/tools/other/key-tester": "Key tester",
 	"/tools/other/test": "Test",
+	"/tools/other/valorant-chat-art": "Valorant Chat Art",
 	"/tools/hidden": "Hidden",
 	"/tools/hidden/post": "Post",
 };

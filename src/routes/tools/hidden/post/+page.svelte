@@ -8,28 +8,32 @@
 	$: aspectRatio = `100/${ratio}`;
 </script>
 
-<svelte:head>
-	<title>Post</title>
-</svelte:head>
-<div class="flex flex-col justify-center p-4">
-	<input class="my-4" type="range" min="10" max="60" bind:value={ratio} />
-	<textarea class="h-auto" placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
+<div class="post">
+	<input type="range" min="10" max="60" bind:value={ratio} />
+	<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
 	<div class="link">
 		<button
 			on:click={() => {
 				window.open(tweet);
-			}}
+			}}>Post</button
 		>
-			Post
-		</button>
-		{tweet}
+		<div>{tweet}</div>
 	</div>
 	<Textarea></Textarea>
 </div>
 
 <style lang="scss">
-	* {
-		display: block;
+	.post {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 16px;
+		& input {
+			margin: 8px 0;
+		}
+		& textarea {
+			height: auto;
+		}
 	}
 
 	textarea {

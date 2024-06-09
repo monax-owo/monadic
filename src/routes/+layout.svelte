@@ -41,9 +41,9 @@
 <div id="app">
 	<Header>
 		<a class="logo" href="{base}/" slot="logo">Monadic</a>
-		<div class="url-input">
-			<input type="text" />
-		</div>
+		<form class="url-input">
+			<input type="text" bind:value={$page.route.id} />
+		</form>
 		<div class="sns-link" slot="link">
 			<a href="https://github.com/monax-owo/monadic">
 				<IconBrandGithub stroke={iconStrokeWidth} />
@@ -53,9 +53,7 @@
 			</a>
 		</div>
 	</Header>
-
 	<div class="content">
-		<pre class="route-id">{$page.route.id}</pre>
 		<slot />
 	</div>
 </div>
@@ -78,10 +76,6 @@
 		width: 100%;
 		max-width: 1024px;
 		color: var(--text);
-		& .route-id {
-			margin-bottom: 16px;
-			height: 24px;
-		}
 	}
 	.url-input {
 		// border: 2px solid var(--b-bg);
@@ -98,6 +92,7 @@
 			padding: 10px;
 			width: 100%;
 			height: calc(var(--Header-h) / 2);
+			color: var(--text);
 			&:focus {
 				outline: var(--highlight-size) solid var(--highlight-bg);
 			}

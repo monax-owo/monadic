@@ -4,7 +4,9 @@
 	$: title = setTitle($page.route.id ?? "");
 </script>
 
-<pre class="test">{title}</pre>
+<div>
+	<pre class="test">{title}</pre>
+</div>
 
 <style lang="scss">
 	.test {

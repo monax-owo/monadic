@@ -9,7 +9,6 @@
 			"/other/key-tester": "Key tester",
 			"/other/test": "Test",
 			"/other/valorant-chat-art": "Valorant Chat Art",
-			"/hidden": "Hidden",
 			"/hidden/post": "Post",
 		},
 		`${base}/tools`

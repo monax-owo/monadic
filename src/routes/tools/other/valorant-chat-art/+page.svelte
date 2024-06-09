@@ -15,6 +15,6 @@
 
 <style lang="scss">
 	.canvas {
-		// 
+		//
 	}
 </style>

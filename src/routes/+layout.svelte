@@ -40,15 +40,15 @@
 
 <div id="app">
 	<Header>
-		<a class="logo" href="{base}/" slot="logo">Monadic</a>
+		<a class="logo hover-1" href="{base}/" slot="logo">Monadic</a>
 		<form class="url-input">
 			<input type="text" bind:value={$page.route.id} />
 		</form>
 		<div class="sns-link" slot="link">
-			<a href="https://github.com/monax-owo/monadic">
+			<a class="hover-1" href="https://github.com/monax-owo/monadic">
 				<IconBrandGithub stroke={iconStrokeWidth} />
 			</a>
-			<a href="https://kit.svelte.jp">
+			<a class="hover-1" href="https://kit.svelte.jp">
 				<IconBrandSvelte stroke={iconStrokeWidth} />
 			</a>
 		</div>
@@ -72,7 +72,7 @@
 	}
 	.content {
 		margin: 16px auto 0;
-		padding: 0 2rem;
+		padding: 0 64px;
 		width: 100%;
 		max-width: 1024px;
 		color: var(--text);
@@ -102,6 +102,8 @@
 		display: flex;
 		flex-direction: row;
 		& a {
+			border-radius: var(--b-radius);
+			padding: 6px;
 			color: var(--text);
 		}
 	}

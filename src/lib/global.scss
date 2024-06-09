@@ -1,3 +1,4 @@
+// 基本4px単位
 // mixin
 @mixin light {
 	--bg: #fafafa;
@@ -15,13 +16,16 @@
 	// border
 	--b-bg: #8f8f8f;
 	// highlight
-	--highlight-bg: rgb(0, 179, 170);
+	--highlight-bg: #00b3aa;
+	// hover
+	--hover-bg: #181818;
 }
 
 @mixin variable {
 	--Header-h: 56px;
 	--Header-radius: 12px;
 	--highlight-size: 1px;
+	--b-radius: 8px;
 }
 
 @mixin shadow-1($blur) {
@@ -43,4 +47,8 @@
 
 .shadow-1 {
 	@include shadow-1(16px);
+}
+.hover-1:hover {
+	border-radius: var(--b-radius);
+	background: var(--hover-bg);
 }

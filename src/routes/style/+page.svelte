@@ -8,7 +8,7 @@
 		{
 			"/pixel": "Pixel Art CSS",
 		},
-		`${base}/style`,
+		`${base}/style`
 	);
 </script>
 

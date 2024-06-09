@@ -15,8 +15,7 @@
 		<button
 			on:click={() => {
 				window.open(tweet);
-			}}>Post</button
-		>
+			}}>Post</button>
 		<div>{tweet}</div>
 	</div>
 	<Textarea></Textarea>

@@ -7,7 +7,7 @@
 			"/style": "Style",
 			"/tools": "Mon tools",
 		},
-		base,
+		base
 	);
 </script>
 

@@ -9,8 +9,7 @@
 	type="button"
 	on:click={() => {
 		buttonMode = !buttonMode;
-	}}
->
+	}}>
 	<slot></slot>
 </button>
 

@@ -20,7 +20,7 @@
 	}
 
 	.header {
-		padding: 0 24px;
+		padding: 0 36px;
 		width: 100%;
 	}
 	.header-content {
@@ -28,15 +28,15 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		margin: 12px auto;
+		margin: 16px auto;
 		border: 0 solid transparent;
 		border-radius: var(--Header-radius);
 		background: var(--bg);
-		padding: 0 24px;
+		padding: 0 16px;
 		max-width: 1024px;
 		height: var(--Header-h);
 		& :global() {
-			gap: 8px;
+			gap: 16px;
 		}
 		:global(> *) {
 			color: var(--text);
@@ -44,7 +44,7 @@
 		:global(> [slot="logo"]) {
 			display: flex;
 			align-items: center;
-			color: var(--text);
+			padding: 6px 12px;
 			font-weight: 600;
 			font-size: 16px;
 			text-decoration: none;

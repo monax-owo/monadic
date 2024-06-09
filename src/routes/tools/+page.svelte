@@ -1,6 +1,19 @@
 <script lang="ts">
-	import { allRoutes } from "$lib/route/routes";
+	import { routeObjToRoutes } from "$lib/route/routes";
 	import Linker from "$lib/component/Linker.svelte";
+	import { base } from "$app/paths";
+	const Routes = routeObjToRoutes(
+		{
+			"/color/watcher": "Color Watcher",
+			"/other/href": "Url Jumper",
+			"/other/key-tester": "Key tester",
+			"/other/test": "Test",
+			"/other/valorant-chat-art": "Valorant Chat Art",
+			"/hidden": "Hidden",
+			"/hidden/post": "Post",
+		},
+		`${base}/tools`
+	);
 </script>
 
-<Linker routes={allRoutes}></Linker>
+<Linker routes={Routes}></Linker>

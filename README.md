@@ -8,4 +8,5 @@
 
 - Svelte kit
 - Vite
+- Sass(Scss)
 - Github Actions

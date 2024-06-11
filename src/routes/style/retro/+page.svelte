@@ -1,21 +1,34 @@
 <script lang="ts">
-	//
 	import "$lib/global.scss";
+	import { setDefaultTheme } from "$lib/theme/theme";
+	import { onMount } from "svelte";
+
+	onMount(() => {
+		return () => {
+			setDefaultTheme();
+		};
+	});
 </script>
 
+<svelte:head>
+	<script>
+		document.documentElement.setAttribute("theme", "retro");
+	</script>
+</svelte:head>
+
 <div>
-	<div class="retro">aa</div>
+	<div class="retro">RETRO</div>
 </div>
 
-<style lang="scss">
-	@layer page {
-		:global(:root) {
-			--bg: #c7bfa9;
-			--text: #4b4b4b;
-			--b-dark: #c7bfa9;
-			--b-light: #000;
-		}
+<style>
+	:global(:root[theme="retro"]) {
+		--bg: #c7bfa9;
+		--text: #4b4b4b;
+		--b-dark: #c7bfa9;
+		--b-light: #000;
+		--test: #000;
 	}
+
 	.retro {
 		border-width: 12px;
 		border-style: inset;

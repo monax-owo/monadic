@@ -32,30 +32,24 @@
 	box-shadow: 0 0 $blur 0px var(--s-bg);
 }
 
-// layer
-@layer layout, page;
-
 // include
-@layer layout {
-	:root {
-		& {
-			@include variable;
-		}
-
-		&[theme="light"] {
-			@include light;
-		}
-
-		&[theme="dark"] {
-			@include dark;
-		}
+:root {
+	& {
+		@include variable;
+	}
+	&[theme="light"] {
+		@include light;
+	}
+	&[theme="dark"] {
+		@include dark;
 	}
 }
-@layer page;
+
 // util
 .shadow-1 {
 	@include shadow-1(16px);
 }
+
 .hover-1:hover {
 	border-radius: var(--b-radius);
 	background: var(--hover-bg);

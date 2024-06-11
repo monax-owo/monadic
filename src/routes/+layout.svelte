@@ -1,11 +1,11 @@
 <script lang="ts">
 	// rest css
+	import "$lib/global.scss";
 	import "sanitize.css/sanitize.css";
 	import "sanitize.css/assets.css";
 	//
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-	import "$lib/global.scss";
 	// fonts
 	// Montserrat
 	// Supports weights 100-900
@@ -28,13 +28,10 @@
 	<title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
 	<!-- setting Theme -->
 	<script lang="ts">
-		const defaultTheme = (): string => {
-			let theme = localStorage.getItem("theme");
-			theme ??= window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-			return theme;
-		};
-		let theme: string = defaultTheme();
-		document.documentElement.setAttribute("theme", theme);
+		document.documentElement.setAttribute(
+			"theme",
+			localStorage.getItem("theme") ?? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+		);
 	</script>
 </svelte:head>
 
@@ -59,11 +56,11 @@
 </div>
 
 <style lang="scss">
+	:global(:root) {
+		--test: #fff;
+	}
 	:global(html) {
 		background: var(--bg);
-	}
-	:global(body) {
-		font-family: "Montserrat Variable", "Noto Sans JP Variable", sans-serif;
 	}
 	#app {
 		display: flex;

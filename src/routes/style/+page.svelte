@@ -6,6 +6,7 @@
 	const Routes = routeObjToRoutes(
 		{
 			"/pixel": "Pixel Art CSS",
+			"/retro": "Retro CSS",
 		},
 		`${base}/style`
 	);

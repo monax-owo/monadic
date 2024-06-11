@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Todo from "$lib/component/dev/Todo.svelte";
-	let paintCode: Array<String> = ["█"];
-	let nowPaintChar: String = "";
+	let paintCode: Array<string> = ["█"];
+	let nowPaintChar: string = "";
 </script>
 
 <div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import { routeObjToRoutes } from "$lib/route/routes";
-	import Linker from "$lib/component/Linker.svelte";
+	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import Portfolio from "$lib/component/Portfolio.svelte";
 	const Routes = routeObjToRoutes(
 		{
@@ -16,4 +16,4 @@
 	<title>Monadic</title>
 </svelte:head>
 <Portfolio></Portfolio>
-<Linker routes={Routes}></Linker>
+<RouteLinker routes={Routes}></RouteLinker>

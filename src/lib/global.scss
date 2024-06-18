@@ -26,6 +26,7 @@
 	--Header-radius: 12px;
 	--highlight-size: 1px;
 	--b-radius: 8px;
+	--t-duration: 0.2s;
 }
 
 @mixin shadow-1($blur) {
@@ -37,9 +38,11 @@
 	& {
 		@include variable;
 	}
+
 	&[theme="light"] {
 		@include light;
 	}
+
 	&[theme="dark"] {
 		@include dark;
 	}
@@ -51,6 +54,7 @@
 }
 
 .hover-1:hover {
+	transition: background-color var(--t-duration);
 	border-radius: var(--b-radius);
-	background: var(--hover-bg);
+	background-color: var(--hover-bg);
 }

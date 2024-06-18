@@ -16,30 +16,39 @@
 	// Header
 	import Header from "$lib/component/Header.svelte";
 	// icons
-	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
 	const iconStrokeWidth = 2;
 	// title
 	import { setTitle } from "$lib/route/routes";
+	import { IconBrandGithub, IconBrandSvelte, IconBrandYoutube } from "@tabler/icons-svelte";
+	import { beforeUpdate } from "svelte";
 	$: title = setTitle($page.route.id ?? "no title");
+	// theme
+	beforeUpdate(() => {
+		document.documentElement.setAttribute(
+			"theme",
+			localStorage.getItem("theme") ?? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+		);
+	});
 </script>
 
 <svelte:head>
 	<title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
 	<!-- setting Theme -->
-	<script lang="ts">
+	<!-- <script lang="ts">
 		document.documentElement.setAttribute(
 			"theme",
 			localStorage.getItem("theme") ?? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
 		);
-	</script>
+	</script> -->
+	<!-- theme=""からdata-theme=""に移行する -->
+	<!-- https://developer.mozilla.org/ja/docs/Learn/HTML/Howto/Use_data_attributes -->
 </svelte:head>
 
 <div id="app">
 	<Header>
 		<a class="logo hover-1" href="{base}/" slot="logo">Monadic</a>
-		<form class="url-input">
-			<input type="text" bind:value={$page.route.id} />
+		<form class="url-input" method="post">
+			<input type="text" name="url" bind:value={$page.route.id} />
 		</form>
 		<div class="sns-link" slot="link">
 			<a class="hover-1" href="https://github.com/monax-owo/monadic">
@@ -47,6 +56,9 @@
 			</a>
 			<a class="hover-1" href="https://kit.svelte.jp">
 				<IconBrandSvelte stroke={iconStrokeWidth} />
+			</a>
+			<a class="hover-1" href="https://www.youtube.com/@energymonaka/featured">
+				<IconBrandYoutube stroke={iconStrokeWidth} />
 			</a>
 		</div>
 	</Header>

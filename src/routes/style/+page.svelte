@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths";
-	import Linker from "$lib/component/Linker.svelte";
+	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import { routeObjToRoutes } from "$lib/route/routes";
 
 	const Routes = routeObjToRoutes(
@@ -12,4 +12,4 @@
 	);
 </script>
 
-<Linker routes={Routes}></Linker>
+<RouteLinker routes={Routes}></RouteLinker>

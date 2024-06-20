@@ -12,7 +12,7 @@
 
 <svelte:head>
 	<script>
-		document.documentElement.setAttribute("theme", "retro");
+		setTheme("retro");
 	</script>
 </svelte:head>
 

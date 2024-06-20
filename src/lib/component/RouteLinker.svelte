@@ -3,7 +3,7 @@
 	export let routes: Route[];
 </script>
 
-<div id="Linker">
+<div id="RouteLinker">
 	{#each routes as route}
 		<!-- <div class=""> -->
 		<a href={route.link}>{route.title}</a>
@@ -12,7 +12,7 @@
 </div>
 
 <style lang="scss">
-	#Linker {
+	#RouteLinker {
 		display: flex;
 		flex-direction: column;
 		a {

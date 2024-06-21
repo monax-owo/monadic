@@ -18,7 +18,7 @@
 
 <Portfolio>
 	<svelte:fragment slot="icon">
-		<img src="/icon_512.png" alt="icon" />
+		<img src="{base}/icon_512.png" alt="icon" />
 	</svelte:fragment>
 	<svelte:fragment slot="name">
 		<span>monax-owo</span>

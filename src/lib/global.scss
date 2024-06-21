@@ -24,6 +24,8 @@
 @mixin variable {
 	--Header-h: 56px;
 	--Header-radius: 12px;
+	--Icon-size: 200px;
+	--Icon-b-radius: calc(var(--Icon-size) / 10);
 	--highlight-size: 1px;
 	--b-radius: 8px;
 	--t-duration: 0.2s;
@@ -49,6 +51,15 @@
 }
 
 // util
+.flex {
+	display: flex;
+}
+.flex-col {
+	flex-direction: column;
+}
+.flex-row {
+	flex-direction: row;
+}
 .shadow-1 {
 	@include shadow-1(16px);
 }

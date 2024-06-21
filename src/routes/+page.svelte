@@ -15,5 +15,17 @@
 <svelte:head>
 	<title>Monadic</title>
 </svelte:head>
-<Portfolio></Portfolio>
+
+<Portfolio>
+	<svelte:fragment slot="icon">
+		<img src="/icon_512.png" alt="icon" />
+	</svelte:fragment>
+	<svelte:fragment slot="name">
+		<span>monax-owo</span>
+	</svelte:fragment>
+	<svelte:fragment slot="profile">
+		<div class="">てすと</div>
+	</svelte:fragment>
+</Portfolio>
+<div></div>
 <RouteLinker routes={Routes}></RouteLinker>

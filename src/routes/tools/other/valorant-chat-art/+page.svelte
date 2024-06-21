@@ -1,4 +1,5 @@
 <script lang="ts">
+	// eslint no-unused-vars
 	import Todo from "$lib/component/dev/Todo.svelte";
 	let paintCode: Array<string> = ["█"];
 	let nowPaintChar: string = "";

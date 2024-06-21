@@ -15,6 +15,10 @@ const compat = new FlatCompat({
 	allConfig: js.configs.all,
 });
 
+// "off" | 0
+// "warn" | 1
+// "error" | 2
+
 export default [
 	{
 		ignores: [
@@ -48,6 +52,7 @@ export default [
 				extraFileExtensions: [".svelte"],
 			},
 		},
+		rules: {},
 	},
 	{
 		files: ["**/*.svelte"],

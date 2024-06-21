@@ -22,18 +22,19 @@
 	$: title = setTitle($page.route.id ?? "no title");
 	// form
 	import { enhance } from "$app/forms";
-	import { goto } from "$app/navigation";
-	import { redirect } from "@sveltejs/kit";
+	import { afterNavigate, beforeNavigate, goto } from "$app/navigation";
 	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
 	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
 	import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
-	import { afterUpdate, beforeUpdate, onMount } from "svelte";
+	import { onMount, beforeUpdate, afterUpdate } from "svelte";
 	let nowRouteId: string = "/";
+	const updateUrlInput = () => {
+		nowRouteId = $page.url.pathname;
+	};
+	afterNavigate(() => updateUrlInput());
+	beforeUpdate(() => updateUrlInput());
+	afterUpdate(() => updateUrlInput());
 	// $: nowRouteId = $page.route.id;
-	onMount(() => {
-		nowRouteId = $page.route.id;
-	});
-	$: if (nowRouteId !== $page.route.id) nowRouteId = $page.route.id;
 </script>
 
 <svelte:head>
@@ -41,7 +42,6 @@
 	<!-- setting Theme -->
 	<script>
 		setDefaultTheme();
-		console.log("a")
 	</script>
 	<!-- theme=""からdata-theme=""に移行する -->
 	<!-- https://developer.mozilla.org/ja/docs/Learn/HTML/Howto/Use_data_attributes -->
@@ -53,11 +53,9 @@
 		<form
 			class="url-input"
 			method="post"
-			use:enhance={({ formData }) => {
+			use:enhance={async ({ formData }) => {
 				const url = formData.get("url").toString();
 				goto(url, { noScroll: true });
-				console.log(url);
-				// redirect(303, url);
 			}}>
 			<input type="text" name="url" bind:value={nowRouteId} />
 		</form>

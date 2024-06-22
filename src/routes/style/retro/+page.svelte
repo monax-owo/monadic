@@ -21,6 +21,7 @@
 </div>
 
 <style lang="scss">
+	// @use "$lib/global.scss";
 	:global(:root[theme="retro"]) {
 		--bg: #c7bfa9;
 		--text: #4b4b4b;

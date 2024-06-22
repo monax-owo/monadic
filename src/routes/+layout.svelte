@@ -32,8 +32,6 @@
 		nowRouteId = $page.url.pathname;
 	};
 	afterNavigate(() => updateUrlInput());
-	beforeUpdate(() => updateUrlInput());
-	afterUpdate(() => updateUrlInput());
 	// $: nowRouteId = $page.route.id;
 </script>
 

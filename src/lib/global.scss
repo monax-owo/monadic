@@ -1,9 +1,24 @@
 // 基本4px単位
 // mixin
+
+// bg = background
+// text = color
+// --s = box-shadow
+// --b = border
+// --hilight = highlight
+// --hover = :hover
+
+@function darkest($color, $percent) {
+	@return color-mix(in srgb, ($color $percent), #000);
+}
+
+@function lightest($color: #fff, $percent: 50%) {
+	@return color-mix(in srgb, ($color $percent), #fff);
+}
+
 @mixin light {
 	--bg: #fafafa;
 	--text: #2e2e2e;
-	// shadow
 	--s-bg: #00000015;
 	--b-bg: #2e2e2e;
 }
@@ -11,14 +26,10 @@
 @mixin dark {
 	--bg: #262626;
 	--text: #d1d1d1;
-	// shadow
 	--s-bg: #ffffff96;
-	// border
 	--b-bg: #8f8f8f;
-	// highlight
 	--highlight-bg: #00b3aa;
-	// hover
-	--hover-bg: #181818;
+	--hover-bg: #{lightest(var(--bg), 80%)};
 }
 
 @mixin variable {
@@ -54,12 +65,15 @@
 .flex {
 	display: flex;
 }
+
 .flex-col {
 	flex-direction: column;
 }
+
 .flex-row {
 	flex-direction: row;
 }
+
 .shadow-1 {
 	@include shadow-1(16px);
 }
@@ -68,4 +82,5 @@
 	transition: background-color var(--t-duration);
 	border-radius: var(--b-radius);
 	background-color: var(--hover-bg);
+	// color: lightest(var(--highlight-bg), 80%);
 }

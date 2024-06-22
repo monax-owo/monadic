@@ -6,19 +6,18 @@
 	// textarea
 	let ratio = 8;
 	$: aspectRatio = `100/${ratio}`;
+	// Copy
 </script>
 
 <div class="post">
 	<input type="range" min="10" max="60" bind:value={ratio} />
 	<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
 	<div class="link">
-		<button
-			on:click={() => {
-				window.open(tweet);
-			}}>Post</button>
+		<button type="button" on:click={() => window.open(tweet)}>Post</button>
+		<button type="button" on:click={() => copy()}></button>
 		<div>{tweet}</div>
 	</div>
-	<Textarea></Textarea>
+	<Textarea on:copy let:copy></Textarea>
 </div>
 
 <style lang="scss">

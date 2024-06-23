@@ -6,6 +6,7 @@ semi: true
 singleQuote: false
 trailingComma: es5
 useTabs: true
+htmlWhitespaceSensitivity: strict
 
 # Add from Svelte
 plugins:

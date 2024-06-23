@@ -1,0 +1,3 @@
+@mixin shadow-1($blur) {
+	box-shadow: 0 0 $blur 0px var(--s-bg);
+}

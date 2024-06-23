@@ -1,0 +1,31 @@
+@use "_variable";
+@use "_function";
+@use "_mixin";
+// @use "_util";
+@use "_theme";
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.shadow-1 {
+	@include mixin.shadow-1(16px);
+}
+
+.hover-1 {
+	transition: all var(--t-duration);
+	border-radius: var(--b-radius);
+
+	&:hover {
+		background-color: var(--hover-bg);
+		color: var(--highlight-text);
+	}
+}

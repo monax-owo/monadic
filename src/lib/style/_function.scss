@@ -1,0 +1,9 @@
+// #{Darkest()}
+@function Darkest($color, $percent) {
+	@return color-mix(in srgb, $color $percent, #000);
+}
+
+// #{Lightest()}
+@function Lightest($color: #fff, $percent: 50%) {
+	@return color-mix(in srgb, $color $percent, #fff);
+}

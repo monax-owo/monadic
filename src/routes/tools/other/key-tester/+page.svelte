@@ -8,7 +8,7 @@
 
 <svelte:window on:keydown={keyTester} />
 
-<div class="histories shadow-1">
+<div class="page shadow-1">
 	{#if histories.length !== 0}
 		{#each histories as history}
 			<li>{history}</li>
@@ -19,7 +19,7 @@
 </div>
 
 <style lang="scss">
-	.histories {
+	.page {
 		margin: 32px auto;
 		border-radius: var(--Header-radius);
 		padding: 16px;

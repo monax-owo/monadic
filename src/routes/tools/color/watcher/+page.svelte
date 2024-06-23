@@ -6,7 +6,7 @@
 	// $: hex = value;
 </script>
 
-<div class="watcher">
+<div class="page">
 	<Todo></Todo>
 	<div style:background-color={value}>color: {value}</div>
 	<div>hex: {hex}</div>

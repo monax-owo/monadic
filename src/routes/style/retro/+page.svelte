@@ -16,7 +16,7 @@
 	</script>
 </svelte:head>
 
-<div>
+<div class="page">
 	<div class="retro-1">RETRO</div>
 </div>
 

@@ -1,86 +1,30 @@
 // 基本4px単位
-// mixin
 
-// bg = background
-// text = color
-// --s = box-shadow
-// --b = border
-// --hilight = highlight
-// --hover = :hover
+// @use "style/_";
+// @use "style/_variable";
+// @use "style/_function";
+// @use "style/_mixin";
+// @use "style/_util";
+// @use "style/_theme";
 
-@function darkest($color, $percent) {
-	@return color-mix(in srgb, ($color $percent), #000);
-}
+// @use "_variable";
+// @use "_function";
+// @use "_mixin";
+// @use "_util";
+// @use "_theme";
 
-@function lightest($color: #fff, $percent: 50%) {
-	@return color-mix(in srgb, ($color $percent), #fff);
-}
+@use "style/_forward" as f;
 
-@mixin light {
-	--bg: #fafafa;
-	--text: #2e2e2e;
-	--s-bg: #00000015;
-	--b-bg: #2e2e2e;
-}
-
-@mixin dark {
-	--bg: #262626;
-	--text: #d1d1d1;
-	--s-bg: #ffffff96;
-	--b-bg: #8f8f8f;
-	--highlight-bg: #00b3aa;
-	--hover-bg: #{lightest(var(--bg), 80%)};
-}
-
-@mixin variable {
-	--Header-h: 56px;
-	--Header-radius: 12px;
-	--Icon-size: 200px;
-	--Icon-b-radius: calc(var(--Icon-size) / 10);
-	--highlight-size: 1px;
-	--b-radius: 8px;
-	--t-duration: 0.2s;
-}
-
-@mixin shadow-1($blur) {
-	box-shadow: 0 0 $blur 0px var(--s-bg);
-}
-
-// include
 :root {
 	& {
-		@include variable;
+		@include f.variable;
 	}
 
 	&[theme="light"] {
-		@include light;
+		@include f.light;
 	}
 
 	&[theme="dark"] {
-		@include dark;
+		@include f.dark;
 	}
-}
-
-// util
-.flex {
-	display: flex;
-}
-
-.flex-col {
-	flex-direction: column;
-}
-
-.flex-row {
-	flex-direction: row;
-}
-
-.shadow-1 {
-	@include shadow-1(16px);
-}
-
-.hover-1:hover {
-	transition: background-color var(--t-duration);
-	border-radius: var(--b-radius);
-	background-color: var(--hover-bg);
-	// color: lightest(var(--highlight-bg), 80%);
 }

@@ -5,7 +5,7 @@
 	let nowPaintChar: string = "";
 </script>
 
-<div>
+<div class="page">
 	<Todo></Todo>
 	<div class="canvas">
 		{#each Array(7) as _, i}

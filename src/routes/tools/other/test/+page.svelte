@@ -2,7 +2,7 @@
 	let result;
 </script>
 
-<div>
+<div class="page">
 	<pre class="test">{result}</pre>
 </div>
 

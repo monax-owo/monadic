@@ -9,7 +9,7 @@
 	// Copy
 </script>
 
-<div class="post">
+<div class="page">
 	<input type="range" min="10" max="60" bind:value={ratio} />
 	<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
 	<div class="link">
@@ -21,7 +21,7 @@
 </div>
 
 <style lang="scss">
-	.post {
+	.page {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

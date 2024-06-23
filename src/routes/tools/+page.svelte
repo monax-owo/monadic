@@ -5,9 +5,10 @@
 	import { base } from "$app/paths";
 	const Routes = routeObjToRoutes(
 		{
+			"/color/mix": "Color Mix",
 			"/color/watcher": "Color Watcher",
 			"/other/href": "Url Jumper",
-			"/other/key-tester": "Key tester",
+			"/other/key-tester": "Key Tester",
 			"/other/test": "Test",
 			"/other/valorant-chat-art": "Valorant Chat Art",
 			"/hidden/post": "Post",

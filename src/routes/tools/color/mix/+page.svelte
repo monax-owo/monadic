@@ -22,7 +22,7 @@
 	});
 </script>
 
-<Template>
+<div class="page">
 	<div class="view" bind:this={el} style:--mix={mix}></div>
 	<div class="container">
 		<div class="color-type">
@@ -53,10 +53,10 @@
 	<span>↓</span>
 	<code>{result}</code>
 	<code>splitResult: {JSON.stringify(splitResult, null)}</code>
-</Template>
+</div>
 
 <style lang="scss">
-	:global(.page) {
+	.page {
 		display: flex;
 		flex-direction: column;
 	}

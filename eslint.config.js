@@ -1,13 +1,11 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import globals from "globals";
-
-import parser from "svelte-eslint-parser";
+import svelteParser from "svelte-eslint-parser";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 
 import js from "@eslint/js";
 import ts from "typescript-eslint";
+import globals from "globals";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +20,9 @@ const compat = new FlatCompat({
 // "error" | 2
 
 export default [
+	js.configs.recommended,
+	...ts.configs.recommended,
+	...compat.extends("plugin:svelte/recommended", "prettier"),
 	{
 		ignores: [
 			"**/.DS_Store",
@@ -37,10 +38,9 @@ export default [
 			"**/yarn.lock",
 		],
 	},
-	...compat.extends("eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:svelte/recommended", "prettier"),
 	{
 		plugins: {
-			"@typescript-eslint": typescriptEslint,
+			"@typescript-eslint": ts.plugin,
 		},
 		languageOptions: {
 			globals: {
@@ -59,7 +59,7 @@ export default [
 	{
 		files: ["**/*.svelte"],
 		languageOptions: {
-			parser: parser,
+			parser: svelteParser,
 			ecmaVersion: 6,
 			sourceType: "script",
 			parserOptions: {

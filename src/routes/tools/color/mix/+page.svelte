@@ -56,7 +56,7 @@
 </Template>
 
 <style lang="scss">
-	Template {
+	:global(.page) {
 		display: flex;
 		flex-direction: column;
 	}

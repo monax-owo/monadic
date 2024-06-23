@@ -2,7 +2,9 @@
 	//
 </script>
 
-<slot></slot>
+<div class="page">
+	<slot></slot>
+</div>
 
 <style lang="scss">
 	// 

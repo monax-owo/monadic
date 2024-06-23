@@ -1,25 +1,32 @@
 <script lang="ts">
+	import Template from "$lib/component/Template.svelte";
 	import { afterUpdate } from "svelte";
-	let cssVariable: Element;
+	let el: Element;
+	// Default value
 	let [color1, color2]: string[] = ["#000", "#fff"];
 	let [p1, p2]: number[] = [20, 80];
+	// color type
 	const colorType = ["srgb", "srgb-linear", "lab", "oklab", "xyz", "xyz-d50", "xyz-d65"] as const;
 	type RectangularColorSpace = (typeof colorType)[number];
-	let selectedColorType: number = 0;
+	// current
+	let selectIndex: number = 0;
 	let currentColorType: RectangularColorSpace;
-	$: currentColorType = colorType[selectedColorType];
-	$: mix = `color-mix(${currentColorType},${color1} ${p1}%,${color2} ${p2}%)`;
-	let resuluMix: string;
+	$: currentColorType = colorType[selectIndex];
+	$: mix = `color-mix(in ${currentColorType}, ${color1} ${p1}%, ${color2} ${p2}%)`;
+	// result
+	let result: string;
+	let splitResult: string[];
 	afterUpdate(() => {
-		resuluMix = window.getComputedStyle(cssVariable).getPropertyValue("background-color");
+		result = window.getComputedStyle(el).getPropertyValue("background-color");
+		splitResult = result.replace(/color|[\(\)]/g, "").split(" ");
 	});
 </script>
 
-<div class="page">
-	<div class="view" bind:this={cssVariable} style:--mix={mix}></div>
+<Template>
+	<div class="view" bind:this={el} style:--mix={mix}></div>
 	<div class="container">
 		<div class="color-type">
-			<select bind:value={selectedColorType}>
+			<select bind:value={selectIndex}>
 				{#each colorType as type, i}
 					<option value={i}>{type}</option>
 				{/each}
@@ -44,11 +51,12 @@
 	</div>
 	<code>{mix}</code>
 	<span>↓</span>
-	<code>{resuluMix}</code>
-</div>
+	<code>{result}</code>
+	<code>splitResult: {JSON.stringify(splitResult, null)}</code>
+</Template>
 
 <style lang="scss">
-	.page {
+	Template {
 		display: flex;
 		flex-direction: column;
 	}
@@ -64,6 +72,7 @@
 		}
 	}
 	.color-type {
+		--test: rgb(96, 96, 96);
 	}
 
 	.prop {

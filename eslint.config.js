@@ -1,11 +1,13 @@
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import globals from "globals";
-import tsParser from "@typescript-eslint/parser";
+
 import parser from "svelte-eslint-parser";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
+
+import js from "@eslint/js";
+import ts from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,7 +47,7 @@ export default [
 				...globals.browser,
 				...globals.node,
 			},
-			parser: tsParser,
+			parser: ts.parser,
 			ecmaVersion: 6,
 			sourceType: "module",
 			parserOptions: {
@@ -61,7 +63,7 @@ export default [
 			ecmaVersion: 6,
 			sourceType: "script",
 			parserOptions: {
-				parser: "@typescript-eslint/parser",
+				parser: ts.parser,
 			},
 		},
 	},

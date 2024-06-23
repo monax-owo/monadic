@@ -64,7 +64,6 @@
 		}
 	}
 	.color-type {
-
 	}
 
 	.prop {

@@ -13,12 +13,6 @@
 </div>
 
 <style lang="scss">
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-
 	.header {
 		padding: 0 36px;
 		width: 100%;
@@ -37,9 +31,7 @@
 		height: var(--Header-h);
 		& :global() {
 			gap: 16px;
-		}
-		:global(> *) {
-			color: var(--text);
+			color: #00ffff;
 		}
 		:global(> [slot="logo"]) {
 			display: flex;

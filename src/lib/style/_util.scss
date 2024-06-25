@@ -23,7 +23,7 @@
 .hover-1 {
 	transition: all var(--t-duration);
 	border-radius: var(--b-radius);
-
+	color: var(--text);
 	&:hover {
 		background-color: var(--hover-bg);
 		color: var(--highlight-text);

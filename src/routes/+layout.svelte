@@ -48,12 +48,12 @@
 
 <div id="app">
 	<Header>
-		<a class="logo hover-1" href="{base}/" slot="logo">Monadic</a>
+		<a class="hover-1" href="{base}/" slot="logo">Monadic</a>
 		<form
 			class="url-input"
 			method="post"
 			use:enhance={async ({ formData }) => {
-				const url = formData.get("url").toString();
+				const url = await formData.get("url").toString();
 				goto(url, { noScroll: true });
 			}}>
 			<input type="text" name="url" bind:value={nowRouteId} />
@@ -121,7 +121,6 @@
 		& a {
 			border-radius: var(--b-radius);
 			padding: 6px;
-			color: var(--text);
 		}
 	}
 </style>

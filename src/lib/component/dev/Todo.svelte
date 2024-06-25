@@ -6,7 +6,9 @@
 </script>
 
 <div id="Todo">
-	<div class="attention">🚧under construction🚧</div>
+	<div class="attention">
+		<p>🚧under construction🚧</p>
+	</div>
 	<div class="comment">
 		<slot></slot>
 	</div>
@@ -17,7 +19,7 @@
 		margin: 12px 0;
 		border-radius: 12px;
 		background: orange;
-		padding: 24px;
+		padding: 12px 24px;
 		color: var(--bg);
 	}
 	.attention {
@@ -25,5 +27,8 @@
 	}
 	.comment {
 		text-align: center;
+		:global(> *) {
+			margin: 6px 12px;
+		}
 	}
 </style>

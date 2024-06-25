@@ -4,11 +4,15 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: "404.html",
+		}),
+		alias: {
+			$routes: "src/routes",
+		},
 		paths: {
 			base: process.argv.includes("dev") ? "/dev" : `/${process.env.BASE_PATH}`,
 		},
-		csrf: {},
 	},
 };
 export default config;

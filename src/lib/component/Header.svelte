@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import "$lib/global.scss";
+	// 
 </script>
 
 <div id="Header">

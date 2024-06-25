@@ -22,11 +22,10 @@
 	$: title = setTitle($page.route.id ?? "no title");
 	// form
 	import { enhance } from "$app/forms";
-	import { afterNavigate, beforeNavigate, goto } from "$app/navigation";
+	import { afterNavigate, goto } from "$app/navigation";
 	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
 	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
 	import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
-	import { onMount, beforeUpdate, afterUpdate } from "svelte";
 	let nowRouteId: string = "/";
 	const updateUrlInput = () => {
 		nowRouteId = $page.url.pathname;
@@ -52,9 +51,9 @@
 		<form
 			class="url-input"
 			method="post"
-			use:enhance={async ({ formData }) => {
-				const url = await formData.get("url").toString();
-				goto(url, { noScroll: true });
+			use:enhance={({ formData }) => {
+				// let url = formData.get("url")?.toString() ?? "404";
+				goto(formData.get("url")?.toString() ?? "404", { noScroll: true });
 			}}>
 			<input type="text" name="url" bind:value={nowRouteId} />
 		</form>

@@ -1,3 +1,17 @@
+$breakpoints: (
+	"sm": "screen and (min-width: 640px)",
+	"md": "screen and (min-width: 768px)",
+	"lg": "screen and (min-width: 1024px)",
+	"xl": "screen and (min-width: 1280px)",
+	"2xl": "screen and (min-width: 1536px)",
+);
+
+@mixin media($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
 @mixin shadow-1($blur) {
 	box-shadow: 0 0 $blur 0px var(--s-bg);
 }

@@ -19,7 +19,7 @@
 	let splitResult: string[];
 	afterUpdate(() => {
 		result = window.getComputedStyle(el).getPropertyValue("background-color");
-		splitResult = result.replace(/color|[\(\)]/g, "").split(" ");
+		splitResult = result.replace(/color|[()]/g, "").split(" ");
 	});
 </script>
 

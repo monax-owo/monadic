@@ -22,7 +22,7 @@
 
 <style lang="scss">
 	// @use "$lib/global.scss";
-	:global(:root[theme="retro"]) {
+	:global(:root[data-theme="retro"]) {
 		--bg: #c7bfa9;
 		--text: #4b4b4b;
 		--b-dark: color-mix(in srgb, var(--bg) 90%, #000);

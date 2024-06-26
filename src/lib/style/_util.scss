@@ -1,8 +1,8 @@
-@use "_variable";
-@use "_function";
-@use "_mixin";
-// @use "_util";
-@use "_theme";
+@use "_variable" as *;
+@use "_function" as *;
+@use "_mixin" as *;
+// @use "_util"  as *;
+@use "_theme" as *;
 
 .flex {
 	display: flex;
@@ -17,13 +17,14 @@
 }
 
 .shadow-1 {
-	@include mixin.shadow-1(16px);
+	@include shadow-1(16px);
 }
 
 .hover-1 {
 	transition: all var(--t-duration);
 	border-radius: var(--b-radius);
 	color: var(--text);
+
 	&:hover {
 		background-color: var(--hover-bg);
 		color: var(--highlight-text);

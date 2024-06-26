@@ -31,8 +31,6 @@
 		nowRouteId = $page.url.pathname;
 	};
 	afterNavigate(() => updateUrlInput());
-	// $: nowRouteId = $page.route.id;
-	//
 </script>
 
 <svelte:head>

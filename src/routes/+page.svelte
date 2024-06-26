@@ -3,6 +3,7 @@
 	import { routeObjToRoutes } from "$lib/route/routes";
 	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import Portfolio from "$lib/component/Portfolio.svelte";
+	import Todo from "$lib/component/dev/Todo.svelte";
 	const Routes = routeObjToRoutes(
 		{
 			"/style": "Style",
@@ -16,6 +17,7 @@
 	<title>Monadic</title>
 </svelte:head>
 
+<Todo></Todo>
 <Portfolio>
 	<svelte:fragment slot="icon">
 		<img src="{base}/icon_512.png" alt="icon" />
@@ -27,5 +29,4 @@
 		<div class="">てすと</div>
 	</svelte:fragment>
 </Portfolio>
-<div></div>
 <RouteLinker routes={Routes}></RouteLinker>

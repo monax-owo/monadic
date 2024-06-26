@@ -5,19 +5,16 @@
 @forward "style/_variable";
 @forward "style/_function";
 @forward "style/_mixin";
-@forward "style/_util";
 @forward "style/_theme";
 
 @use "style/_variable" as *;
 @use "style/_function" as *;
 @use "style/_mixin" as *;
-@use "style/_util" as *;
 @use "style/_theme" as *;
 
 // @use "_variable";
 // @use "_function";
 // @use "_mixin";
-// @use "_util";
 // @use "_theme";
 
 :root {

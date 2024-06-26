@@ -2,7 +2,6 @@
 	import "$lib/global.scss";
 	import { setDefaultTheme } from "$lib/theme/theme";
 	import { onMount } from "svelte";
-
 	onMount(() => {
 		return () => {
 			setDefaultTheme();
@@ -21,12 +20,12 @@
 </div>
 
 <style lang="scss">
-	// @use "$lib/global.scss";
+	@use "$lib/global.scss" as *;
 	:global(:root[data-theme="retro"]) {
 		--bg: #c7bfa9;
 		--text: #4b4b4b;
-		--b-dark: color-mix(in srgb, var(--bg) 90%, #000);
-		--b-light: color-mix(in srgb, var(--bg) 80%, #fff);
+		--b-dark: #{Darkest(var(--bg), 90%)};
+		--b-light: #{Lightest(var(--bg), 80%)};
 		--test: #000;
 		--b-radius: 24px;
 		--s: var(--bg);

@@ -1,8 +1,7 @@
-@use "_variable" as *;
-@use "_function" as *;
-@use "_mixin" as *;
-// @use "_util"  as *;
-@use "_theme" as *;
+@use "style/_variable" as *;
+@use "style/_function" as *;
+@use "style/_mixin" as *;
+@use "style/_theme" as *;
 
 .flex {
 	display: flex;

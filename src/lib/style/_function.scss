@@ -1,5 +1,5 @@
 // #{Darkest()}
-@function Darkest($color, $percent, $percent2) {
+@function Darkest($color, $percent, $percent2: 100% - $percent) {
 	@return color-mix(in srgb, $color $percent, #000 $percent2);
 }
 

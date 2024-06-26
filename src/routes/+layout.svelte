@@ -1,6 +1,7 @@
 <script lang="ts">
 	// rest css
 	import "$lib/global.scss";
+	import "$lib/util.scss";
 	import "sanitize.css/sanitize.css";
 	import "sanitize.css/assets.css";
 	//

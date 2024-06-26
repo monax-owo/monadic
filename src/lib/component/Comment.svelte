@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="Comment"></div>
+<div class="Comment"></div>
 
 <style lang="scss">
 </style>

@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="Header">
+<div class="Header">
 	<header class="header">
 		<div class="header-content shadow-1">
 			<slot name="logo">LOGO HERE</slot>

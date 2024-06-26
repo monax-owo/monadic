@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="Colorpicker"></div>
+<div class="Colorpicker"></div>
 
 <style lang="scss">
 </style>

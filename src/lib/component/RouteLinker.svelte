@@ -3,7 +3,7 @@
 	export let routes: Route[];
 </script>
 
-<div id="RouteLinker">
+<div class="RouteLinker">
 	{#each routes as route}
 		<!-- <div class=""> -->
 		<a href={route.link}>{route.title}</a>

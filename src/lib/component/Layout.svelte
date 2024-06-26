@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="Layout"></div>
+<div class="Layout"></div>
 
 <style lang="scss">
 </style>

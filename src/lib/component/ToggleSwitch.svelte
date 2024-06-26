@@ -2,7 +2,7 @@
 	//
 </script>
 
-<div id="ToggleSwitch">
+<div class="ToggleSwitch">
 	<label for="switch">
 		<input type="checkbox" name="" id="switch" />
 		<div class=""></div>

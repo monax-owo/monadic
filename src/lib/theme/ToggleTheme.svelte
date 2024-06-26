@@ -2,7 +2,7 @@
 	// TODO
 </script>
 
-<div class="toggle"></div>
+<div class="ToggleTheme"></div>
 
 <style lang="scss">
 </style>

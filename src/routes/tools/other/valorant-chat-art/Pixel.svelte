@@ -2,9 +2,7 @@
 	import { onMount } from "svelte";
 	import { PC1, PC2 } from "./store";
 	let char: string = "";
-	let draw: boolean = false;
-	const keydown = () => (draw = true);
-	const keyup = () => (draw = false);
+	let draw: boolean;
 	const p = (PC: string) => (char = PC);
 	const over = (e: MouseEvent, PC: string) => {
 		if (draw) {
@@ -13,7 +11,6 @@
 	onMount(() => () => (draw = false));
 </script>
 
-<svelte:window on:keydown={() => keydown()} on:keyup={() => keyup} />
 <button type="button" class="Pixel" on:click={() => p($PC1)} on:mouseover={e => over(e, $PC1)}>
 	<span>{char}</span>
 </button>
@@ -26,6 +23,8 @@
 		--canvas-size: 16px;
 		padding: 0;
 		width: var(--canvas-size);
+		max-width: var(--canvas-size);
+		display: block;
 		height: var(--canvas-size);
 		overflow: hidden;
 		@include media(sm) {
@@ -34,5 +33,10 @@
 		@include media(md) {
 			--canvas-size: 32px;
 		}
+	}
+	span {
+		font-size: calc(var(--canvas-size) - 2px);
+		line-height: 1;
+		font-family: "Noto Sans JP Variable", sans-serif;
 	}
 </style>

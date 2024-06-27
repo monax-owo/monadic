@@ -1,42 +1,26 @@
 <script lang="ts">
 	import Todo from "$lib/component/dev/Todo.svelte";
-	import Pixel from "./Pixel.svelte";
-	import { PC1, PC2 } from "./store";
-	const col = 5;
-	const row = 26;
+	import Canvas from "./Canvas.svelte";
+	import { PC1, PC2, paintCode } from "./store";
+
 	let canvasSize: string;
-	let val1: number;
-	let val2: number;
-	$: PC1.set(paintCode[val1]);
-	let paintCode: string[] = ["█", "2", "+", "a"];
+	let val1: number = 0;
+	let val2: number = 0;
+	paintCode.set(["█", "1", "あ", "A", "a", "亜", "ア"]);
+	$: PC1.set($paintCode[val1]);
 </script>
 
-<Todo></Todo>
-<input type="number" bind:value={val1} />
-<input type="number" bind:value={val2} />
+<Todo>
+	<p>%指定する</p>
+	<a href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid-constrained-proportions-11">doc</a>
+</Todo>
+<input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />
+<input type="number" bind:value={val2} min="0" max={$paintCode.length - 1} />
 <input type="text" bind:value={canvasSize} />
 <div class="paint" style:--canvas-size="{canvasSize}px">
-	<div class="flex flex-col col">
-		{#each Array(col) as _, colIndex}
-			<div class="flex flex-row row">
-				{#each Array(row) as _, rowIndex}
-					<Pixel></Pixel>
-				{/each}
-			</div>
-		{/each}
-	</div>
+	<Canvas></Canvas>
 </div>
+<code>{JSON.stringify($paintCode)}</code>
 
 <style lang="scss">
-	.paint {
-		div {
-			gap: 2px;
-		}
-	}
-	.col {
-		height: auto;
-	}
-	.row {
-		//
-	}
 </style>

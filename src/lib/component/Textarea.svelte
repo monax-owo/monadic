@@ -18,7 +18,7 @@
 </div>
 
 <style lang="scss">
-	#Textarea {
+	.Textarea {
 		position: relative;
 
 		& > * {

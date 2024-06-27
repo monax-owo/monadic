@@ -1,24 +1,26 @@
 <script lang="ts">
 	import Todo from "$lib/component/dev/Todo.svelte";
-	import Canvas from "./Canvas.svelte";
-	import { paintChar1, paintChar2 } from "./store";
+	import Pixel from "./Pixel.svelte";
+	import { PC1, PC2 } from "./store";
 	const col = 5;
 	const row = 26;
 	let canvasSize: string;
-	let paintCode: Array<string> = ["█"];
+	let val1: number;
+	let val2: number;
+	$: PC1.set(paintCode[val1]);
+	let paintCode: string[] = ["█", "2", "+", "a"];
 </script>
 
-<Todo>
-	<p>@include, routes/+page.svelte</p>
-	<p>{paintChar1}</p>
-</Todo>
+<Todo></Todo>
+<input type="number" bind:value={val1} />
+<input type="number" bind:value={val2} />
 <input type="text" bind:value={canvasSize} />
 <div class="paint" style:--canvas-size="{canvasSize}px">
 	<div class="flex flex-col col">
 		{#each Array(col) as _, colIndex}
 			<div class="flex flex-row row">
 				{#each Array(row) as _, rowIndex}
-					<Canvas></Canvas>
+					<Pixel></Pixel>
 				{/each}
 			</div>
 		{/each}
@@ -35,6 +37,6 @@
 		height: auto;
 	}
 	.row {
-
+		//
 	}
 </style>

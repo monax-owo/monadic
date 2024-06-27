@@ -44,7 +44,7 @@
 	<!-- https://developer.mozilla.org/ja/docs/Learn/HTML/Howto/Use_data_attributes -->
 </svelte:head>
 
-<div id="app">
+<div class="app">
 	<Header>
 		<a class="hover-1" href="{base}/" slot="logo">Monadic</a>
 		<form
@@ -80,7 +80,7 @@
 	:global(html) {
 		background: var(--bg);
 	}
-	#app {
+	.app {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

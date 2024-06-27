@@ -12,7 +12,7 @@
 </div>
 
 <style lang="scss">
-	#RouteLinker {
+	.RouteLinker {
 		display: flex;
 		flex-direction: column;
 		a {

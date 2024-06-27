@@ -5,7 +5,7 @@
 	}
 </script>
 
-<div id="Todo">
+<div class="Todo">
 	<div class="attention">
 		<p>🚧under construction🚧</p>
 	</div>
@@ -15,7 +15,7 @@
 </div>
 
 <style lang="scss">
-	#Todo {
+	.Todo {
 		margin: 12px 0;
 		border-radius: 12px;
 		background: orange;

@@ -14,7 +14,7 @@
 </div>
 
 <style lang="scss">
-	#Portfolio {
+	.Portfolio {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

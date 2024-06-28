@@ -3,7 +3,7 @@
 	import Canvas from "./Canvas.svelte";
 	import { PC1, PC2, paintCode } from "./store";
 
-	let canvasSize: string;
+	let canvasSize: string = "0";
 	let val1: number = 0;
 	let val2: number = 0;
 	paintCode.set(["█", "1", "あ", "A", "a", "亜", "ア"]);

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { PC1, PC2 } from "./store";
+	export let id;
 	let char: string = "";
 	let draw: boolean;
 	const p = (PC: string) => (char = PC);
@@ -11,7 +12,7 @@
 	onMount(() => () => (draw = false));
 </script>
 
-<button type="button" class="Pixel" on:click={() => p($PC1)} on:mouseover={e => over(e, $PC1)}>
+<button {id} type="button" class="Pixel" on:click={() => p($PC1)} on:mouseover={e => over(e, $PC1)}>
 	<span>{char}</span>
 </button>
 
@@ -21,11 +22,10 @@
 		appearance: none;
 		border: none;
 		--canvas-size: 16px;
-		padding: 0;
-		width: var(--canvas-size);
-		max-width: var(--canvas-size);
 		display: block;
-		height: var(--canvas-size);
+		padding: 0;
+		// width: var(--canvas-size);
+		// height: var(--canvas-size);
 		overflow: hidden;
 		@include media(sm) {
 			--canvas-size: 24px;

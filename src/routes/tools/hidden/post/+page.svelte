@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Template from "$lib/component/Template.svelte";
 	import Textarea from "$lib/component/Textarea.svelte";
 	// tweet text
 	let text = "";
@@ -9,16 +10,18 @@
 	// Copy
 </script>
 
-<div class="page">
-	<input type="range" min="10" max="60" bind:value={ratio} />
-	<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
-	<div class="link">
-		<button type="button" on:click={() => window.open(tweet)}>Post</button>
-		<button type="button" on:click={() => copy()}></button>
-		<div>{tweet}</div>
+<Template>
+	<div class="page">
+		<input type="range" min="10" max="60" bind:value={ratio} />
+		<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
+		<div class="link">
+			<button type="button" on:click={() => window.open(tweet)}>Post</button>
+			<button type="button" on:click={() => copy()}></button>
+			<div>{tweet}</div>
+		</div>
+		<Textarea on:copy let:copy></Textarea>
 	</div>
-	<Textarea on:copy let:copy></Textarea>
-</div>
+</Template>
 
 <style lang="scss">
 	.page {

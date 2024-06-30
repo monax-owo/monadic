@@ -68,9 +68,7 @@
 			</a>
 		</div>
 	</Header>
-	<div class="content">
-		<slot />
-	</div>
+	<slot />
 </div>
 
 <style lang="scss">
@@ -84,13 +82,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-	.content {
-		margin: 16px auto 0;
-		padding: 0 64px;
-		width: 100%;
-		max-width: 1024px;
-		color: var(--text);
 	}
 	.url-input {
 		// border: 2px solid var(--b-bg);

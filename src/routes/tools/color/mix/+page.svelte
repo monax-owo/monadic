@@ -23,42 +23,44 @@
 	});
 </script>
 
-<Todo>
-	<p>Input要素を右クリックでクリア</p>
-	<p>右クリック2回で通常のコンテキストメニュー</p>
-</Todo>
-<div class="page">
-	<div class="view" bind:this={el} style:--mix={mix}></div>
-	<div class="container">
-		<div class="color-type">
-			<select bind:value={selectIndex} size={colorType.length}>
-				{#each colorType as type, i}
-					<option value={i}>{type}</option>
-				{/each}
-			</select>
-		</div>
-		<div class="prop">
-			<input type="color" bind:value={color1} />
-			<input type="text" bind:value={color1} on:contextmenu|stopPropagation|preventDefault={e => e.currentTarget.select()} />
-			<div class="">
-				<input type="range" min="0" max="100" step="1" bind:value={p1} />
-				<input type="number" bind:value={p1} />
+<Template>
+	<Todo>
+		<p>Input要素を右クリックでクリア</p>
+		<p>右クリック2回で通常のコンテキストメニュー</p>
+	</Todo>
+	<div class="page">
+		<div class="view" bind:this={el} style:--mix={mix}></div>
+		<div class="container">
+			<div class="color-type">
+				<select bind:value={selectIndex} size={colorType.length}>
+					{#each colorType as type, i}
+						<option value={i}>{type}</option>
+					{/each}
+				</select>
+			</div>
+			<div class="prop">
+				<input type="color" bind:value={color1} />
+				<input type="text" bind:value={color1} on:contextmenu|stopPropagation|preventDefault={e => e.currentTarget.select()} />
+				<div class="">
+					<input type="range" min="0" max="100" step="1" bind:value={p1} />
+					<input type="number" bind:value={p1} />
+				</div>
+			</div>
+			<div class="prop">
+				<input type="color" bind:value={color2} />
+				<input type="text" bind:value={color2} />
+				<div class="">
+					<input type="range" min="0" max="100" step="1" bind:value={p2} />
+					<input type="number" bind:value={p2} />
+				</div>
 			</div>
 		</div>
-		<div class="prop">
-			<input type="color" bind:value={color2} />
-			<input type="text" bind:value={color2} />
-			<div class="">
-				<input type="range" min="0" max="100" step="1" bind:value={p2} />
-				<input type="number" bind:value={p2} />
-			</div>
-		</div>
+		<code>{mix}</code>
+		<span>↓</span>
+		<code>{result}</code>
+		<code>splitResult: {JSON.stringify(splitResult, null)}</code>
 	</div>
-	<code>{mix}</code>
-	<span>↓</span>
-	<code>{result}</code>
-	<code>splitResult: {JSON.stringify(splitResult, null)}</code>
-</div>
+</Template>
 
 <style lang="scss">
 	.page {

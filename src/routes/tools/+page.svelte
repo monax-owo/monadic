@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Template from "$lib/component/Template.svelte";
 	import { routeObjToRoutes } from "$lib/route/routes";
 	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import Todo from "$lib/component/dev/Todo.svelte";
@@ -17,5 +18,7 @@
 	);
 </script>
 
-<Todo></Todo>
-<RouteLinker routes={Routes}></RouteLinker>
+<Template>
+	<Todo></Todo>
+	<RouteLinker routes={Routes}></RouteLinker>
+</Template>

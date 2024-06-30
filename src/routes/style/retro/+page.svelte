@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Template from "$lib/component/Template.svelte";
 	import "$lib/global.scss";
 	import { setDefaultTheme } from "$lib/theme/theme";
 	import { onMount } from "svelte";
@@ -15,9 +16,11 @@
 	</script>
 </svelte:head>
 
-<div class="page">
-	<div class="retro-1">RETRO</div>
-</div>
+<Template>
+	<div class="page">
+		<div class="retro-1">RETRO</div>
+	</div>
+</Template>
 
 <style lang="scss">
 	@use "$lib/global.scss" as *;

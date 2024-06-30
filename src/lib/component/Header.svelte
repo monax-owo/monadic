@@ -27,7 +27,7 @@
 		border-radius: var(--Header-radius);
 		background: var(--bg);
 		padding: 0 16px;
-		max-width: 1024px;
+		max-width: var(--Header-max-w);
 		height: var(--Header-h);
 		& :global() {
 			gap: 16px;

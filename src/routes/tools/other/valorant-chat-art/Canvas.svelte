@@ -2,7 +2,7 @@
 	import Pixel from "./Pixel.svelte";
 	import { CanvasArrayGen, PC1, canvasArray } from "./store";
 	const col = 5;
-	const row = 8;
+	const row = 26;
 	canvasArray.set(CanvasArrayGen(col, row, ""));
 	let draw: boolean = false;
 	const keydown = () => (draw = true);
@@ -27,11 +27,14 @@
 
 <style lang="scss">
 	.Canvas {
-		--gap: 0.03%;
+		--gap: 0.02%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		width: 100%;
+		& :global(svg) {
+			font-family: "Noto Sans JP Variable", sans-serif;
+		}
 	}
 	.row {
 		display: flex;

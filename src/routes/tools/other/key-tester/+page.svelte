@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Template from "$lib/component/Template.svelte";
 	let histories: string[] = [];
 	function keyTester(event: { key: string }) {
 		histories = [event.key, ...histories];
@@ -8,15 +9,17 @@
 
 <svelte:window on:keydown={keyTester} />
 
-<div class="page shadow-1">
-	{#if histories.length !== 0}
-		{#each histories as history}
-			<li>{history}</li>
-		{/each}
-	{:else}
-		<div>press key!</div>
-	{/if}
-</div>
+<Template>
+	<div class="page shadow-1">
+		{#if histories.length !== 0}
+			{#each histories as history}
+				<li>{history}</li>
+			{/each}
+		{:else}
+			<div>press key!</div>
+		{/if}
+	</div>
+</Template>
 
 <style lang="scss">
 	.page {

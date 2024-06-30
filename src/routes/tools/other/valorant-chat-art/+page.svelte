@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Todo from "$lib/component/dev/Todo.svelte";
 	import Canvas from "./Canvas.svelte";
-	import { PC1, PC2, paintCode } from "./store";
+	import { PC1, PC2, paintCode, canvasArray } from "./store";
 
 	let canvasSize: string = "0";
 	let val1: number = 0;
@@ -21,6 +21,7 @@
 	<Canvas></Canvas>
 </div>
 <code>{JSON.stringify($paintCode)}</code>
+<code>{JSON.stringify($canvasArray)}</code>
 
 <style lang="scss">
 </style>

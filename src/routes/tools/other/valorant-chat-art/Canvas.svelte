@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Pixel from "./Pixel.svelte";
+	import { CanvasArrayGen, PC1, canvasArray } from "./store";
 	const col = 5;
-	const row = 26;
+	const row = 8;
+	canvasArray.set(CanvasArrayGen(col, row, ""));
 	let draw: boolean = false;
 	const keydown = () => (draw = true);
 	const keyup = () => (draw = false);
@@ -13,47 +15,33 @@
 	{#each Array(col) as _, colIndex}
 		<div class="row">
 			{#each Array(row) as _, rowIndex}
-				<Pixel id={`${colIndex}[${rowIndex}]`}></Pixel>
+				<Pixel
+					id={`${colIndex}[${rowIndex}]`}
+					on:click={() => {
+						$canvasArray[colIndex][rowIndex] = $PC1;
+					}}></Pixel>
 			{/each}
 		</div>
 	{/each}
 </div>
 
 <style lang="scss">
-	@function fn1($axis) {
-		@return calc(#{$axis} * calc(var(--size) + var(--gap)) - var(--gap));
-	}
 	.Canvas {
-		--size: 12px;
-		--gap: 2px;
+		--gap: 0.03%;
 		display: flex;
 		flex-direction: column;
-		align-content: space-between;
-		// flex-wrap: nowrap;
-		// gap: var(--gap);
-		// (row * (size + gap)) - gap
-		// ((row * size) + (row * gap) - gap)
-		// ((row * size) + ((row - 1) * gap))
-		// width: fn1(var(--row));
+		justify-content: space-between;
 		width: 100%;
-		// (col * (size + gap)) - gap
-		height: fn1(var(--col));
 	}
 	.row {
 		display: flex;
-		// flex-grow: 0;
-		// flex-shrink: 0;
-		// flex-basis: auto;
 		flex-direction: row;
 		justify-content: space-between;
-		// flex-wrap: nowrap;
-		// gap: var(--gap);
-		height: calc(100% / var(--col));
-
-		:global(> button) {
-			background: #fff;
-			width: 100%;
-			height: 100%;
-		}
+		width: 100%;
+		height: calc(calc(100% * var(--col)) - calc(var(--gap) * calc(var(--col) - 1)));
+	}
+	.row :global(.Pixel) {
+		margin-bottom: calc(var(--gap) * calc(var(--row) - 1));
+		width: calc(calc(100% / var(--row)) - calc(var(--gap) * calc(var(--row) - 1)));
 	}
 </style>

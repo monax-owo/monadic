@@ -12,30 +12,36 @@
 	onMount(() => () => (draw = false));
 </script>
 
-<button {id} type="button" class="Pixel" on:click={() => p($PC1)} on:mouseover={e => over(e, $PC1)}>
-	<span>{char}</span>
-</button>
+<div class="Pixel">
+	<button {id} type="button" class="Pixel" on:click on:click={() => p($PC1)} on:mouseover={e => over(e, $PC1)}>
+		<span>{char}</span>
+	</button>
+</div>
 
 <style lang="scss">
 	@use "$lib/style/_mixin" as *;
 	.Pixel {
-		appearance: none;
-		border: none;
-		--canvas-size: 16px;
-		display: block;
-		padding: 0;
-		// width: var(--canvas-size);
-		// height: var(--canvas-size);
-		overflow: hidden;
-		@include media(sm) {
-			--canvas-size: 24px;
-		}
-		@include media(md) {
-			--canvas-size: 32px;
+		& button {
+			display: block;
+			position: relative;
+			appearance: none;
+			border: none;
+			padding: 0;
+			padding-bottom: 100%;
+			width: 100%;
+			overflow: hidden;
 		}
 	}
 	span {
-		font-size: calc(var(--canvas-size) - 2px);
+		// display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 190%;
 		line-height: 1;
 		font-family: "Noto Sans JP Variable", sans-serif;
 	}

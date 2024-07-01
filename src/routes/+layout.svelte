@@ -24,9 +24,9 @@
 	// form
 	import { enhance } from "$app/forms";
 	import { afterNavigate, goto } from "$app/navigation";
-	import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-	import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
-	import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
+	import { IconBrandGithub } from "@tabler/icons-svelte/IconBrandGithub.svelte";
+	import { IconBrandSvelte } from "@tabler/icons-svelte/IconBrandSvelte.svelte";
+	import { IconBrandYoutube } from "@tabler/icons-sve";
 	let nowRouteId: string = "/";
 	const updateUrlInput = () => {
 		nowRouteId = $page.url.pathname;

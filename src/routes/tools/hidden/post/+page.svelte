@@ -16,10 +16,10 @@
 		<textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}></textarea>
 		<div class="link">
 			<button type="button" on:click={() => window.open(tweet)}>Post</button>
-			<button type="button" on:click={() => copy()}></button>
+			<button type="button" on:click={() => /* copy() */ {}}></button>
 			<div>{tweet}</div>
 		</div>
-		<Textarea on:copy let:copy></Textarea>
+		<Textarea></Textarea>
 	</div>
 </Template>
 

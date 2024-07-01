@@ -1,8 +1,7 @@
-// "Link":"Name"
 import { base } from "$app/paths";
 // base = base path
 // route = $page.url.id
-
+// "Link":"Name"
 export const routeObjToRoutes = (OBJ: object, BASE: string) => {
 	return Object.entries(OBJ)
 		.map(list => [`${BASE}${list[0]}`, list[1]])

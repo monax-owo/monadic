@@ -43,7 +43,7 @@
 		"@fontsource-variable/montserrat": "^5.0.19",
 		"@fontsource-variable/noto-sans-jp": "^5.0.19",
 		"@fontsource/press-start-2p": "^5.0.20",
-		"@tabler/icons-svelte": "^3.6.0",
+		"@tabler/icons-svelte": "3.6.0",
 		"sanitize.css": "^13.0.0"
 	}
 }

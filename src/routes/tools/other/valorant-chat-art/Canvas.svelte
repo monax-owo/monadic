@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Pixel from "./Pixel.svelte";
 	import { canvasArrayGen, PC1, defaulPixelChar, canvasArray } from "./store";
-	const col = 5;
-	const row = 26;
+	let col = 5;
+	let row = 26;
 	defaulPixelChar.set("░");
-	canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
+	const upDateCanvas = () => canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
+	upDateCanvas();
 	let draw: boolean = false;
 	const keydown = () => (draw = true);
 	const keyup = () => (draw = false);

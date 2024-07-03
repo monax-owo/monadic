@@ -24,6 +24,9 @@
 	<Todo>
 		<a href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid-constrained-proportions-11">doc</a>
 	</Todo>
+	<div class="icon">
+
+	</div>
 	<input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />
 	<input type="number" bind:value={val2} min="0" max={$paintCode.length - 1} />
 	<input type="text" bind:value={canvasSize} />
@@ -43,5 +46,6 @@
 		display: block;
 		border: 1px solid white;
 		padding: 12px;
+		line-height: 1.4rem;
 	}
 </style>

@@ -40,7 +40,10 @@
 			</div>
 			<div class="prop">
 				<input type="color" bind:value={color1} />
-				<input type="text" bind:value={color1} on:contextmenu|stopPropagation|preventDefault={e => e.currentTarget.select()} />
+				<input
+					type="text"
+					bind:value={color1}
+					on:contextmenu|stopPropagation|preventDefault={e => e.currentTarget.select()} />
 				<div class="">
 					<input type="range" min="0" max="100" step="1" bind:value={p1} />
 					<input type="number" bind:value={p1} />

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { copy } from "$lib/component/dev/clipboard";
 	import Todo from "$lib/component/dev/Todo.svelte";
+	import Doc from "$lib/component/dev/Doc.svelte";
 	import Template from "$lib/component/Template.svelte";
 	import Canvas from "./Canvas.svelte";
 	import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
@@ -22,11 +23,14 @@
 
 <Template>
 	<Todo>
-		<a href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid-constrained-proportions-11">doc</a>
+		<p>左クリック長押しで書けるようにする</p>
+		<p>文字の種類を追加する</p>
+		<p>文字を選びやすくする</p>
+		<Doc
+			href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid-constrained-proportions-11"
+		></Doc>
 	</Todo>
-	<div class="icon">
-
-	</div>
+	<div class="icon"> </div>
 	<input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />
 	<input type="number" bind:value={val2} min="0" max={$paintCode.length - 1} />
 	<input type="text" bind:value={canvasSize} />

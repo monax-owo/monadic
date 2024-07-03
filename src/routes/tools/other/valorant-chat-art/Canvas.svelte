@@ -7,11 +7,14 @@
 	const upDateCanvas = () => canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
 	upDateCanvas();
 	let draw: boolean = false;
-	const keydown = () => (draw = true);
-	const keyup = () => (draw = false);
+	const mousedown = () => (draw = true);
+	const mouseup = () => (draw = false);
 </script>
 
-<svelte:window on:keydown={() => keydown()} on:keyup={() => keyup} />
+<svelte:window
+	on:mousedown={() => mousedown()}
+	on:mouseup={() => mouseup()}
+	on:beforeunload={() => {}} />
 
 <div class="Canvas" style:--col={col} style:--row={row}>
 	{#each Array(col) as _, colIndex}
@@ -22,7 +25,8 @@
 					indexX={row}
 					on:click={() => {
 						$canvasArray[colIndex][rowIndex] = $PC1;
-					}}></Pixel>
+					}}
+					on:ho></Pixel>
 			{/each}
 		</div>
 	{/each}
@@ -30,7 +34,7 @@
 
 <style lang="scss">
 	.Canvas {
-		--gap: 0.02%;
+		--gap: 0.01%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

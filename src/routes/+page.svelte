@@ -4,7 +4,7 @@
 	import { routeObjToRoutes } from "$lib/route/routes";
 	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import Portfolio from "$lib/component/Portfolio.svelte";
-	import Todo from "$lib/component/dev/Todo.svelte";
+	import Task from "./Task.svelte";
 	const Routes = routeObjToRoutes(
 		{
 			"/style": "Style",
@@ -12,6 +12,7 @@
 		},
 		base
 	);
+	if
 </script>
 
 <svelte:head>
@@ -19,7 +20,7 @@
 </svelte:head>
 
 <Template>
-	<Todo></Todo>
+	<Task></Task>
 	<Portfolio>
 		<svelte:fragment slot="icon">
 			<img src="{base}/icon_512.png" alt="icon" />

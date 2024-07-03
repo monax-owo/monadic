@@ -8,20 +8,26 @@
 	if (char === "" || !char) throw new Error("char is not defined");
 	let draw: boolean;
 	const p = (PC: string) => (char = PC);
-	const over = (e: MouseEvent, PC: string) => {
-		if (draw) {
-		}
+	const over = (PC: string) => {
+		if (draw) p(PC);
 	};
+
 	onMount(() => {
 		console.log("mount");
 	});
 </script>
 
 <div class="Pixel">
-	<button id={`${indexY}[${indexX}]`} type="button" on:click on:click={() => p($PC1)}>
-		<!-- on:mouseover={e => over(e, $PC1)} -->
-		<svg viewBox="0 0 100 100" fill="black" text-anchor="middle" dominant-baseline="text-bottom">
-			<text x="50" y="85" font-size="90">{char}</text>
+	<button
+		id={`${indexY}[${indexX}]`}
+		type="button"
+		on:focus={() => over($PC1)}
+		on:mouseover={() => over($PC1)}
+		on:click
+		on:click={() => p($PC1)}>
+		<svg viewBox="0 0 100 100" fill="black">
+			<text x="50" y="-20" font-size="92" text-anchor="middle" dominant-baseline="text-before-edge"
+				>{char}</text>
 		</svg>
 	</button>
 </div>
@@ -40,10 +46,12 @@
 			width: 100%;
 			overflow: hidden;
 			user-select: none;
+			&:hover {
+				// background-color: var();
+			}
 		}
 	}
 	svg {
-		// display: inline-block;
 		position: absolute;
 		top: 0;
 		left: 0;

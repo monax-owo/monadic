@@ -1,19 +1,24 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { PC1, PC2 } from "./store";
-	export let id;
-	let char: string = "█";
+	import { PC1, PC2, defaulPixelChar } from "./store";
+	export let indexY: number;
+	export let indexX: number;
+	if (!indexY || !indexX) throw new Error("index is not defined");
+	let char: string = $defaulPixelChar;
+	if (char === "" || !char) throw new Error("char is not defined");
 	let draw: boolean;
 	const p = (PC: string) => (char = PC);
 	const over = (e: MouseEvent, PC: string) => {
 		if (draw) {
 		}
 	};
-	onMount(() => () => (draw = false));
+	onMount(() => {
+		console.log("mount");
+	});
 </script>
 
 <div class="Pixel">
-	<button {id} type="button" on:click on:click={() => p($PC1)}>
+	<button id={`${indexY}[${indexX}]`} type="button" on:click on:click={() => p($PC1)}>
 		<!-- on:mouseover={e => over(e, $PC1)} -->
 		<svg viewBox="0 0 100 100" fill="black" text-anchor="middle" dominant-baseline="text-bottom">
 			<text x="50" y="85" font-size="90">{char}</text>
@@ -29,7 +34,7 @@
 			position: relative;
 			appearance: none;
 			border: none;
-			background-color: var(--);
+			background-color: transparent;
 			padding: 0;
 			padding-bottom: 100%;
 			width: 100%;

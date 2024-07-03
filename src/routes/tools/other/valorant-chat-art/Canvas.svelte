@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Pixel from "./Pixel.svelte";
-	import { CanvasArrayGen, PC1, canvasArray } from "./store";
+	import { canvasArrayGen, PC1, defaulPixelChar, canvasArray } from "./store";
 	const col = 5;
 	const row = 26;
-	canvasArray.set(CanvasArrayGen(col, row, ""));
+	defaulPixelChar.set("░");
+	canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
 	let draw: boolean = false;
 	const keydown = () => (draw = true);
 	const keyup = () => (draw = false);
@@ -16,7 +17,8 @@
 		<div class="row">
 			{#each Array(row) as _, rowIndex}
 				<Pixel
-					id={`${colIndex}[${rowIndex}]`}
+					indexY={col}
+					indexX={row}
 					on:click={() => {
 						$canvasArray[colIndex][rowIndex] = $PC1;
 					}}></Pixel>
@@ -31,6 +33,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin: 12px 0;
+		border-radius: var(--component-b-radius);
+		background-color: var(--text);
+		padding: 8px;
 		width: 100%;
 		& :global(svg) {
 			font-family: "Noto Sans JP Variable", sans-serif;

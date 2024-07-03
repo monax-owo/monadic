@@ -17,7 +17,7 @@
 <style lang="scss">
 	.Todo {
 		margin: 12px 0;
-		border-radius: 12px;
+		border-radius: var(--component-b-radius);
 		background: orange;
 		padding: 12px 24px;
 		color: var(--bg);

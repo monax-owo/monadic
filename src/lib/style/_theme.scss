@@ -25,6 +25,7 @@
 }
 
 @mixin variable {
+	--component-b-radius: 12px;
 	--Header-h: 56px;
 	--Header-max-w: 1536px;
 	--Header-radius: 12px;

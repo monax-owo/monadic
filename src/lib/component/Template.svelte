@@ -3,7 +3,7 @@
 </script>
 
 <div class="Template" style:--test={test}>
-	<slot></slot>
+	<slot><div>page is none</div></slot>
 </div>
 
 <style lang="scss">

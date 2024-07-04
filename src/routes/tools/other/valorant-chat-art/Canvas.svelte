@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Pixel from "./Pixel.svelte";
-	import { canvasArrayGen, PC1, defaulPixelChar, canvasArray } from "./store";
+	import { canvasArray, canvasArrayGen, defaulPixelChar, PC1 } from "./store";
 	let col = 5;
 	let row = 26;
 	defaulPixelChar.set("░");

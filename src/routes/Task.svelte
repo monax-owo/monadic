@@ -8,9 +8,7 @@
 	}
 </script>
 
-<div>
-  
-</div>
+<div> </div>
 
 <style lang="scss">
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Template from "$lib/component/Template.svelte";
 	import { base } from "$app/paths";
 	import RouteLinker from "$lib/component/RouteLinker.svelte";
+	import Template from "$lib/component/Template.svelte";
 	import { routeObjToRoutes } from "$lib/route/routes";
 
 	const Routes = routeObjToRoutes(

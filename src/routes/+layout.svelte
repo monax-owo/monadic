@@ -2,8 +2,8 @@
 	// rest css
 	import "$lib/global.scss";
 	import "$lib/util.scss";
-	import "sanitize.css/sanitize.css";
 	import "sanitize.css/assets.css";
+	import "sanitize.css/sanitize.css";
 	//
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";

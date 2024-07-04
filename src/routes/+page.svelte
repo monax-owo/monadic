@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Template from "$lib/component/Template.svelte";
 	import { base } from "$app/paths";
-	import { routeObjToRoutes } from "$lib/route/routes";
-	import RouteLinker from "$lib/component/RouteLinker.svelte";
 	import Portfolio from "$lib/component/Portfolio.svelte";
+	import RouteLinker from "$lib/component/RouteLinker.svelte";
+	import Template from "$lib/component/Template.svelte";
+	import { routeObjToRoutes } from "$lib/route/routes";
 	import Task from "./Task.svelte";
 	const Routes = routeObjToRoutes(
 		{
@@ -12,7 +12,6 @@
 		},
 		base
 	);
-	if
 </script>
 
 <svelte:head>

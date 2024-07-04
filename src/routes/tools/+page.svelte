@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Template from "$lib/component/Template.svelte";
-	import { routeObjToRoutes } from "$lib/route/routes";
-	import RouteLinker from "$lib/component/RouteLinker.svelte";
-	import Todo from "$lib/component/dev/Todo.svelte";
 	import { base } from "$app/paths";
+	import RouteLinker from "$lib/component/RouteLinker.svelte";
+	import Template from "$lib/component/Template.svelte";
+	import Todo from "$lib/component/dev/Todo.svelte";
+	import { routeObjToRoutes } from "$lib/route/routes";
 	const Routes = routeObjToRoutes(
 		{
 			"/color/mix": "Color Mix",

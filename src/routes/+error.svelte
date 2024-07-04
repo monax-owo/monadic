@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Template from "$lib/component/Template.svelte";
 	import { page } from "$app/stores";
+	import Template from "$lib/component/Template.svelte";
 </script>
 
 <Template>

@@ -3,7 +3,7 @@ import { ogpImageGen } from "./ogpgen";
 import type { RequestHandler } from "@sveltejs/kit";
 import NotoSansJP from "./NotoSansJP.ttf";
 
-// export const prerender = true;
+export const prerender = false;
 
 export const GET: RequestHandler = async ({ params }) => {
   const { title } = params;

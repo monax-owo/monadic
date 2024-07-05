@@ -30,9 +30,9 @@ importers:
       '@eslint/js':
         specifier: ^9.6.0
         version: 9.6.0
-      '@sveltejs/adapter-static':
-        specifier: ^3.0.2
-        version: 3.0.2(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))
+      '@sveltejs/adapter-netlify':
+        specifier: ^4.3.0
+        version: 4.3.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))
       '@sveltejs/kit':
         specifier: ^2.5.18
         version: 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6))
@@ -472,6 +472,9 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
+  '@iarna/toml@2.2.5':
+    resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
+
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
     engines: {glibc: '>=2.26', node: ^18.17.0 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0', yarn: '>=3.2.0'}
@@ -722,10 +725,10 @@ packages:
   '@sodaru/yup-to-json-schema@2.0.1':
     resolution: {integrity: sha512-lWb0Wiz8KZ9ip/dY1eUqt7fhTPmL24p6Hmv5Fd9pzlzAdw/YNcWZr+tiCT4oZ4Zyxzi9+1X4zv82o7jYvcFxYA==}
 
-  '@sveltejs/adapter-static@3.0.2':
-    resolution: {integrity: sha512-/EBFydZDwfwFfFEuF1vzUseBoRziwKP7AoHAwv+Ot3M084sE/HTVBHf9mCmXfdM9ijprY5YEugZjleflncX5fQ==}
+  '@sveltejs/adapter-netlify@4.3.0':
+    resolution: {integrity: sha512-lSO3Agv/jPy93KKsj3HSrrBaG1vHe63z+p31l12yGUc2v/jGN94cSnynm540OHMo9ZoFV30H/SbE+lfgxfL2KA==}
     peerDependencies:
-      '@sveltejs/kit': ^2.0.0
+      '@sveltejs/kit': ^2.4.0
 
   '@sveltejs/kit@2.5.18':
     resolution: {integrity: sha512-+g06hvpVAnH7b4CDjhnTDgFWBKBiQJpuSmQeGYOuzbO3SC3tdYjRNlDCrafvDtKbGiT2uxY5Dn9qdEUGVZdWOQ==}
@@ -2195,6 +2198,8 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
+  '@iarna/toml@2.2.5': {}
+
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.2
@@ -2374,9 +2379,12 @@ snapshots:
   '@sodaru/yup-to-json-schema@2.0.1':
     optional: true
 
-  '@sveltejs/adapter-static@3.0.2(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))':
+  '@sveltejs/adapter-netlify@4.3.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))':
     dependencies:
+      '@iarna/toml': 2.2.5
       '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6))
+      esbuild: 0.21.5
+      set-cookie-parser: 2.6.0
 
   '@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)(sass@1.77.6))':
     dependencies:

@@ -4,6 +4,7 @@ import type { RequestHandler } from "@sveltejs/kit";
 import NotoSansJP from "./NotoSansJP.ttf";
 
 export const prerender = true;
+
 export const GET: RequestHandler = async ({ params }) => {
   const { title } = params;
   if (!title) throw new Error("title is not defined");

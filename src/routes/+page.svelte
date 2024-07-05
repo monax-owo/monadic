@@ -9,6 +9,7 @@
 		{
 			"/style": "Style",
 			"/tools": "Mon tools",
+			"/api": "API",
 		},
 		base
 	);

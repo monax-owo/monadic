@@ -4,10 +4,10 @@
 	import "$lib/util.scss";
 	import "sanitize.css/assets.css";
 	import "sanitize.css/sanitize.css";
-	//
+//
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-	// fonts
+// fonts
 	// Montserrat
 	// Supports weights 100-900
 	import "@fontsource-variable/montserrat";
@@ -29,7 +29,7 @@
 	import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
 	let nowRouteId: string = "/";
 	const updateUrlInput = () => {
-		nowRouteId = $page.url.pathname;
+		nowRouteId = $page.url.pathname.replace(base, "");
 	};
 	afterNavigate(() => updateUrlInput());
 </script>
@@ -40,8 +40,6 @@
 	<script>
 		setDefaultTheme();
 	</script>
-	<!-- theme=""からdata-theme=""に移行する -->
-	<!-- https://developer.mozilla.org/ja/docs/Learn/HTML/Howto/Use_data_attributes -->
 </svelte:head>
 
 <div class="app">
@@ -52,7 +50,7 @@
 			method="post"
 			use:enhance={({ formData }) => {
 				// let url = formData.get("url")?.toString() ?? "404";
-				goto(formData.get("url")?.toString() ?? "404", { noScroll: true });
+				goto(`${base}${formData.get("url")?.toString()}` ?? "404", { noScroll: true });
 			}}>
 			<input type="text" name="url" bind:value={nowRouteId} />
 		</form>

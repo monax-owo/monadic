@@ -5,7 +5,7 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
-      edge: false,
+      edge: true,
       split: false,
     }),
     alias: {

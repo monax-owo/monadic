@@ -6,12 +6,12 @@ import NotoSansJP from "./NotoSansJP.ttf";
 export const prerender = true;
 
 export const GET: RequestHandler = async ({ params }) => {
-	const { title } = params;
-	if (!title) throw new Error("title is not defined");
-	const png = await ogpImageGen(title,read(NotoSansJP));
-	return new Response(png, {
-		headers: {
-			"Content-Type": "image/png",
-		},
-	});
+  const { title } = params;
+  if (!title) throw new Error("title is not defined");
+  const png = await ogpImageGen(title, read(NotoSansJP));
+  return new Response(png, {
+    headers: {
+      "Content-Type": "image/png",
+    },
+  });
 };

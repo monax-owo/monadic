@@ -18,15 +18,15 @@
 // @use "_theme";
 
 :root {
-	& {
-		@include variable;
-	}
+  & {
+    @include variable;
+  }
 
-	&[data-theme="light"] {
-		@include light;
-	}
+  &[data-theme="light"] {
+    @include light;
+  }
 
-	&[data-theme="dark"] {
-		@include dark;
-	}
+  &[data-theme="dark"] {
+    @include dark;
+  }
 }

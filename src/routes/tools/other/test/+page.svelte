@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Template from "$lib/component/Template.svelte";
+  import Template from "$lib/component/Template.svelte";
 </script>
 
 <Template></Template>

@@ -4,28 +4,28 @@
 @use "style/_theme" as *;
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .flex-col {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-row {
-	flex-direction: row;
+  flex-direction: row;
 }
 
 .shadow-1 {
-	@include shadow-1(16px);
+  @include shadow-1(16px);
 }
 
 .hover-1 {
-	transition: all var(--t-duration);
-	border-radius: var(--b-radius);
-	color: var(--text);
+  transition: all var(--t-duration);
+  border-radius: var(--b-radius);
+  color: var(--text);
 
-	&:hover {
-		background-color: var(--hover-bg);
-		color: var(--highlight-text);
-	}
+  &:hover {
+    background-color: var(--hover-bg);
+    color: var(--highlight-text);
+  }
 }

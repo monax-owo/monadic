@@ -5,7 +5,7 @@ quoteProps: as-needed
 semi: true
 singleQuote: false
 trailingComma: es5
-useTabs: true
+useTabs: false
 htmlWhitespaceSensitivity: strict
 arrowParens: avoid
 

@@ -3,16 +3,16 @@
   import RouteLinker from "$lib/component/RouteLinker.svelte";
   import Template from "$lib/component/Template.svelte";
   import { routeObjToRoutes } from "$lib/route/routes";
-
+  import Task from "$routes/Task.svelte";
   const Routes = routeObjToRoutes(
     {
-      "/pixel": "Pixel Art CSS",
-      "/retro": "Retro CSS",
+      "/ogp": "OGP",
     },
-    `${base}/style`
+    `${base}/api`
   );
 </script>
 
 <Template>
+  <Task></Task>
   <RouteLinker routes={Routes}></RouteLinker>
 </Template>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	// TODO
+  // TODO
 </script>
 
 <div class="ToggleTheme"></div>

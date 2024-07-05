@@ -8,30 +8,30 @@
 // --hover = :hover()
 
 @mixin light {
-	--bg: #fafafa;
-	--text: #2e2e2e;
-	--s-bg: #00000015;
-	--b-bg: #2e2e2e;
+  --bg: #fafafa;
+  --text: #2e2e2e;
+  --s-bg: #00000015;
+  --b-bg: #2e2e2e;
 }
 
 @mixin dark {
-	--bg: #262626;
-	--text: #d1d1d1;
-	--s-bg: #ffffff96;
-	--b-bg: #8f8f8f;
-	--highlight-bg: #00b3aa;
-	--highlight-text: #{Lightest(var(--highlight-bg), 80%)};
-	--hover-bg: #{Lightest(var(--bg), 80%)};
+  --bg: #262626;
+  --text: #d1d1d1;
+  --s-bg: #ffffff96;
+  --b-bg: #8f8f8f;
+  --highlight-bg: #00b3aa;
+  --highlight-text: #{Lightest(var(--highlight-bg), 80%)};
+  --hover-bg: #{Lightest(var(--bg), 80%)};
 }
 
 @mixin variable {
-	--component-b-radius: 12px;
-	--Header-h: 56px;
-	--Header-max-w: 1536px;
-	--Header-radius: 12px;
-	--Icon-size: 200px;
-	--Icon-b-radius: calc(var(--Icon-size) / 10);
-	--highlight-size: 1px;
-	--b-radius: 8px;
-	--t-duration: 0.2s;
+  --component-b-radius: 12px;
+  --Header-h: 56px;
+  --Header-max-w: 1536px;
+  --Header-radius: 12px;
+  --Icon-size: 200px;
+  --Icon-b-radius: calc(var(--Icon-size) / 10);
+  --highlight-size: 1px;
+  --b-radius: 8px;
+  --t-duration: 0.2s;
 }

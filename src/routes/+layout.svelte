@@ -4,10 +4,10 @@
   import "$lib/util.scss";
   import "sanitize.css/assets.css";
   import "sanitize.css/sanitize.css";
-//
+  //
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-// fonts
+  // fonts
   // Montserrat
   // Supports weights 100-900
   import "@fontsource-variable/montserrat";
@@ -17,6 +17,9 @@
   // Header
   import Header from "$lib/component/Header.svelte";
   // icons
+  import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
+  import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
+  import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
   const iconStrokeWidth = 2;
   // title
   import { setTitle } from "$lib/route/routes";
@@ -24,24 +27,21 @@
   // form
   import { enhance } from "$app/forms";
   import { afterNavigate, goto } from "$app/navigation";
-  import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-  import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
-  import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
   let nowRouteId: string = "/";
   const updateUrlInput = () => {
     nowRouteId = $page.url.pathname.replace(base, "");
   };
   afterNavigate(() => updateUrlInput());
   //
-  export let data;
+  const og = {};
 </script>
 
 <svelte:head>
   <title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
   <!-- ogp -->
-  <meta name="description" content={data.description} />
-  <meta property="og:title" content={title} />
-  <meta property="og:image" content={`baseUrl/blog/ogp/${encodeURIComponent(post.title)}.png`} />
+  <!-- <meta name="description" content={og.description} /> -->
+  <!-- <meta property="og:title" content={og.title} /> -->
+  <!-- <meta property="og:image" content={`baseUrl/blog/ogp/${encodeURIComponent(post.title)}.png`} /> -->
   <!-- <meta property="og:description" content={description} /> -->
   <!-- setting Theme -->
   <script>

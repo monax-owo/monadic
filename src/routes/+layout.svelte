@@ -4,10 +4,10 @@
   import "$lib/util.scss";
   import "sanitize.css/assets.css";
   import "sanitize.css/sanitize.css";
-  //
+//
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  // fonts
+// fonts
   // Montserrat
   // Supports weights 100-900
   import "@fontsource-variable/montserrat";
@@ -32,10 +32,17 @@
     nowRouteId = $page.url.pathname.replace(base, "");
   };
   afterNavigate(() => updateUrlInput());
+  //
+  export let data;
 </script>
 
 <svelte:head>
   <title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
+  <!-- ogp -->
+  <meta name="description" content={data.description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:image" content={`baseUrl/blog/ogp/${encodeURIComponent(post.title)}.png`} />
+  <!-- <meta property="og:description" content={description} /> -->
   <!-- setting Theme -->
   <script>
     setDefaultTheme();

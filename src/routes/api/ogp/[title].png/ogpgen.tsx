@@ -1,7 +1,8 @@
 import satori from "satori";
 import sharp from "sharp";
 import type { ReactNode } from "react";
-
+import { base } from "$app/paths";
+const ogpUrl = (title: string) => `${base}/api/ogp/${encodeURIComponent(title)}.png`;
 const elementGen = (title: string): ReactNode => {
   return (
     <div

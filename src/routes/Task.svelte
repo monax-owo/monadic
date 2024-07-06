@@ -8,7 +8,8 @@
   }
 </script>
 
-<div> </div>
+<div><slot></slot></div>
 
 <style lang="scss">
+  // 
 </style>

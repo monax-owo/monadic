@@ -2,7 +2,10 @@
   import Template from "$lib/component/Template.svelte";
 </script>
 
-<Template></Template>
+<Template>
+  <!--  -->
+</Template>
 
 <style lang="scss">
+  //
 </style>

@@ -25,8 +25,7 @@
           indexX={row}
           on:click={() => {
             $canvasArray[colIndex][rowIndex] = $PC1;
-          }}
-          on:ho></Pixel>
+          }}></Pixel>
       {/each}
     </div>
   {/each}

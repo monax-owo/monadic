@@ -31,14 +31,14 @@
     ></Doc>
   </Todo>
   <div class="icon"> </div>
+  <code>{JSON.stringify($paintCode)}</code>
   <input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />
   <input type="number" bind:value={val2} min="0" max={$paintCode.length - 1} />
   <input type="text" bind:value={canvasSize} />
   <div class="paint" style:--canvas-size="{canvasSize}px">
     <Canvas></Canvas>
   </div>
-  <code>{JSON.stringify($paintCode)}</code>
-  <code>{JSON.stringify($canvasArray)}</code>
+
   <code>↓</code>
   <pre>{$canvasString}</pre>
   <button type="button" on:click={() => copy($canvasString)}>COPY</button>
@@ -50,6 +50,8 @@
     display: block;
     border: 1px solid white;
     padding: 12px;
-    line-height: 1.4rem;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-family: "Noto Sans JP Variable", sans-serif;
   }
 </style>

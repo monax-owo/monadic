@@ -11,7 +11,6 @@
   const over = (PC: string) => {
     if (draw) p(PC);
   };
-
   onMount(() => {
     console.log("mount");
   });

@@ -8,6 +8,7 @@
     {
       "/color/mix": "Color Mix",
       "/color/watcher": "Color Watcher",
+      "/other/event-listener": "Event Listener",
       "/other/href": "Url Jumper",
       "/other/key-tester": "Key Tester",
       "/other/test": "Test",

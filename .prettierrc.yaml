@@ -8,6 +8,7 @@ trailingComma: es5
 useTabs: false
 htmlWhitespaceSensitivity: strict
 arrowParens: avoid
+endOfLine: "lf"
 
 # Add from Svelte
 plugins:

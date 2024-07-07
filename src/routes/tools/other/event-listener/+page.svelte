@@ -29,9 +29,12 @@
     "touchmove",
     "touchstart",
   ];
+  const on = (value: keyof GlobalEventHandlersEventMap, i: number) => {
+    console.log(value, i);
+  };
   onMount(() => {
-    eventType.forEach(value => {
-      b.addEventListener("click", () => console.log(value));
+    eventType.forEach((value, i) => {
+      b.addEventListener(value, () => on(value, i));
     });
   });
 </script>
@@ -39,3 +42,12 @@
 <Template>
   <button type="button" bind:this={b}>Click me!</button>
 </Template>
+
+<style lang="scss">
+  button {
+    display: block;
+    margin: 32px auto;
+    width: 160px;
+    height: 60px;
+  }
+</style>

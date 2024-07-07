@@ -33,7 +33,7 @@
   };
   afterNavigate(() => updateUrlInput());
   //
-  const og = {};
+  // const og = {};
 </script>
 
 <svelte:head>

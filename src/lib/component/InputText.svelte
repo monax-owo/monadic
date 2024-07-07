@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "$lib/component/Button.svelte";
-  import { paste } from "$lib/component/dev/clipboard";
+  import { paste } from "$lib/util/clipboard";
   //
 </script>
 

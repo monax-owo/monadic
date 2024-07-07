@@ -41,6 +41,11 @@
 
 <Template>
   <button type="button" bind:this={b}>Click me!</button>
+  <div class="event-list">
+    {#each eventType as value, i}
+      <div class="value">{value}<span>{i}</span></div>
+    {/each}
+  </div>
 </Template>
 
 <style lang="scss">
@@ -49,5 +54,12 @@
     margin: 32px auto;
     width: 160px;
     height: 60px;
+  }
+  .value {
+    span {
+      display: inline-block;
+      padding: 0 8px;
+      color: #9980ff;
+    }
   }
 </style>

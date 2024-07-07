@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  if (import.meta.env.MODE !== "development") {
+  import { isDev } from "$lib/util/dev";
+  if (!isDev) {
     console.log(`Todo.svelte here: ${$page.route.id}`);
   }
 </script>

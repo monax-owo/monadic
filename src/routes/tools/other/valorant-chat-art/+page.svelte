@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { copy } from "$lib/component/dev/clipboard";
+  import { copy } from "$lib/util/clipboard";
   import Todo from "$lib/component/dev/Todo.svelte";
   import Doc from "$lib/component/dev/Doc.svelte";
   import Template from "$lib/component/Template.svelte";

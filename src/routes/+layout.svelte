@@ -20,13 +20,14 @@
   import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
   import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
   import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
-  const iconStrokeWidth = 2;
+  const iconStrokeWidth = 1.8;
   // title
   import { setTitle } from "$lib/route/routes";
   $: title = setTitle($page.route.id ?? "no title");
   // form
   import { enhance } from "$app/forms";
   import { afterNavigate, goto } from "$app/navigation";
+  import IsDev from "$lib/component/dev/IsDev.svelte";
   let nowRouteId: string = "/";
   const updateUrlInput = () => {
     nowRouteId = $page.url.pathname.replace(base, "");
@@ -50,6 +51,7 @@
 </svelte:head>
 
 <div class="app">
+  <IsDev></IsDev>
   <Header>
     <a class="hover-1" href="{base}/" slot="logo">Monadic</a>
     <form

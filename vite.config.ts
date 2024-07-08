@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     sveltekit(),
     AutoImport({
-      dts: true,
+      dts: "./src/@types/auto-imports.d.ts",
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.svelte$/, // .svelte

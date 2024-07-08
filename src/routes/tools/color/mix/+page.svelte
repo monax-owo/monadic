@@ -1,7 +1,6 @@
 <script lang="ts">
   import Template from "$lib/component/Template.svelte";
   import Todo from "$lib/component/dev/Todo.svelte";
-  import { afterUpdate } from "svelte";
   let el: Element;
   // Default value
   let [color1, color2]: string[] = ["#000000", "#ffffff"];

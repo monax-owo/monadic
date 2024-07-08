@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { PC1, PC2, defaulPixelChar } from "./store";
   export let indexY: number;
   export let indexX: number;

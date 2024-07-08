@@ -1,6 +1,7 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-// import "vite/client";
+/// <reference types="vite/client" />
+
 declare global {
   namespace App {
     // interface Error {}

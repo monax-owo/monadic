@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
   export let href: string;
   if (href === "" || !href) throw new Error("href is not defined");
   if (!$$slots.default) console.warn("Doc.svelte slot is empty");

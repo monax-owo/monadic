@@ -1,6 +1,5 @@
 <script lang="ts">
   import Template from "$lib/component/Template.svelte";
-  import { onMount } from "svelte";
   let b: HTMLButtonElement;
   const eventType: (keyof GlobalEventHandlersEventMap)[] = [
     "auxclick",

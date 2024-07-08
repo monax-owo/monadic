@@ -1,9 +1,25 @@
 import { defineConfig } from "vite";
 import { sveltekit } from "@sveltejs/kit/vite";
-// import react from "@vitejs/plugin-react";
+import AutoImport from "unplugin-auto-import/vite";
 import autoprefixer from "autoprefixer";
+
 export default defineConfig({
-  plugins: [sveltekit() /* react() */],
+  plugins: [
+    sveltekit(),
+    AutoImport({
+      dts: true,
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.svelte$/, // .svelte
+      ],
+      imports: [
+        "svelte",
+        {
+          zod: [["default", "z"]], // import z from "zod"
+        },
+      ],
+    }),
+  ],
   css: {
     postcss: {
       plugins: [autoprefixer()],

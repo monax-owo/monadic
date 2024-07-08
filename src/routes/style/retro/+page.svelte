@@ -2,7 +2,6 @@
   import Template from "$lib/component/Template.svelte";
   import "$lib/global.scss";
   import { setDefaultTheme } from "$lib/theme/theme";
-  import { onMount } from "svelte";
   onMount(() => {
     return () => {
       setDefaultTheme();

@@ -56,7 +56,9 @@ export default [
         extraFileExtensions: [".svelte"],
       },
     },
-    rules: {},
+    rules: {
+      "no-undef": 0,
+    },
   },
   {
     files: ["**/*.svelte"],
@@ -67,6 +69,9 @@ export default [
       parserOptions: {
         parser: ts.parser,
       },
+    },
+    rules: {
+      "no-undef": 0,
     },
   },
 ];

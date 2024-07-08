@@ -51,7 +51,7 @@
 </svelte:head>
 
 <div class="app">
-  <IsDev></IsDev>
+  <IsDev>is dev!</IsDev>
   <Header>
     <a class="hover-1" href="{base}/" slot="logo">Monadic</a>
     <form

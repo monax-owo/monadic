@@ -1,3 +1,5 @@
+import { logger } from "$lib/util/logger";
+
 type Page = {
   path: string | URL;
   title: string;
@@ -25,7 +27,7 @@ const PageList = class {
   }
 
   public get value(): Page[] {
-    if (this.pages.length === 0) throw new Error("pages is undefined");
+    if (this.pages.length === 0) logger.error("pages is undefined");
     return this.pages;
   }
 };

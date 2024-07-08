@@ -1,6 +1,10 @@
 <script lang="ts">
   import Todo from "$lib/component/dev/Todo.svelte";
+  import RouteLinker from "$lib/component/RouteLinker.svelte";
   import Template from "$lib/component/Template.svelte";
+  const routes = {
+    "/test": "Test",
+  };
 </script>
 
 <Template>
@@ -11,6 +15,7 @@
     <p>1つの色からテーマを作るSass関数を作る(like tailwind)</p>
     <!-- "$lib/theme/ToggleTheme.svelte" -->
   </Todo>
+  <RouteLinker {routes}></RouteLinker>
 </Template>
 
 <style lang="scss">

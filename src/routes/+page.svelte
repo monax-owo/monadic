@@ -2,16 +2,12 @@
   import { base } from "$app/paths";
   import RouteLinker from "$lib/component/RouteLinker.svelte";
   import Template from "$lib/component/Template.svelte";
-  import { routeObjToRoutes } from "$lib/route/routes";
   import Task from "./Task.svelte";
-  const Routes = routeObjToRoutes(
-    {
-      "/style": "Style",
-      "/tools": "Mon tools",
-      "/api": "API",
-    },
-    base
-  );
+  const Routes = {
+    "/style": "Style",
+    "/tools": "Mon tools",
+    "/api": "API",
+  };
 </script>
 
 <svelte:head>
@@ -20,5 +16,5 @@
 
 <Template>
   <Task></Task>
-  <RouteLinker routes={Routes}></RouteLinker>
+  <RouteLinker routes={Routes} {base}></RouteLinker>
 </Template>

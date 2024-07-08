@@ -16,6 +16,8 @@ export default defineConfig({
         "svelte",
         {
           zod: [["default", "z"]], // import z from "zod"
+          // "./src/lib/util": [],
+          // "$app/paths": [],
         },
       ],
     }),

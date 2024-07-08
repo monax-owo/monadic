@@ -1,13 +1,14 @@
 <script lang="ts">
-  import type { Route } from "$lib/route/routes";
-  export let routes: Route[];
+  import { page } from "$app/stores";
+  import { routeObjToRoutes, type Route } from "$lib/route/routes";
+  export let routes: object;
+  export let base: string = $page.url.pathname;
+  const routeList: Route[] = routeObjToRoutes(routes, base);
 </script>
 
 <div class="RouteLinker">
-  {#each routes as route}
-    <!-- <div class=""> -->
+  {#each routeList as route}
     <a href={route.link}>{route.title}</a>
-    <!-- </div> -->
   {/each}
 </div>
 

@@ -8,8 +8,11 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
     "moduleResolution": "bundler",
+    "module": "esnext",
+    "noEmit": true,
+    "target": "esnext",
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"]
   }

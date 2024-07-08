@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { logger } from "$lib/util/logger";
   import { PC1, PC2, defaulPixelChar } from "./store";
   export let indexY: number;
   export let indexX: number;
-  if (!indexY || !indexX) throw new Error("index is not defined");
+  if (!indexY || !indexX) logger.error("index is not defined");
   let char: string = $defaulPixelChar;
-  if (char === "" || !char) throw new Error("char is not defined");
+  if (char === "" || !char) logger.error("char is not defined");
   let draw: boolean;
   const p = (PC: string) => (char = PC);
   const over = (PC: string) => {

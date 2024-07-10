@@ -1,4 +1,4 @@
-import * as s from "satori";
+import satori from "satori";
 import sharp from "sharp";
 import { base } from "$app/paths";
 import type { ComponentChildren } from "preact";
@@ -33,7 +33,7 @@ const elementGen = (title: string): ComponentChildren => {
   );
 };
 const ogpImageGen = async (title: string, font: Response): Promise<Buffer> => {
-  const svg = await s.default(elementGen(title), {
+  const svg = await satori(elementGen(title), {
     width: 1200,
     height: 630,
     fonts: [

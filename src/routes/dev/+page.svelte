@@ -14,6 +14,7 @@
     <p>テーマ切り替えを行えるようにする→theme/ToggleTheme.svelte</p>
     <p>1つの色からテーマを作るSass関数を作る(like tailwind)</p>
     <p>ファイルサイズの最適化、preactを使えるようにしたい</p>
+    <p>Preactに移行(helper.tsx)</p>
     <!-- "$lib/theme/ToggleTheme.svelte" -->
   </Todo>
   <RouteLinker {routes}></RouteLinker>

@@ -5,3 +5,4 @@ const attachReactComponent = (container: ReactDOM.Container | Element, component
   ReactDOM.createRoot(container).render(<React.StrictMode>{component}</React.StrictMode>);
 };
 export { attachReactComponent };
+// TODO:Preactに移行

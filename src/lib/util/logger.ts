@@ -9,6 +9,7 @@ const log = (message: string) => {
 // logging type
 const error = (message: string) => {
   logger.error(message);
+  throw new Error(message);
 };
 const success = (message: string) => {
   log(message);

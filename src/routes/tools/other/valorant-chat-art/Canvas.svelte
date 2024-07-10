@@ -6,7 +6,7 @@
   defaulPixelChar.set("░");
   const upDateCanvas = () => canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
   upDateCanvas();
-  let draw: boolean = false;
+  export let draw: boolean = false;
   const mousedown = () => (draw = true);
   const mouseup = () => (draw = false);
 </script>

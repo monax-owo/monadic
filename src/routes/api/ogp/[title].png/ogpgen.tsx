@@ -1,9 +1,9 @@
-import satori from "satori";
+import * as s from "satori";
 import sharp from "sharp";
-import type { ReactNode } from "react";
 import { base } from "$app/paths";
+import type { ComponentChildren } from "preact";
 const ogpUrl = (title: string) => `${base}/api/ogp/${encodeURIComponent(title)}.png`;
-const elementGen = (title: string): ReactNode => {
+const elementGen = (title: string): ComponentChildren => {
   return (
     <div
       style={{
@@ -32,8 +32,8 @@ const elementGen = (title: string): ReactNode => {
     </div>
   );
 };
-export const ogpImageGen = async (title: string, font: Response): Promise<Buffer> => {
-  const svg = await satori(elementGen(title), {
+const ogpImageGen = async (title: string, font: Response): Promise<Buffer> => {
+  const svg = await s.default(elementGen(title), {
     width: 1200,
     height: 630,
     fonts: [
@@ -47,3 +47,4 @@ export const ogpImageGen = async (title: string, font: Response): Promise<Buffer
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
   return png;
 };
+export { ogpImageGen };

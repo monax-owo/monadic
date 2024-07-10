@@ -6,8 +6,8 @@ type Page = {
   description: string;
 };
 
-const PageList = class {
-  pages: Page[];
+class Pages {
+  static pages: Page[];
   constructor() {
     this.pages = [];
   }
@@ -15,7 +15,7 @@ const PageList = class {
    * add
    * Page型のオブジェクトからページを追加する
    */
-  public add(item: Page) {
+  public static add(item: Page) {
     this.pages.push(item);
   }
   /**
@@ -25,11 +25,16 @@ const PageList = class {
   public addPage(path: string, title: string, description: string) {
     this.add({ path, title, description });
   }
-
+  /**
+   * addPage
+   */
   public get value(): Page[] {
     if (this.pages.length === 0) logger.error("pages is undefined");
     return this.pages;
   }
+}
+const PageList = {
+  add: Pages.add,
 };
 export { PageList };
 export type { Page };

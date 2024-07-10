@@ -1,4 +1,8 @@
 const Page = () => {
-  return <button type="button">aa</button>;
+  return (
+    <>
+      <button type="button">aaa</button>
+    </>
+  );
 };
 export default Page;

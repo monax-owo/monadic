@@ -20,8 +20,6 @@
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.10",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -53,8 +51,6 @@
     "@fontsource/press-start-2p": "^5.0.20",
     "@tabler/icons-svelte": "3.6.0",
     "preact": "^10.22.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "sanitize.css": "^13.0.0"
   }
 }

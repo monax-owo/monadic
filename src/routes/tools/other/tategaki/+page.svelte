@@ -12,19 +12,25 @@
    * @param array
    *
    */
-  const split = (array: string[]): string[][] => {
-    let temp: string[][] = [[]];
-    let index: number = 0;
-    array.forEach((v, i) => {
-      if (v === "\n") {
-        ++index;
-        temp.push([]);
-      } else {
-        temp[index].push(v);
-      }
-    });
-    return temp;
-  };
+  // const split = (array: string[]): string[][] => {
+  //   let temp: string[][] = [[]];
+  //   array.forEach((v, i) => {
+  //     if (v === "\n") {
+  //       temp.push([]);
+  //     } else {
+  //       temp[temp.length - 1].push(v);
+  //     }
+  //   });
+  //   return temp;
+  // };
+  const split = (array: string[]): string[][] =>
+    array.reduce<string[][]>(
+      (acc, v) => {
+        v === "\n" ? acc.push([]) : acc[acc.length - 1].push(v);
+        return acc;
+      },
+      [[]]
+    );
 
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);

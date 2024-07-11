@@ -1,8 +1,7 @@
 <script lang="ts">
+  import { Template, Todo } from "$lib/autoimport";
   import { copy } from "$lib/util/clipboard";
-  import Todo from "$lib/component/dev/Todo.svelte";
   import Doc from "$lib/component/dev/Doc.svelte";
-  import Template from "$lib/component/Template.svelte";
   import Canvas from "./Canvas.svelte";
   import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
 

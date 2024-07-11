@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { rectangularArrayGen } from "$lib/util/rectangularArray";
   import Pixel from "./Pixel.svelte";
-  import { canvasArray, canvasArrayGen, defaulPixelChar, PC1 } from "./store";
+  import { canvasArray, defaulPixelChar, PC1 } from "./store";
   let col = 5;
   let row = 26;
   defaulPixelChar.set("░");
-  const upDateCanvas = () => canvasArray.set(canvasArrayGen(col, row, $defaulPixelChar));
+  const upDateCanvas = () => canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
   upDateCanvas();
   export let draw: boolean = false;
   const mousedown = () => (draw = true);

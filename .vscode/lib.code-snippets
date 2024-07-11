@@ -1,0 +1,19 @@
+{
+  "template": {
+    "prefix": "!m",
+    "body": [
+      "<script lang=\"ts\">",
+      "\timport { Template, Todo } from \"\\$lib\/autoimport\";",
+      "\t${1://}",
+      "</script>",
+      "",
+      "<Template>",
+      "\t",
+      "</Template>",
+      "",
+      "<style lang=\"scss\">",
+      "\t",
+      "</style>",
+    ],
+  },
+}

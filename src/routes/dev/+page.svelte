@@ -4,6 +4,7 @@
   import Template from "$lib/component/Template.svelte";
   const routes = {
     "/test": "Test",
+    "/test/preact": "Test Preact",
   };
 </script>
 

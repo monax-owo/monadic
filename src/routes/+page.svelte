@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import RouteLinker from "$lib/component/RouteLinker.svelte";
-  import Template from "$lib/component/Template.svelte";
+  import { Template, Todo } from "$lib/autoimport";
   import Task from "./Task.svelte";
   const Routes = {
     "/style": "Style",

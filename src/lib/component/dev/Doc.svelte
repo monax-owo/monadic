@@ -3,7 +3,7 @@
   export let href: string;
   if (href === "" || !href) logger.error("href is not defined");
   if (!$$slots.default) console.warn("Doc.svelte slot is empty");
-  onMount(() => {});
+  // onMount(() => {});
 </script>
 
 <div class="Doc">

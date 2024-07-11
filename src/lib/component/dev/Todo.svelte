@@ -27,9 +27,11 @@
     text-align: center;
   }
   .comment {
+    margin: 0 0;
+    font-family: "Noto Sans JP Variable", sans-serif;
     text-align: center;
     :global(> *) {
-      margin: 6px 12px;
+      margin: 4px 12px;
     }
   }
 </style>

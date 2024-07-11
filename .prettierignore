@@ -6,3 +6,4 @@ yarn.lock
 **/.github
 **/node_modules
 **/.svelte-kit
+src/@types/auto-imports.d.ts

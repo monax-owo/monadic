@@ -36,9 +36,13 @@
     let len = array.reduce((acc, v) => {
       return Math.max(acc, v.length - 1);
     }, 0);
-    let temp = array.reduce<T[][]>((acc, v) => {
-      // v.push(Array(len - v.length).fill(""));
-    });
+    let temp = array.reduce<T[][]>(
+      (acc, v) => {
+        // v.push(Array(len - v.length).fill(""));
+        return acc;
+      },
+      [[]]
+    );
   };
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);

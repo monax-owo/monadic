@@ -32,17 +32,20 @@
       [[]]
     );
   };
-  const fill = <T,>(array: T[][]): T[][] => {
-    let len = array.reduce((acc, v) => {
-      return Math.max(acc, v.length - 1);
+  const maxLen = <T,>(array: T[][]): number => {
+    return array.reduce((acc, v) => {
+      return Math.max(acc, v.length);
     }, 0);
-    let temp = array.reduce<T[][]>(
-      (acc, v) => {
-        // v.push(Array(len - v.length).fill(""));
-        return acc;
-      },
-      [[]]
-    );
+  };
+  const fill = (array: string[][]): string[][] => {
+    let len = array.reduce((acc, v) => {
+      return Math.max(acc, v.length);
+    }, 0);
+    let temp = array.reduce((acc: string[][], v) => {
+      acc.push([...v, ...Array(v.length >= len ? 0 : len - v.length).fill("")]);
+      return acc;
+    }, []);
+    return temp;
   };
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);
@@ -63,14 +66,11 @@
   <!-- <code>{text}</code> -->
   <div>
     <code>{JSON.stringify(tempArray)}</code>
-    <br /><br />
     <code>{JSON.stringify(splitArray)}</code>
-    <br /><br />
     <code>{JSON.stringify(resultArray)}</code>
-    <br /><br />
     <code>{result}</code>
-    <br /><br />
     <code>{JSON.stringify(fill(splitArray))}</code>
+    <code>{JSON.stringify(maxLen(splitArray))}</code>
   </div>
 </Template>
 
@@ -80,5 +80,15 @@
     width: 100%;
     min-height: 8rem;
     resize: vertical;
+  }
+  code,
+  pre {
+    display: block;
+    // border: 1px solid white;
+    // padding: 12px;
+    // font-size: 1.2em;
+    // line-height: 1.2em;
+    margin: 12px 0;
+    font-family: "Noto Sans JP Variable", sans-serif;
   }
 </style>

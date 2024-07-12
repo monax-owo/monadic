@@ -7,15 +7,19 @@ const log = (message: string) => {
   console.log(template(message));
 };
 // logging type
-const error = (message: string) => {
-  logger.error(message);
+const dev = (message: string, ...optionalParams: unknown[]) => {
+  console.log(message, optionalParams);
+};
+const error = (message: string, ...optionalParams: unknown[]) => {
+  console.error(message, optionalParams);
   throw new Error(message);
 };
-const success = (message: string) => {
-  log(message);
+const success = (message: string, ...optionalParams: unknown[]) => {
+  console.log(message, optionalParams);
 };
 // export
 const logger = {
+  dev,
   error,
   success,
 };

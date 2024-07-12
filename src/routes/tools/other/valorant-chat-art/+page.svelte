@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Template, Todo } from "$lib/autoimport";
-  import { copy } from "$lib/util/clipboard";
+  import { copyText, clickCopy } from "$lib/util/clipboard";
   import Doc from "$lib/component/dev/Doc.svelte";
   import Canvas from "./Canvas.svelte";
   import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
@@ -12,7 +12,7 @@
   $: PC1.set($paintCode[val1]);
   const canvasArrayToString = (canvas: Array<Array<string>>): string => {
     let temp: string[] = [""];
-    canvas.forEach(row => {
+    canvas.forEach((row) => {
       temp.push(row.join(""));
     });
     return temp.join("\n");
@@ -40,7 +40,7 @@
 
   <code>↓</code>
   <pre>{$canvasString}</pre>
-  <button type="button" on:click={() => copy($canvasString)}>COPY</button>
+  <button type="button" on:click={() => copyText($canvasString)}>COPY</button>
 </Template>
 
 <style lang="scss">

@@ -20,7 +20,7 @@
   // import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
   // import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
   // import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
-  // const iconStrokeWidth = 1.8;
+  const iconStrokeWidth = 1.8;
   // title
   import { setTitle } from "$lib/route/routes";
   $: title = setTitle($page.route.id ?? "no title");

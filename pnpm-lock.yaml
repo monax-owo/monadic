@@ -20,6 +20,9 @@ importers:
       '@fontsource/press-start-2p':
         specifier: ^5.0.20
         version: 5.0.20
+      '@tabler/icons-svelte':
+        specifier: 3.6.0
+        version: 3.6.0(svelte@4.2.18)
       preact:
         specifier: ^10.22.1
         version: 10.22.1
@@ -869,6 +872,14 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       vite: ^5.0.0
+
+  '@tabler/icons-svelte@3.6.0':
+    resolution: {integrity: sha512-phI61t81MlWhodATjvQQdqw8vTL0srSW6GsHzJmuhIMJGB4rwFzAXB2Ec4Pkz0vWFzVQgkeSE/AsiOLIUKWkxA==}
+    peerDependencies:
+      svelte: '>=3 <5'
+
+  '@tabler/icons@3.6.0':
+    resolution: {integrity: sha512-Zv0Ofc64RCMpZ2F8CvsWAphrSjerx5hEErt/RMmE+W8r4E5l5Lizi+My9KbbZQ4NyAtrtrOX80OY1oROZrRzEA==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2840,6 +2851,13 @@ snapshots:
       vitefu: 0.2.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.6))
     transitivePeerDependencies:
       - supports-color
+
+  '@tabler/icons-svelte@3.6.0(svelte@4.2.18)':
+    dependencies:
+      '@tabler/icons': 3.6.0
+      svelte: 4.2.18
+
+  '@tabler/icons@3.6.0': {}
 
   '@types/babel__core@7.20.5':
     dependencies:

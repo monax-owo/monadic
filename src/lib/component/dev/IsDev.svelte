@@ -9,7 +9,7 @@
   const V: number = 4;
   const N: number = 2;
   const M: number = 0;
-  const [v, n, m] = [V, N, M].map(val => val * 32);
+  const [v, n, m] = [V, N, M].map((val) => val * 32);
   // x,y
   // prettier-ignore
   const a = [

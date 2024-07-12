@@ -1,22 +1,52 @@
-const copy = (text: string) => {
+import type { Action } from "svelte/action";
+import { logger } from "$lib/util/logger";
+
+const copyText = (text: string): void => {
   navigator.clipboard
     .writeText(text)
     .then(() => {
-      console.log("Success");
+      logger.dev("Success", text);
     })
-    .catch(err => {
-      console.error("Failed", err);
-    });
-};
-const paste = () /* : string */ => {
-  navigator.clipboard
-    .readText()
-    .then(() => {
-      console.log("Success");
-    })
-    .catch(err => {
-      console.error("Failed", err);
+    .catch((err) => {
+      logger.error("Failed", err);
     });
 };
 
-export { copy, paste };
+const pasteText = (): void => {
+  navigator.clipboard
+    .readText()
+    .then(() => {
+      logger.dev("Success");
+    })
+    .catch((err) => {
+      logger.error("Failed", err);
+    });
+};
+
+const clickCopy: Action<HTMLElement, string> = (node, text) => {
+  const handleCopy = () => {
+    copyText(text);
+    console.log(text);
+  };
+  node.addEventListener("click", handleCopy);
+  return {
+    destroy() {
+      node.removeEventListener("click", handleCopy);
+    },
+    update(newText) {
+      text = newText;
+    },
+  };
+};
+
+// たぶんいらない
+const clickPaste: Action = (node) => {
+  node.addEventListener("click", () => {
+    pasteText();
+  });
+  return {
+    destroy() {},
+  };
+};
+
+export { copyText, pasteText, clickCopy, clickPaste };

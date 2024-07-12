@@ -7,7 +7,7 @@ singleQuote: false
 trailingComma: es5
 useTabs: false
 htmlWhitespaceSensitivity: strict
-arrowParens: avoid
+arrowParens: always
 endOfLine: "lf"
 
 # Add from Svelte

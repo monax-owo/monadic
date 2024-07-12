@@ -6,7 +6,7 @@
 
 <div class="InputText">
   <input type="text" />
-  <Button on:click={e => paste()}>paste</Button>
+  <Button on:click={(e) => paste()}>paste</Button>
 </div>
 
 <style lang="scss">

@@ -32,9 +32,11 @@
   const updateUrlInput = () => {
     nowRouteId = $page.url.pathname.replace(base, "");
   };
+  //
+  let app: HTMLElement;
   afterNavigate(() => {
     updateUrlInput();
-    window.focus();
+    app.focus();
   });
   //
   // const og = {};
@@ -53,7 +55,7 @@
   </script>
 </svelte:head>
 
-<div class="app">
+<div class="app" bind:this={app}>
   <IsDev>is dev!</IsDev>
   <Header>
     <a class="hover-1" href="{base}/" slot="logo">Monadic</a>

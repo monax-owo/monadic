@@ -23,20 +23,29 @@
   //   });
   //   return temp;
   // };
-  const split = (array: string[]): string[][] =>
-    array.reduce<string[][]>(
+  const split = (array: string[]): string[][] => {
+    return array.reduce<string[][]>(
       (acc, v) => {
         v === "\n" ? acc.push([]) : acc[acc.length - 1].push(v);
         return acc;
       },
       [[]]
     );
-
+  };
+  const fill = <T,>(array: T[][]): T[][] => {
+    let len = array.reduce((acc, v) => {
+      return Math.max(acc, v.length - 1);
+    }, 0);
+    let temp = array.reduce<T[][]>((acc, v) => {
+      // v.push(Array(len - v.length).fill(""));
+    });
+  };
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);
-  $: resultArray = rotate(splitArray);
-  //
-  const rotate = (array: string[][]) => array[0].map((v, i) => array.map(v2 => v2[i]).reverse());
+  // $: resultArray = rotate(splitArray);
+  // TODO:配列の長さを揃えないでも使えるrotate関数を作る
+  // もしくはsplitArrayの配列の長さを揃える関数を作る
+  // const rotate = (array: string[][]) => array[0].map((v, i) => array.map(v2 => v2[i]).reverse());
   //
 </script>
 
@@ -51,12 +60,13 @@
   <div>
     <code>{JSON.stringify(tempArray)}</code>
     <br /><br />
-
     <code>{JSON.stringify(splitArray)}</code>
-
     <br /><br />
     <code>{JSON.stringify(resultArray)}</code>
+    <br /><br />
     <code>{result}</code>
+    <br /><br />
+    <code>{JSON.stringify(fill(splitArray))}</code>
   </div>
 </Template>
 
@@ -64,5 +74,7 @@
   textarea {
     display: block;
     width: 100%;
+    min-height: 8rem;
+    resize: vertical;
   }
 </style>

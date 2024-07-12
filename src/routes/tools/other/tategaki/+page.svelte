@@ -38,14 +38,11 @@
     }, 0);
   };
   const fill = (array: string[][]): string[][] => {
-    let len = array.reduce((acc, v) => {
-      return Math.max(acc, v.length);
-    }, 0);
-    let temp = array.reduce((acc: string[][], v) => {
+    const len = maxLen(array);
+    return array.reduce((acc: string[][], v) => {
       acc.push([...v, ...Array(v.length >= len ? 0 : len - v.length).fill("")]);
       return acc;
     }, []);
-    return temp;
   };
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);

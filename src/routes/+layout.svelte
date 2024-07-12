@@ -14,6 +14,8 @@
   // Noto Sans JP
   // Supports weights 100-900
   import "@fontsource-variable/noto-sans-jp";
+  // Noto Color Emoji
+  import '@fontsource/noto-color-emoji';
   // Header
   import Header from "$lib/component/Header.svelte";
   // icons

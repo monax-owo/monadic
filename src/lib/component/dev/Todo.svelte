@@ -28,10 +28,15 @@
   }
   .comment {
     margin: 0 0;
-    font-family: "Noto Sans JP Variable", sans-serif;
+    // font-family: "Noto Color Emoji", "Noto Sans JP Variable", sans-serif;
     text-align: center;
     :global(> *) {
       margin: 4px 12px;
+    }
+    :global(> [data-done]) {
+      &::before {
+        content: "✔";
+      }
     }
   }
 </style>

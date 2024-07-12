@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/noto-sans-jp':
         specifier: ^5.0.19
         version: 5.0.19
+      '@fontsource/noto-color-emoji':
+        specifier: ^5.0.27
+        version: 5.0.27
       '@fontsource/press-start-2p':
         specifier: ^5.0.20
         version: 5.0.20
@@ -558,6 +561,9 @@ packages:
 
   '@fontsource-variable/noto-sans-jp@5.0.19':
     resolution: {integrity: sha512-fAhvax6qyagBBf5x8WoIMxNsofgytN4e0cBn1eGgYHhbr4snWA+NxCHkaH+jlOv7nSv9ZzzsSusslkcsRJwGYg==}
+
+  '@fontsource/noto-color-emoji@5.0.27':
+    resolution: {integrity: sha512-gsIMN5o8qoRLrA+XyDNKKnMNpTbwpNbINisJqirLOLXl83arOV2sHRnNOkVht2gzUcImUxEUBGektp56G3Vj9w==}
 
   '@fontsource/press-start-2p@5.0.20':
     resolution: {integrity: sha512-URkenVoJlx1wtmpY+zoMFWxftWmm1H3CJnrGwjoy1e5G+qTjJnctxDIXDs65mvluFmSPsFNaULA2CEQBOli+eQ==}
@@ -2593,6 +2599,8 @@ snapshots:
   '@fontsource-variable/montserrat@5.0.19': {}
 
   '@fontsource-variable/noto-sans-jp@5.0.19': {}
+
+  '@fontsource/noto-color-emoji@5.0.27': {}
 
   '@fontsource/press-start-2p@5.0.20': {}
 

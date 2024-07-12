@@ -17,9 +17,9 @@
   // Header
   import Header from "$lib/component/Header.svelte";
   // icons
-  // import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-  // import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
-  // import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
+  import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
+  import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
+  import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
   const iconStrokeWidth = 1.8;
   // title
   import { setTitle } from "$lib/route/routes";
@@ -32,7 +32,10 @@
   const updateUrlInput = () => {
     nowRouteId = $page.url.pathname.replace(base, "");
   };
-  afterNavigate(() => updateUrlInput());
+  afterNavigate(() => {
+    updateUrlInput();
+    window.focus();
+  });
   //
   // const og = {};
 </script>
@@ -65,13 +68,13 @@
     </form>
     <div class="sns-link" slot="link">
       <a class="hover-1" href="https://github.com/monax-owo/monadic">
-        <!-- <IconBrandGithub stroke={iconStrokeWidth} /> -->
+        <IconBrandGithub stroke={iconStrokeWidth} />
       </a>
       <a class="hover-1" href="https://kit.svelte.jp">
-        <!-- <IconBrandSvelte stroke={iconStrokeWidth} /> -->
+        <IconBrandSvelte stroke={iconStrokeWidth} />
       </a>
       <a class="hover-1" href="https://www.youtube.com/@energymonaka/featured">
-        <!-- <IconBrandYoutube stroke={iconStrokeWidth} /> -->
+        <IconBrandYoutube stroke={iconStrokeWidth} />
       </a>
     </div>
   </Header>

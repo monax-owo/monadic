@@ -1,32 +1,23 @@
 <script lang="ts">
   import { rectangularArrayGen } from "$lib/util/rectangularArray";
   import Pixel from "./Pixel.svelte";
-  import { canvasArray, defaulPixelChar, PC1 } from "./store";
+  import { canvasArray, defaulPixelChar, PC1, draw } from "./store";
   let col = 5;
   let row = 26;
   defaulPixelChar.set("░");
   const upDateCanvas = () => canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
   upDateCanvas();
-  export let draw: boolean = false;
-  const mousedown = () => (draw = true);
-  const mouseup = () => (draw = false);
+  const mousedown = () => draw.set(true);
+  const mouseup = () => draw.set(false);
 </script>
 
-<svelte:window
-  on:mousedown={() => mousedown()}
-  on:mouseup={() => mouseup()}
-  on:beforeunload={() => {}} />
+<svelte:window on:mousedown={mousedown} on:mouseup={mouseup} />
 
 <div class="Canvas" style:--col={col} style:--row={row}>
   {#each Array(col) as _, colIndex}
     <div class="row">
       {#each Array(row) as _, rowIndex}
-        <Pixel
-          indexY={col}
-          indexX={row}
-          on:click={() => {
-            $canvasArray[colIndex][rowIndex] = $PC1;
-          }}></Pixel>
+        <Pixel YIndex={colIndex} XIndex={rowIndex}></Pixel>
       {/each}
     </div>
   {/each}

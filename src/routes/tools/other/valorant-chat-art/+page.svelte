@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Template, Todo } from "$lib/autoimport";
-  import { copyText, clickCopy } from "$lib/util/clipboard";
-  import Doc from "$lib/component/dev/Doc.svelte";
   import Canvas from "./Canvas.svelte";
+  import { draw } from "./store";
+  import { Template, Todo } from "$lib/autoimport";
+  import { clickCopy } from "$lib/util/clipboard";
   import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
 
   let canvasSize: string = "0";
@@ -18,16 +18,16 @@
     return temp.join("\n");
   };
   $: canvasString.set(canvasArrayToString($canvasArray));
+  //
+  const kp = () => {};
 </script>
 
+<svelte:window on:keypress={kp} />
 <Template>
   <Todo>
     <p>左クリック長押しで書けるようにする</p>
     <p>文字の種類を追加する</p>
     <p>文字を選びやすくする</p>
-    <Doc
-      href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid-constrained-proportions-11"
-    ></Doc>
   </Todo>
   <div class="icon"> </div>
   <code>{JSON.stringify($paintCode)}</code>
@@ -38,9 +38,9 @@
     <Canvas></Canvas>
   </div>
 
-  <code>↓</code>
+  <code>↓ painting : {$draw}</code>
   <pre>{$canvasString}</pre>
-  <button type="button" on:click={() => copyText($canvasString)}>COPY</button>
+  <button type="button" use:clickCopy={$canvasString}>COPY</button>
 </Template>
 
 <style lang="scss">

@@ -1,29 +1,27 @@
 <script lang="ts">
   import { logger } from "$lib/util/logger";
-  import { PC1, PC2, defaulPixelChar } from "./store";
-  export let indexY: number;
-  export let indexX: number;
-  if (!indexY || !indexX) logger.error("index is not defined");
+  import { canvasArray, PC1, PC2, defaulPixelChar, draw } from "./store";
+  export let YIndex: number;
+  export let XIndex: number;
+  if (YIndex == null || XIndex == null) logger.error("index is not defined");
   let char: string = $defaulPixelChar;
   if (char === "" || !char) logger.error("char is not defined");
-  let draw: boolean;
-  const p = (PC: string) => (char = PC);
-  const over = (PC: string) => {
-    if (draw) p(PC);
+  $: char = $canvasArray[YIndex][XIndex];
+  const paint = (PC: string) => {
+    $canvasArray[YIndex][XIndex] = PC;
   };
-  onMount(() => {
-    console.log("mount");
-  });
+  const over = (PC: string) => {
+    if ($draw) paint(PC);
+  };
 </script>
 
 <div class="Pixel">
   <button
-    id={`${indexY}[${indexX}]`}
+    id={`${YIndex}[${XIndex}]`}
     type="button"
     on:focus={() => over($PC1)}
     on:mouseover={() => over($PC1)}
-    on:click
-    on:click={() => p($PC1)}>
+    on:click={() => paint($PC1)}>
     <svg viewBox="0 0 100 100" fill="black">
       <text x="50" y="-20" font-size="92" text-anchor="middle" dominant-baseline="text-before-edge"
         >{char}</text>

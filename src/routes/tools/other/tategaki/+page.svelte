@@ -70,7 +70,9 @@
 </script>
 
 <Template>
-  <Todo></Todo>
+  <Todo>
+    <p>半角英数字を対応させる</p>
+  </Todo>
   <textarea bind:value={text} />
   <details class="data">
     <pre>temp   : {JSON.stringify(tempArray)}</pre>

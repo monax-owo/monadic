@@ -29,7 +29,7 @@
     <p>文字の種類を追加する</p>
     <p>文字を選びやすくする</p>
   </Warn>
-  <div class="icon"> </div>
+  <div class="icon"></div>
   <code>{JSON.stringify($paintCode)}</code>
   <input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />
   <input type="number" bind:value={val2} min="0" max={$paintCode.length - 1} />

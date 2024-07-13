@@ -4,7 +4,7 @@
   export let mention: string;
 </script>
 
-<div class="Post"> </div>
+<div class="Post"></div>
 
 <style lang="scss">
 </style>

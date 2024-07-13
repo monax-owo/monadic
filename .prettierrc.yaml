@@ -7,9 +7,12 @@ singleQuote: false
 trailingComma: es5
 useTabs: false
 tabWidth: 2
-htmlWhitespaceSensitivity: strict
+htmlWhitespaceSensitivity: css
 arrowParens: always
 endOfLine: "lf"
+requirePragma: false
+insertPragma: false
+proseWrap: preserve
 
 # Add from Svelte
 plugins:

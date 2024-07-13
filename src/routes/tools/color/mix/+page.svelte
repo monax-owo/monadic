@@ -1,6 +1,6 @@
 <script lang="ts">
   import Template from "$lib/component/Template.svelte";
-  import Todo from "$lib/component/Note/Warn.svelte";
+  import Warn from "$lib/component/Note/Warn.svelte";
   let el: Element;
   // Default value
   let [color1, color2]: string[] = ["#000000", "#ffffff"];
@@ -23,10 +23,10 @@
 </script>
 
 <Template>
-  <Todo>
+  <Warn>
     <p>Input要素を右クリックでクリア</p>
     <p>右クリック2回で通常のコンテキストメニュー</p>
-  </Todo>
+  </Warn>
   <div class="page">
     <div class="view" bind:this={el} style:--mix={mix}></div>
     <div class="container">

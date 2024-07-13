@@ -1,7 +1,7 @@
 <script lang="ts">
   import Canvas from "./Canvas.svelte";
   import { draw } from "./store";
-  import { Template, Todo } from "$lib/autoimport";
+  import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
   import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
 
@@ -24,11 +24,11 @@
 
 <svelte:window on:keypress={kp} />
 <Template>
-  <Todo>
+  <Warn>
     <p>左クリック長押しで書けるようにする</p>
     <p>文字の種類を追加する</p>
     <p>文字を選びやすくする</p>
-  </Todo>
+  </Warn>
   <div class="icon"> </div>
   <code>{JSON.stringify($paintCode)}</code>
   <input type="number" bind:value={val1} min="0" max={$paintCode.length - 1} />

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Template, Todo } from "$lib/autoimport";
+  import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
 
   type Matrix<T> = T[][];
@@ -70,9 +70,9 @@
 </script>
 
 <Template>
-  <Todo>
+  <Warn>
     <p>半角英数字を対応させる</p>
-  </Todo>
+  </Warn>
   <textarea bind:value={text} />
   <details class="data">
     <pre>temp   : {JSON.stringify(tempArray)}</pre>

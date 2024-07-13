@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import RouteLinker from "$lib/component/RouteLinker.svelte";
-  import { Template, Todo } from "$lib/autoimport";
+  import { Template, Warn } from "$lib/autoimport";
   const Routes = {
     "/color/mix": "Color Mix",
     "/color/watcher": "Color Watcher",
@@ -15,6 +15,6 @@
 </script>
 
 <Template>
-  <Todo></Todo>
+  <Warn></Warn>
   <RouteLinker routes={Routes} base={`${base}/tools`}></RouteLinker>
 </Template>

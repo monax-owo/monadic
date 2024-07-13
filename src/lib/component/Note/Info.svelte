@@ -3,11 +3,11 @@
   import { isDev } from "$lib/util/dev";
   import Comment from "$lib/component/Note/Comment.svelte";
   if (!isDev) {
-    console.log(`Warn.svelte here: ${$page.route.id}`);
+    console.log(`Info.svelte here: ${$page.route.id}`);
   }
 </script>
 
-<div class="Warn">
+<div class="Info">
   <div class="attention">
     <p>🚧under construction🚧</p>
   </div>
@@ -17,7 +17,7 @@
 </div>
 
 <style lang="scss">
-  .Warn {
+  .Info {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
     background: #ffa500;

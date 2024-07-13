@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Template, Todo } from "$lib/autoimport";
+  import { Template, Warn } from "$lib/autoimport";
 </script>
 
 <Template>

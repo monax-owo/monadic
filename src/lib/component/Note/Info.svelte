@@ -21,7 +21,7 @@
   .Info {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
-    background-color:#00fa9a;
+    background-color: #00fa9a;
     padding: 12px 24px;
     color: var(--bg);
     // background-color:turquoise;

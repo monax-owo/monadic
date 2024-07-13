@@ -20,7 +20,7 @@
   .Warn {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
-    background-color:darkorange;
+    background-color: darkorange;
     // background-color:;
     padding: 12px 24px;
     color: var(--bg);

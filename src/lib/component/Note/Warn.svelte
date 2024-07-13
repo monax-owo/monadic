@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { isDev } from "$lib/util/dev";
-  import Comment from "$lib/component/Note/Comment.svelte";
+  import Comment from "$lib/component/note/Comment.svelte";
   if (!isDev) {
     console.log(`Warn.svelte here: ${$page.route.id}`);
   }
@@ -20,7 +20,8 @@
   .Warn {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
-    background: #ffa500;
+    background-color:darkorange;
+    // background-color:;
     padding: 12px 24px;
     color: var(--bg);
   }

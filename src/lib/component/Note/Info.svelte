@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { isDev } from "$lib/util/dev";
-  import Comment from "$lib/component/Note/Comment.svelte";
+  import Comment from "$lib/component/note/Comment.svelte";
   if (!isDev) {
     console.log(`Info.svelte here: ${$page.route.id}`);
   }
@@ -9,6 +9,7 @@
 
 <div class="Info">
   <div class="attention">
+    <!-- TODO:文字を変える -->
     <p>🚧under construction🚧</p>
   </div>
   <Comment>
@@ -20,9 +21,11 @@
   .Info {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
-    background: #ffa500;
+    background-color:#00fa9a;
     padding: 12px 24px;
     color: var(--bg);
+    // background-color:turquoise;
+    // background-color:paleturquoise;
   }
   .attention {
     text-align: center;

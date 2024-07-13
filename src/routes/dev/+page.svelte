@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Warn from "$lib/component/Note/Warn.svelte";
-  import Info from "$lib/component/Note/Info.svelte";
+  import Warn from "$lib/component/note/Warn.svelte";
+  import Info from "$lib/component/note/Info.svelte";
   import RouteLinker from "$lib/component/RouteLinker.svelte";
   import Template from "$lib/component/Template.svelte";
   const routes = {
@@ -22,6 +22,7 @@
     <p>バリデーションをする</p>
     <p>モバイル向けのスタイルを書く</p>
     <p>ogpに対応させる(+layout.svelte)</p>
+    <p>色を調整する(note)</p>
     <!-- "$lib/theme/ToggleTheme.svelte" -->
   </Warn>
   <RouteLinker {routes}></RouteLinker>

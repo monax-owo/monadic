@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { isDev } from "$lib/util/dev";
+  import Comment from "$lib/component/Note/Comment.svelte";
   if (!isDev) {
     console.log(`Todo.svelte here: ${$page.route.id}`);
   }
@@ -10,9 +11,9 @@
   <div class="attention">
     <p>🚧under construction🚧</p>
   </div>
-  <div class="comment">
+  <Comment>
     <slot></slot>
-  </div>
+  </Comment>
 </div>
 
 <style lang="scss">
@@ -25,18 +26,5 @@
   }
   .attention {
     text-align: center;
-  }
-  .comment {
-    margin: 0 0;
-    // font-family: "Noto Color Emoji", "Noto Sans JP Variable", sans-serif;
-    text-align: center;
-    :global(> *) {
-      margin: 4px 12px;
-    }
-    :global(> [data-done]) {
-      &::before {
-        content: "✔";
-      }
-    }
   }
 </style>

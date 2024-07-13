@@ -18,6 +18,7 @@
     flex-direction: column;
     a {
       color: var(--text);
+      font-size: 1.2rem;
       text-decoration: none;
       &:hover {
         text-decoration: underline;

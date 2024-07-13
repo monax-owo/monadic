@@ -37,8 +37,8 @@
       display: flex;
       align-items: center;
       padding: 6px 12px;
-      font-weight: 600;
-      font-size: 16px;
+      font-weight: 700;
+      font-size: 1.125rem;
       text-decoration: none;
     }
   }

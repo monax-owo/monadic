@@ -15,7 +15,7 @@
   // Supports weights 100-900
   import "@fontsource-variable/noto-sans-jp";
   // Noto Color Emoji
-  import '@fontsource/noto-color-emoji';
+  import "@fontsource/noto-color-emoji";
   // Header
   import Header from "$lib/component/Header.svelte";
   // icons
@@ -42,15 +42,18 @@
   });
   //
   // const og = {};
+  import type { LayoutData } from "./$types";
+  export let data: LayoutData;
+  let og = data.og;
 </script>
 
 <svelte:head>
   <title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
   <!-- ogp -->
-  <!-- <meta name="description" content={og.description} /> -->
-  <!-- <meta property="og:title" content={og.title} /> -->
-  <!-- <meta property="og:image" content={`baseUrl/blog/ogp/${encodeURIComponent(post.title)}.png`} /> -->
-  <!-- <meta property="og:description" content={description} /> -->
+  <meta name="description" content={og.description} />
+  <meta property="og:title" content={og.title} />
+  <meta property="og:image" content={og.image} />
+  <meta property="og:description" content={og.description} />
   <!-- setting Theme -->
   <script>
     setDefaultTheme();

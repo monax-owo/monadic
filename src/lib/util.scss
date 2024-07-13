@@ -20,7 +20,8 @@
 }
 
 .hover-1 {
-  transition: all var(--t-duration);
+  transition-duration: var(--t-duration);
+  transition-property: background-color color;
   border-radius: var(--b-radius);
   color: var(--text);
 

@@ -3,10 +3,7 @@
   //
 </script>
 
-<Template>
-  
-</Template>
+<Template></Template>
 
 <style lang="scss">
-  
 </style>

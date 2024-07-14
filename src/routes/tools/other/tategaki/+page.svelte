@@ -87,7 +87,9 @@
   </Warn>
   <textarea bind:value={text} />
   <!-- <input type="number" bind:value={offsetSize} min="0" max="10" /> -->
-  <InputNumber min="0" max="10" bind:value={offsetSize}></InputNumber>
+  <span>
+    offset :<InputNumber min="0" max="10" bind:value={offsetSize}></InputNumber>
+  </span>
   <details class="data" open={isDev}>
     <pre>temp   : {JSON.stringify(tempArray)}</pre>
     <pre>split  : {JSON.stringify(splitArray)}</pre>

@@ -34,4 +34,8 @@
 </div>
 
 <style lang="scss">
+  .InputNumber {
+    display: inline-block;
+    margin: 0 8px;
+  }
 </style>

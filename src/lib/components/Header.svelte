@@ -14,7 +14,7 @@
 
 <style lang="scss">
   .header {
-    padding: 0 36px;
+    padding: 0 36px;// モバイルのときは 0 16px にする
     width: 100%;
   }
   .header-content {

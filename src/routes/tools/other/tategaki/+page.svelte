@@ -85,6 +85,8 @@
 <Template>
   <Warn>
     <p>半角英数字を対応させる</p>
+    <p>1行目のオフセットを消えないようにする(空白文字を変える？)</p>
+    <p>ユーザーが入力した空白を全角に置換する</p>
   </Warn>
   <textarea bind:value={text} />
   <!-- <input type="number" bind:value={offsetSize} min="0" max="10" /> -->

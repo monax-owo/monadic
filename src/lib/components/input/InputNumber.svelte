@@ -6,7 +6,7 @@
   export let value: number;
 
   let i: HTMLInputElement;
-  
+
   const increment = () => {
     i.stepUp();
     value = parseFloat(i.value);

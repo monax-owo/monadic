@@ -16,4 +16,10 @@
       "</style>",
     ],
   },
+  "util_scss": {
+    "prefix": "!mixin",
+    "body": [
+      "@use \"\\$lib/global.scss\" as *;"
+    ],
+  },
 }

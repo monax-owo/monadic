@@ -30,7 +30,7 @@
 </div>
 
 <style lang="scss">
-  @use "$lib/style/_mixin" as *;
+  @use "$lib/global.scss" as *;
   .Pixel {
     & button {
       display: block;
@@ -43,9 +43,9 @@
       width: 100%;
       overflow: hidden;
       user-select: none;
-      &:hover {
-        // background-color: var();
-      }
+      // &:hover {
+      // background-color: var();
+      // }
     }
   }
   svg {

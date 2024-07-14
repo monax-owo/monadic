@@ -11,7 +11,9 @@
 </script>
 
 <Template>
-  <Info></Info>
+  <Info>
+    <dir>info</dir>
+  </Info>
   <Warn>
     <p>ページのタイトルをstoreで管理するようにする</p>
     <p>各+page.svelteにタイトルを決める関数を設置するようにする</p>

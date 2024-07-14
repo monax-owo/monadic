@@ -50,10 +50,10 @@
 <svelte:head>
   <title>{title.length > 0 ? `${title} | ` : ""}Monadic</title>
   <!-- ogp -->
-  <meta name="description" content={og.description} />
+  <meta name="description" content={og.desc} />
   <meta property="og:title" content={og.title} />
   <meta property="og:image" content={og.image} />
-  <meta property="og:description" content={og.description} />
+  <meta property="og:description" content={og.desc} />
   <!-- setting Theme -->
   <script>
     setDefaultTheme();

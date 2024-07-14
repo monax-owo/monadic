@@ -1,13 +1,13 @@
 <script lang="ts">
+  import Post from "$components/Post.svelte";
   import Template from "$components/Template.svelte";
   import Textarea from "$components/input/Textarea.svelte";
-  // tweet text
-  let text = "";
-  $: tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
-  // textarea
-  let ratio = 8;
+  import { clickCopy } from "$lib/util/clipboard";
+  import { tweet } from "$lib/util/sns";
+  import "$lib/util/sns";
+  let text: string = "";
+  let ratio = 18;
   $: aspectRatio = `100/${ratio}`;
-  // Copy
 </script>
 
 <Template>
@@ -16,11 +16,12 @@
     <textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}
     ></textarea>
     <div class="link">
-      <button type="button" on:click={() => window.open(tweet)}>Post</button>
-      <button type="button" on:click={() => /* copy() */ {}}></button>
-      <div>{tweet}</div>
+      <button type="button" on:click={() => tweet(text).open()}>Tweet</button>
+      <button type="button" use:clickCopy={text}>Copy</button>
+      <Post desc={text}>Tweet</Post>
+      <div>{tweet(text)}</div>
     </div>
-    <Textarea></Textarea>
+    <!-- <Textarea></Textarea> -->
   </div>
 </Template>
 

@@ -1,5 +1,6 @@
 <script lang="ts">
   import InputNumber from "$components/input/InputNumber.svelte";
+  import Post from "$components/Post.svelte";
   import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
   import { isDev } from "$lib/util/dev";
@@ -100,6 +101,7 @@
   </details>
   <pre class="result">{result}</pre>
   <button type="button" use:clickCopy={result}>COPY</button>
+  <Post desc={result}>Tweet</Post>
 </Template>
 
 <style lang="scss">

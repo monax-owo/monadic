@@ -12,7 +12,7 @@
 
 <Template>
   <Info>
-    <dir>info</dir>
+    <div>info</div>
   </Info>
   <Warn>
     <p>ページのタイトルをstoreで管理するようにする</p>

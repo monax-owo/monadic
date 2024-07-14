@@ -1,4 +1,5 @@
 <script lang="ts">
+  import InputNumber from "$component/input/InputNumber.svelte";
   import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
   import { isDev } from "$lib/util/dev";
@@ -85,7 +86,8 @@
     <p>半角英数字を対応させる</p>
   </Warn>
   <textarea bind:value={text} />
-  <input type="number" bind:value={offsetSize} min="0" max="10" />
+  <!-- <input type="number" bind:value={offsetSize} min="0" max="10" /> -->
+  <InputNumber min="0" max="10" bind:value={offsetSize}></InputNumber>
   <details class="data" open={isDev}>
     <pre>temp   : {JSON.stringify(tempArray)}</pre>
     <pre>split  : {JSON.stringify(splitArray)}</pre>

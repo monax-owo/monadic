@@ -8,6 +8,7 @@
   type Matrix<T> = T[][];
   type Ms = Matrix<string>;
 
+  let offsetSize: number = 0;
   let text: string = "";
   let tempArray: string[];
   let splitArray: Ms;
@@ -17,7 +18,6 @@
 
   const width: number = 20;
   const ROW_JOINT_CHAR = "　";
-  let offsetSize = 2;
   const split = (array: string[]): Ms => {
     return array.reduce(
       (acc: Ms, v) => {
@@ -55,7 +55,7 @@
     return array.reduce((acc: Ms, arr2) => {
       acc.push(
         arr2.reduce((acc: string[], v) => {
-          acc.push(v === "" ? "　" : v);
+          acc.push(v === "" || v === " " ? "　" : v);
           return acc;
         }, [])
       );

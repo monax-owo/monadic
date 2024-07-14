@@ -1,13 +1,12 @@
 <script lang="ts">
   import { Template } from "$lib/autoimport";
   import { page } from "$app/stores";
-
 </script>
 
 <Template>
-  <code>
-    {JSON.stringify($page)}
-  </code>
+  <Code>
+    {JSON.stringify($page,null,"\t")}
+  </Code>
 </Template>
 
 <style lang="scss">

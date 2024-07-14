@@ -1,20 +1,24 @@
 <script lang="ts">
   import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
+  import { isDev } from "$lib/util/dev";
 
   type Matrix<T> = T[][];
+  type Ms = Matrix<string>;
+
   let text: string = "";
   let tempArray: string[];
-  let splitArray: Matrix<string>;
-  let fillArray: Matrix<string>;
+  let splitArray: Ms;
+  let fillArray: Ms;
+  let offsetArray: Ms;
   let result: string;
 
   const width: number = 20;
   const ROW_JOINT_CHAR = "　";
-
-  const split = (array: string[]): Matrix<string> => {
+  let offsetSize = 2;
+  const split = (array: string[]): Ms => {
     return array.reduce(
-      (acc: Matrix<string>, v) => {
+      (acc: Ms, v) => {
         v === "\n" ? acc.push([]) : acc[acc.length - 1].push(v);
         return acc;
       },
@@ -28,20 +32,25 @@
     }, 0);
   };
 
-  const fill = (array: Matrix<string>): Matrix<string> => {
+  const fill = (array: Ms): Ms => {
     const len = longestLength(array);
-    return array.reduce((acc: Matrix<string>, v) => {
+    return array.reduce((acc: Ms, v) => {
       acc.push([...v, ...Array(v.length >= len ? 0 : len - v.length).fill("")]);
       return acc;
     }, []);
   };
 
-  const rotate = (array: Matrix<string>) => {
+  const offset = (array: Ms, offsetSize: number = 0): Ms => {
+    // return array.push(Array(offsetSize).fill(""));
+    return [...array, ...Array(offsetSize).fill("")];
+  };
+
+  const rotate = (array: Ms): Ms => {
     return array[0].map((v, i) => array.map((v2) => v2[i]).reverse());
   };
 
-  const replaceWhiteSpace = (array: Matrix<string>) => {
-    return array.reduce((acc: Matrix<string>, arr2) => {
+  const replaceWhiteSpace = (array: Ms) => {
+    return array.reduce((acc: Ms, arr2) => {
       acc.push(
         arr2.reduce((acc: string[], v) => {
           acc.push(v === "" ? "　" : v);
@@ -52,20 +61,22 @@
     }, []);
   };
 
-  const matrixStringToArray = (array: Matrix<string>) => {
+  const matrixStringToArray = (array: Ms) => {
     return replaceWhiteSpace(array).reduce((acc: string[], v) => {
       acc.push(v.join(ROW_JOINT_CHAR));
       return acc;
     }, []);
   };
-  const res = (array: Matrix<string>) => {
+
+  const res = (array: Ms) => {
     return matrixStringToArray(array).join("\n");
   };
 
   $: tempArray = Array.from(text);
   $: splitArray = split(tempArray);
   $: fillArray = fill(splitArray);
-  $: rotateArray = rotate(fillArray);
+  $: offsetArray = offset(fillArray, offsetSize);
+  $: rotateArray = rotate(offsetArray);
   $: result = res(rotateArray);
 </script>
 
@@ -74,10 +85,12 @@
     <p>半角英数字を対応させる</p>
   </Warn>
   <textarea bind:value={text} />
-  <details class="data">
+  <input type="number" bind:value={offsetSize} min="0" max="10" />
+  <details class="data" open={isDev}>
     <pre>temp   : {JSON.stringify(tempArray)}</pre>
     <pre>split  : {JSON.stringify(splitArray)}</pre>
     <pre>fill   : {JSON.stringify(fillArray)}</pre>
+    <pre>offset : {JSON.stringify(offsetArray)}</pre>
     <pre>rotate : {JSON.stringify(rotateArray)}</pre>
     <pre>Length : {JSON.stringify(longestLength(splitArray))}</pre>
   </details>

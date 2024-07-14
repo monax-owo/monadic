@@ -11,7 +11,7 @@ const config = {
     }),
     alias: {
       $routes: "src/routes",
-      $components: "src/lib/component",
+      $components: "src/lib/components",
     },
     paths: {
       base: process.argv.includes("dev") ? "/dev" : `/${process.env.BASE_PATH ?? base}`,

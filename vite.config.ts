@@ -18,7 +18,7 @@ export default defineConfig({
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.svelte$/, // .svelte
       ],
-      exclude: [/\/src\/lib\/component/],
+      exclude: [/\/src\/lib\/components/],
       imports: [
         "svelte",
         {

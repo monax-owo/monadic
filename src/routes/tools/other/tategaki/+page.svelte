@@ -1,5 +1,5 @@
 <script lang="ts">
-  import InputNumber from "$component/input/InputNumber.svelte";
+  import InputNumber from "$components/input/InputNumber.svelte";
   import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
   import { isDev } from "$lib/util/dev";

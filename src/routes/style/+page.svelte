@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import RouteLinker from "$component/RouteLinker.svelte";
-  import Template from "$component/Template.svelte";
+  import RouteLinker from "$components/RouteLinker.svelte";
+  import Template from "$components/Template.svelte";
   const Routes = {
     "/pixel": "Pixel Art CSS",
     "/retro": "Retro CSS",

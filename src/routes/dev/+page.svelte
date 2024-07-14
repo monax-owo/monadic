@@ -1,12 +1,11 @@
 <script lang="ts">
-  import Warn from "$component/note/Warn.svelte";
-  import Info from "$component/note/Info.svelte";
-  import RouteLinker from "$component/RouteLinker.svelte";
-  import Template from "$component/Template.svelte";
+  import Warn from "$components/note/Warn.svelte";
+  import Info from "$components/note/Info.svelte";
+  import RouteLinker from "$components/RouteLinker.svelte";
+  import Template from "$components/Template.svelte";
   const routes = {
     "/test": "Test",
     "/route": "Route",
-
   };
 </script>
 

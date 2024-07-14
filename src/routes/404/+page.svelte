@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Template from "$component/Template.svelte";
+  import Template from "$components/Template.svelte";
   import Error from "$routes/+error.svelte";
 </script>
 

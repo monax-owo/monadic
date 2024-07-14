@@ -6,16 +6,12 @@
   export let value: number;
 
   let i: HTMLInputElement;
-
-  type E = MouseEvent & {
-    currentTarget: EventTarget & HTMLButtonElement;
-  };
-
-  const increment = (e: E) => {
+  
+  const increment = () => {
     i.stepUp();
     value = parseFloat(i.value);
   };
-  const decrement = (e: E) => {
+  const decrement = () => {
     i.stepDown();
     value = parseFloat(i.value);
   };

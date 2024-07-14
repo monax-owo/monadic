@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Template from "$component/Template.svelte";
-  import Textarea from "$component/input/Textarea.svelte";
+  import Template from "$components/Template.svelte";
+  import Textarea from "$components/input/Textarea.svelte";
   // tweet text
   let text = "";
   $: tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);

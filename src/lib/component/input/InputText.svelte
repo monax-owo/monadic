@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from "$component/input/Button.svelte";
+  import Button from "$components/input/Button.svelte";
   //
 </script>
 

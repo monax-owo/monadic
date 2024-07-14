@@ -17,7 +17,7 @@
   // Noto Color Emoji
   import "@fontsource/noto-color-emoji";
   // Header
-  import Header from "$component/Header.svelte";
+  import Header from "$components/Header.svelte";
   // icons
   import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
   import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
@@ -29,7 +29,7 @@
   // form
   import { enhance } from "$app/forms";
   import { afterNavigate, goto } from "$app/navigation";
-  import IsDev from "$component/dev/IsDev.svelte";
+  import IsDev from "$components/dev/IsDev.svelte";
   let nowRouteId: string = "/";
   const updateUrlInput = () => {
     nowRouteId = $page.url.pathname.replace(base, "");

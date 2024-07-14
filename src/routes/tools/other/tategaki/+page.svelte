@@ -44,33 +44,31 @@
 
   const offset = (array: Ms, offsetSize: number = 0): Ms => {
     // return array.push(Array(offsetSize).fill(""));
-    return [...array, ...Array(offsetSize).fill("")];
+    return [...array, ...Array(offsetSize).fill(Array(longestLength(array)).fill(""))];
   };
 
   const rotate = (array: Ms): Ms => {
     return array[0].map((v, i) => array.map((v2) => v2[i]).reverse());
   };
 
-  const replaceWhiteSpace = (array: Ms) => {
+  const replaceWhiteSpace = (array: Ms): Ms => {
     return array.reduce((acc: Ms, arr2) => {
-      acc.push(
+      return acc.concat([
         arr2.reduce((acc: string[], v) => {
-          acc.push(v === "" || v === " " ? "　" : v);
-          return acc;
-        }, [])
-      );
-      return acc;
+          return acc.concat([v === "" || v === " " ? "　" : v]);
+        }, []),
+      ]);
     }, []);
   };
 
-  const matrixStringToArray = (array: Ms) => {
+  const matrixStringToArray = (array: Ms): string[] => {
     return replaceWhiteSpace(array).reduce((acc: string[], v) => {
       acc.push(v.join(ROW_JOINT_CHAR));
       return acc;
     }, []);
   };
 
-  const res = (array: Ms) => {
+  const res = (array: Ms): string => {
     return matrixStringToArray(array).join("\n");
   };
 

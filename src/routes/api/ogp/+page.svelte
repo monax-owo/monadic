@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import Template from "$lib/component/Template.svelte";
+  import Template from "$component/Template.svelte";
   const title = "test title";
 </script>
 

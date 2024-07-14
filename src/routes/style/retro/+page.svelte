@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Template from "$lib/component/Template.svelte";
+  import Template from "$component/Template.svelte";
   import "$lib/global.scss";
   import { setDefaultTheme } from "$lib/theme/theme";
   onMount(() => {

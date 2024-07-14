@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import RouteLinker from "$lib/component/RouteLinker.svelte";
+  import RouteLinker from "$component/RouteLinker.svelte";
   import { Template } from "$lib/autoimport";
   import Task from "./Task.svelte";
   const Routes = {

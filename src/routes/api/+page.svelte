@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import RouteLinker from "$lib/component/RouteLinker.svelte";
-  import Template from "$lib/component/Template.svelte";
+  import RouteLinker from "$component/RouteLinker.svelte";
+  import Template from "$component/Template.svelte";
   import Task from "$routes/Task.svelte";
   const Routes = {
     "/ogp": "OGP",

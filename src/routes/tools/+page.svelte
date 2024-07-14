@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import RouteLinker from "$lib/component/RouteLinker.svelte";
+  import RouteLinker from "$component/RouteLinker.svelte";
   import { Template, Warn } from "$lib/autoimport";
   const Routes = {
     "/color/mix": "Color Mix",

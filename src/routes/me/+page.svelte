@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Template from "$lib/component/Template.svelte";
-  import Portfolio from "$lib/component/Portfolio.svelte";
+  import Template from "$component/Template.svelte";
+  import Portfolio from "$component/Portfolio.svelte";
   import { base } from "$app/paths";
 </script>
 

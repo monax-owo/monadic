@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { isDev } from "$lib/util/dev";
-  import Comment from "$lib/component/note/Comment.svelte";
+  import Comment from "$component/note/Comment.svelte";
   if (!isDev) {
     console.log(`Info.svelte here: ${$page.route.id}`);
   }

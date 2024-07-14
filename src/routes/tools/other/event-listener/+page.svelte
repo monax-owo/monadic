@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Template from "$lib/component/Template.svelte";
+  import Template from "$component/Template.svelte";
   let b: HTMLButtonElement;
   const eventType: (keyof GlobalEventHandlersEventMap)[] = [
     "auxclick",

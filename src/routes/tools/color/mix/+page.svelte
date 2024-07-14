@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Template from "$lib/component/Template.svelte";
-  import Warn from "$lib/component/note/Warn.svelte";
+  import Template from "$component/Template.svelte";
+  import Warn from "$component/note/Warn.svelte";
   let el: Element;
   // Default value
   let [color1, color2]: string[] = ["#000000", "#ffffff"];

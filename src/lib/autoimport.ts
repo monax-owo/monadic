@@ -1,3 +1,3 @@
-import Template from "$lib/component/Template.svelte";
-import Warn from "$lib/component/note/Warn.svelte";
+import Template from "$component/Template.svelte";
+import Warn from "$component/note/Warn.svelte";
 export { Template, Warn };

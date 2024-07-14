@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Template from "$lib/component/Template.svelte";
+  import Template from "$component/Template.svelte";
   let histories: string[] = [];
   function keyTester(event: { key: string }) {
     histories = [event.key, ...histories];

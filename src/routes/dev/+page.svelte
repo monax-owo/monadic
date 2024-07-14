@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Warn from "$lib/component/note/Warn.svelte";
-  import Info from "$lib/component/note/Info.svelte";
-  import RouteLinker from "$lib/component/RouteLinker.svelte";
-  import Template from "$lib/component/Template.svelte";
+  import Warn from "$component/note/Warn.svelte";
+  import Info from "$component/note/Info.svelte";
+  import RouteLinker from "$component/RouteLinker.svelte";
+  import Template from "$component/Template.svelte";
   const routes = {
     "/test": "Test",
     "/test/media-query": "Media Query",

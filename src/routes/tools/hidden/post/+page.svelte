@@ -1,7 +1,7 @@
 <script lang="ts">
   import Post from "$components/Post.svelte";
   import Template from "$components/Template.svelte";
-  import Textarea from "$components/input/Textarea.svelte";
+  // import Textarea from "$components/input/Textarea.svelte";
   import { clickCopy } from "$lib/util/clipboard";
   import { tweet } from "$lib/util/sns";
   import "$lib/util/sns";

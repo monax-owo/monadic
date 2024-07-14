@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/ban-types: 0 */
 import { browser } from "$app/environment";
 
 declare global {

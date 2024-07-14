@@ -16,12 +16,12 @@
 }
 
 .shadow-1 {
-  @include shadow-1(16px);
+  @include shadow-1(var(--blur));
 }
 
 .hover-1 {
   transition-duration: var(--t-duration);
-  transition-property: background-color color;
+  transition-property: background-color, color;
   border-radius: var(--b-radius);
   color: var(--text);
 

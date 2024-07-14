@@ -8,14 +8,19 @@
 // --hover = :hover()
 
 @mixin light {
-  --bg: #fafafa;
+  --bg: #ececec;
+  --2-bg: #d4d4d4;
   --text: #2e2e2e;
-  --s-bg: #00000015;
+  --s-bg: #0000002e;
   --b-bg: #2e2e2e;
+  --highlight-bg: #00b3aa;
+  --highlight-text: #{Lightest(var(--highlight-bg), 80%)};
+  --hover-bg: #{Darkest(var(--bg), 92%)};
 }
 
 @mixin dark {
-  --bg: #262626;
+  --bg: #212121;
+  --2-bg: #111111;
   --text: #d1d1d1;
   --s-bg: #ffffff96;
   --b-bg: #8f8f8f;
@@ -34,4 +39,5 @@
   --highlight-size: 1px;
   --b-radius: 8px;
   --t-duration: 0.2s;
+  --blur: 16px;
 }

@@ -5,8 +5,8 @@
   import Template from "$component/Template.svelte";
   const routes = {
     "/test": "Test",
-    "/test/media-query": "Media Query",
-    "/test/preact": "Preact",
+    "/route": "Route",
+
   };
 </script>
 

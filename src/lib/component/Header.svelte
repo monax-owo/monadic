@@ -31,7 +31,6 @@
     height: var(--Header-h);
     & :global() {
       gap: 16px;
-      color: #00ffff;
     }
     :global(> [slot="logo"]) {
       display: flex;

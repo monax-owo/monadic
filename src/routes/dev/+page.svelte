@@ -26,6 +26,7 @@
     <p>色を調整する(note)</p>
     <p>ObjectからMapに移行する(route.ts)</p>
     <p>モバイルのときCanvasを縦にする(valorant-chat-art)</p>
+    <p>モバイルでpaintingがtrueのままになる問題(valorant-chat-art)</p>
     <p>
       モバイルのときはイベントからpixelに被っているか判定(めんどい)(valorant-chat-art)
     </p>

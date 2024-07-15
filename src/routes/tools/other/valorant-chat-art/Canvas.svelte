@@ -16,7 +16,8 @@
   on:mousedown={d}
   on:mouseup={u}
   on:touchstart={d}
-  on:touchcancel={u} />
+  on:touchcancel={u}
+  on:touchend={u} />
 
 <div class="Canvas" style:--col={col} style:--row={row}>
   {#each Array(col) as _, colIndex}
@@ -38,6 +39,7 @@
     background-color: var(--text);
     padding: 2px;
     width: 100%;
+    touch-action: pinch-zoom;
     & :global(svg) {
       font-family: "Noto Sans JP Variable", sans-serif;
     }

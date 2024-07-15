@@ -31,13 +31,13 @@
     --test: #000;
     --b-radius: 24px;
     --s: var(--bg);
-    --s-blur: 4px;
-    --s-spread: 2px;
+    --s-blur: 6px;
+    --s-spread: 4px;
   }
 
   @mixin retro-shadow() {
     box-shadow:
-      inset bs(0, 0),
+      inset bs(6, 6),
       bs(0, 0);
   }
 

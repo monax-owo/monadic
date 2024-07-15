@@ -13,9 +13,13 @@
 </div>
 
 <style lang="scss">
+  @use "$lib/global.scss" as *;
   .header {
-    padding: 0 36px;// モバイルのときは 0 16px にする
+    padding: 0 16px; // モバイルのときは 0 16px にする
     width: 100%;
+    @include media(md) {
+      padding: 0 36px;
+    }
   }
   .header-content {
     display: flex;
@@ -35,7 +39,10 @@
     :global(> [slot="logo"]) {
       display: flex;
       align-items: center;
-      padding: 6px 12px;
+      padding: 6px 6px;
+      @include media(md) {
+        padding: 6px 12px;
+      }
       font-weight: 700;
       font-size: 1.125rem;
       text-decoration: none;

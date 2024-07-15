@@ -7,7 +7,8 @@ $breakpoints: (
   2xl: "screen and (min-width: 1536px)",
 );
 
-// @include media(sm) {...style}s
+// smの場合640px以上のときにスタイルが適用される
+// @include media(sm) {...style}
 @mixin media($breakpoint) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
@@ -16,4 +17,16 @@ $breakpoints: (
 
 @mixin shadow-1($blur) {
   box-shadow: 0 0 $blur 0px var(--s-bg);
+}
+
+// モバイルのときはhoverの代わりにactiveを使うようにする
+@mixin hover() {
+  &:active {
+    @content;
+  }
+  @include media(md) {
+    &:hover {
+      @content;
+    }
+  }
 }

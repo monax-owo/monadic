@@ -48,7 +48,7 @@
   };
 
   const rotate = (array: Ms): Ms => {
-    return array[0].map((v, i) => array.map((v2) => v2[i]).reverse());
+    return array[0].map((_, i) => array.map((v2) => v2[i]).reverse());
   };
 
   const replaceWhiteSpace = (array: Ms): Ms => {

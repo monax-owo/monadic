@@ -67,6 +67,7 @@
     <form
       class="url-input"
       method="post"
+      autocomplete="off"
       use:enhance={({ formData }) => {
         // let url = formData.get("url")?.toString() ?? "404";
         goto(`${base}${formData.get("url")?.toString()}` ?? "404", {
@@ -96,6 +97,9 @@
   }
   :global(html) {
     background: var(--bg);
+    scroll-behavior: smooth;
+    scrollbar-gutter: auto;
+    scrollbar-width: thin;
   }
   .app {
     display: flex;

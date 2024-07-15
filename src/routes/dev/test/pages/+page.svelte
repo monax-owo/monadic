@@ -7,7 +7,7 @@
 
 <Template>
   <div>
-    {JSON.stringify(Pages.value, undefined, 2)}
+    {JSON.stringify(Pages.value, null, 2)}
   </div>
 </Template>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Template from "$components/Template.svelte";
-  import PixBtn from "$lib/pixel/PixBtn.svelte";
+  import PixBtn from "./PixBtn.svelte";
 </script>
 
 <Template>

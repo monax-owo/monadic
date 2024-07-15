@@ -1,5 +1,6 @@
 import { logger } from "$lib/util/logger";
 import { page } from "$app/stores";
+import { writable } from "svelte/store";
 
 // クラスじゃなくてstoreとnamespaceがいいな
 
@@ -8,6 +9,8 @@ type Page = {
   title: string;
   desc: string;
 };
+
+const pages = writable<Page[]>([]);
 
 class Pages {
   static pages: Page[] = [];
@@ -36,12 +39,12 @@ class Pages {
    * path,title,descを指定してページを追加する
    */
   public static add(path: string | null, title: string, desc: string) {
-    const unsubscribe = page.subscribe((v) => {
+    const u = page.subscribe((v) => {
       path = v.route.id;
     });
     if (!path) throw logger.error("path is nullish.");
     this.addPage({ path, title, desc });
-    unsubscribe();
+    u();
   }
 
   /**

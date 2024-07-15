@@ -4,7 +4,7 @@
   export let desc: string = "aaa";
   export let tag: string | undefined = "";
   export let mention: string | undefined = "";
-  let result;
+  let result: string;
   $: result = `${desc}${tag}${mention}`;
 </script>
 

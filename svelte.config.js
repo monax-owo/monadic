@@ -14,7 +14,9 @@ const config = {
       $components: "src/lib/components",
     },
     paths: {
-      base: process.argv.includes("dev") ? "/dev" : `/${process.env.BASE_PATH ?? base}`,
+      base: process.argv.includes("dev")
+        ? "/dev"
+        : `/${process.env.BASE_PATH ?? base}`,
     },
   },
 };

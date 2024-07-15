@@ -9,7 +9,8 @@
 </script>
 
 <div class="Post">
-  <button type="button" on:click={() => tweet(result).open()}><slot>Tweet</slot></button>
+  <button type="button" on:click={() => tweet(result).open()}
+    ><slot>Tweet</slot></button>
 </div>
 
 <style lang="scss">

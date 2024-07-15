@@ -23,8 +23,12 @@
     on:mouseover={() => over($PC1)}
     on:click={() => paint($PC1)}>
     <svg viewBox="0 0 100 100" fill="black">
-      <text x="50" y="-20" font-size="92" text-anchor="middle" dominant-baseline="text-before-edge"
-        >{char}</text>
+      <text
+        x="50"
+        y="-20"
+        font-size="92"
+        text-anchor="middle"
+        dominant-baseline="text-before-edge">{char}</text>
     </svg>
   </button>
 </div>

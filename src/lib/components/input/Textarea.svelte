@@ -13,7 +13,9 @@
 <!-- copy機能の実装 -->
 <!-- https://developer.mozilla.org/ja/docs/Web/API/Element/copy_event -->
 <div class="Textarea">
-  <div aria-hidden="true" style:min-height={minH} style:max-height={maxH}>{value}</div>
+  <div aria-hidden="true" style:min-height={minH} style:max-height={maxH}>
+    {value}
+  </div>
   <textarea bind:value {placeholder}></textarea>
 </div>
 

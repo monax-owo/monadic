@@ -23,10 +23,9 @@ export default defineConfig({
         "svelte",
         {
           zod: [["default", "z"]], // import z from "zod"
-          [path.resolve(__dirname, "./src/lib/autoimport").replaceAll("\\", "/")]: [
-            "Template",
-            "Todo",
-          ],
+          [path
+            .resolve(__dirname, "./src/lib/autoimport")
+            .replaceAll("\\", "/")]: ["Template", "Todo"],
           // "$app/paths": [],
         },
       ],

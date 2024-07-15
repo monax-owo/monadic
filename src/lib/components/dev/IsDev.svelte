@@ -34,8 +34,12 @@
       {fill}
       stroke-width={strokeWidth}>
       <polyline points={a.join(" ")} />
-      <text x="0" y="20" transform={`rotate(45 ${r(v)},${v})`} fill="black" text-anchor="middle"
-        ><slot></slot></text>
+      <text
+        x="0"
+        y="20"
+        transform={`rotate(45 ${r(v)},${v})`}
+        fill="black"
+        text-anchor="middle"><slot></slot></text>
     </svg>
   </div>
 {/if}

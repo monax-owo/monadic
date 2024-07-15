@@ -69,7 +69,9 @@
       method="post"
       use:enhance={({ formData }) => {
         // let url = formData.get("url")?.toString() ?? "404";
-        goto(`${base}${formData.get("url")?.toString()}` ?? "404", { noScroll: true });
+        goto(`${base}${formData.get("url")?.toString()}` ?? "404", {
+          noScroll: true,
+        });
       }}>
       <input type="text" name="url" bind:value={nowRouteId} />
     </form>

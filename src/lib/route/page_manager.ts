@@ -18,7 +18,8 @@ class Pages {
    */
   private static search(item: Page): boolean {
     return this.pages.some(
-      (v) => v.path === item.path && v.title === item.title && v.desc === item.desc
+      (v) =>
+        v.path === item.path && v.title === item.title && v.desc === item.desc
     );
   }
 

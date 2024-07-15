@@ -13,8 +13,10 @@
 <Template>
   <div class="page">
     <input type="range" min="10" max="60" bind:value={ratio} />
-    <textarea placeholder="type tweet..." bind:value={text} style:aspect-ratio={aspectRatio}
-    ></textarea>
+    <textarea
+      placeholder="type tweet..."
+      bind:value={text}
+      style:aspect-ratio={aspectRatio}></textarea>
     <div class="link">
       <button type="button" on:click={() => tweet(text).open()}>Tweet</button>
       <button type="button" use:clickCopy={text}>Copy</button>

@@ -8,4 +8,13 @@ const canvasArray = writable<Array<Array<string>>>([]);
 const canvasString = writable<string>(undefined);
 const draw = writable<boolean>(false);
 
-export { PCMain, PC1, PC2, paintCode, defaulPixelChar, canvasArray, canvasString, draw };
+export {
+  PCMain,
+  PC1,
+  PC2,
+  paintCode,
+  defaulPixelChar,
+  canvasArray,
+  canvasString,
+  draw,
+};

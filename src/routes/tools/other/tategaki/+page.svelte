@@ -44,7 +44,10 @@
 
   const offset = (array: Ms, offsetSize: number = 0): Ms => {
     // return array.push(Array(offsetSize).fill(""));
-    return [...array, ...Array(offsetSize).fill(Array(longestLength(array)).fill(""))];
+    return [
+      ...array,
+      ...Array(offsetSize).fill(Array(longestLength(array)).fill("")),
+    ];
   };
 
   const rotate = (array: Ms): Ms => {

@@ -6,7 +6,15 @@
   let [color1, color2]: string[] = ["#000000", "#ffffff"];
   let [p1, p2]: number[] = [20, 80];
   // color type
-  const colorType = ["srgb", "srgb-linear", "lab", "oklab", "xyz", "xyz-d50", "xyz-d65"] as const;
+  const colorType = [
+    "srgb",
+    "srgb-linear",
+    "lab",
+    "oklab",
+    "xyz",
+    "xyz-d50",
+    "xyz-d65",
+  ] as const;
   type RectangularColorSpace = (typeof colorType)[number];
   // current
   let selectIndex: number = 0;
@@ -25,7 +33,9 @@
 <Template>
   <Warn>
     <p>Input要素を右クリックでクリア</p>
-    <p>右クリック2回で通常のコンテキストメニュー(右クリック2回は良くなさそう)</p>
+    <p>
+      右クリック2回で通常のコンテキストメニュー(右クリック2回は良くなさそう)
+    </p>
     <p>color()関数からrgba()関数に変換する</p>
   </Warn>
   <div class="page">
@@ -43,7 +53,8 @@
         <input
           type="text"
           bind:value={color1}
-          on:contextmenu|stopPropagation|preventDefault={(e) => e.currentTarget.select()} />
+          on:contextmenu|stopPropagation|preventDefault={(e) =>
+            e.currentTarget.select()} />
         <div class="">
           <input type="range" min="0" max="100" step="1" bind:value={p1} />
           <input type="number" bind:value={p1} />

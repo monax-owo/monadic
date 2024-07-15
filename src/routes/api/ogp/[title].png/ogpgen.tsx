@@ -2,7 +2,8 @@ import satori from "satori";
 import sharp from "sharp";
 import { base } from "$app/paths";
 import type { ComponentChildren } from "preact";
-const ogpUrl = (title: string) => `${base}/api/ogp/${encodeURIComponent(title)}.png`;
+const ogpUrl = (title: string) =>
+  `${base}/api/ogp/${encodeURIComponent(title)}.png`;
 const elementGen = (title: string): ComponentChildren => {
   return (
     <div
@@ -19,7 +20,13 @@ const elementGen = (title: string): ComponentChildren => {
       }}>
       <div style={{ color: "#fff", fontSize: 64, maxWidth: 1000 }}>{title}</div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ color: "#d1d5db", fontSize: 48, display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            color: "#d1d5db",
+            fontSize: 48,
+            display: "flex",
+            alignItems: "center",
+          }}>
           <img
             src="https://avatars.githubusercontent.com/u/100062175"
             width={48}

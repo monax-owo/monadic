@@ -5,7 +5,8 @@
   let col = 5;
   let row = 26;
   defaulPixelChar.set("░");
-  const upDateCanvas = () => canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
+  const upDateCanvas = () =>
+    canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
   upDateCanvas();
   const mousedown = () => draw.set(true);
   const mouseup = () => draw.set(false);
@@ -43,10 +44,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: calc(calc(100% * var(--col)) - calc(var(--gap) * calc(var(--col) - 1)));
+    height: calc(
+      calc(100% * var(--col)) - calc(var(--gap) * calc(var(--col) - 1))
+    );
   }
   .row :global(.Pixel) {
     margin-bottom: calc(var(--gap) * calc(var(--row) - 1));
-    width: calc(calc(100% / var(--row)) - calc(var(--gap) * calc(var(--row) - 1)));
+    width: calc(
+      calc(100% / var(--row)) - calc(var(--gap) * calc(var(--row) - 1))
+    );
   }
 </style>

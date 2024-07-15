@@ -39,13 +39,15 @@
     :global(> [slot="logo"]) {
       display: flex;
       align-items: center;
-      padding: 6px 6px;
-      @include media(md) {
-        padding: 6px 12px;
-      }
       font-weight: 700;
       font-size: 1.125rem;
       text-decoration: none;
+      & {
+        padding: 6px 6px;
+        @include media(md) {
+          padding: 6px 12px;
+        }
+      }
     }
   }
 </style>

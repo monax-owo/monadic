@@ -7,11 +7,16 @@
 </div>
 
 <style lang="scss">
+  @use "$lib/global.scss" as *;
   .Template {
-    margin: 16px auto 0;
-    padding: 0 64px;
+    margin: 0 auto 0;
+    padding: 0 16px;
     width: 100%;
-    max-width: calc(var(--Header-max-w) - 512px);
+    max-width: calc(var(--Header-max-w) - 256px);
     color: var(--text);
+    @include media(md) {
+      margin: 16px auto;
+      padding: 0 64px;
+    }
   }
 </style>

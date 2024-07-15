@@ -17,13 +17,17 @@
 </div>
 
 <style lang="scss">
+  @use "$lib/global.scss" as *;
   .Warn {
     margin: 12px 0;
     border-radius: var(--component-b-radius);
     background-color: darkorange;
     // background-color:;
-    padding: 12px 24px;
+    padding: 4px 0;
     color: var(--bg);
+    @include media(md) {
+      padding: 12px 0;
+    }
   }
   .attention {
     text-align: center;

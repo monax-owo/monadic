@@ -25,7 +25,7 @@
 <svelte:window on:keypress={kp} />
 <Template>
   <Warn>
-    <p>左クリック長押しで書けるようにする</p>
+    <p>モバイル未対応</p>
     <p>文字の種類を追加する</p>
     <p>文字を選びやすくする</p>
   </Warn>

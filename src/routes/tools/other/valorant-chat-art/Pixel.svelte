@@ -7,11 +7,11 @@
   let char: string = $defaulPixelChar;
   if (char === "" || !char) logger.error("char is not defined");
   $: char = $canvasArray[YIndex][XIndex];
-  const paint = (PC: string) => {
-    $canvasArray[YIndex][XIndex] = PC;
+  const paint = () => {
+    $canvasArray[YIndex][XIndex] = $PC1;
   };
-  const over = (PC: string) => {
-    if ($draw) paint(PC);
+  const over = () => {
+    if ($draw) paint();
   };
 </script>
 
@@ -19,9 +19,11 @@
   <button
     id={`${YIndex}[${XIndex}]`}
     type="button"
-    on:focus={() => over($PC1)}
-    on:mouseover={() => over($PC1)}
-    on:click={() => paint($PC1)}>
+    on:focus={over}
+    on:mouseover={over}
+    on:click={paint}
+    on:touchmove={over}
+    on:touchstart={paint}>
     <svg viewBox="0 0 100 100" fill="black">
       <text
         x="50"

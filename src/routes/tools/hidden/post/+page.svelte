@@ -18,7 +18,6 @@
       bind:value={text}
       style:aspect-ratio={aspectRatio}></textarea>
     <div class="link">
-      <button type="button" on:click={() => tweet(text).open()}>Tweet</button>
       <button type="button" use:clickCopy={text}>Copy</button>
       <Post desc={text}>Tweet</Post>
       <div>{tweet(text)}</div>

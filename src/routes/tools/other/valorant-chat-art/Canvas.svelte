@@ -8,11 +8,15 @@
   const upDateCanvas = () =>
     canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
   upDateCanvas();
-  const mousedown = () => draw.set(true);
-  const mouseup = () => draw.set(false);
+  const d = () => draw.set(true);
+  const u = () => draw.set(false);
 </script>
 
-<svelte:window on:mousedown={mousedown} on:mouseup={mouseup} />
+<svelte:window
+  on:mousedown={d}
+  on:mouseup={u}
+  on:touchstart={d}
+  on:touchcancel={u} />
 
 <div class="Canvas" style:--col={col} style:--row={row}>
   {#each Array(col) as _, colIndex}
@@ -31,9 +35,8 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 12px 0;
-    border-radius: var(--component-b-radius);
     background-color: var(--text);
-    padding: 8px;
+    padding: 2px;
     width: 100%;
     & :global(svg) {
       font-family: "Noto Sans JP Variable", sans-serif;

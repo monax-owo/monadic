@@ -1,7 +1,9 @@
 <script lang="ts">
-  // rest css
+  // scss
   import "$lib/global.scss";
   import "$lib/util.scss";
+  //
+  // rest css
   import "sanitize.css/assets.css";
   import "sanitize.css/sanitize.css";
   //
@@ -16,16 +18,17 @@
   import "@fontsource-variable/noto-sans-jp";
   // Noto Color Emoji
   import "@fontsource/noto-color-emoji";
+  //
   // Header
   import Header from "$components/Header.svelte";
-  // icons
-  import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-  import IconBrandSvelte from "@tabler/icons-svelte/IconBrandSvelte.svelte";
-  import IconBrandYoutube from "@tabler/icons-svelte/IconBrandYoutube.svelte";
-  const iconStrokeWidth = 1.8;
+  //
+  // SNSLinks
+  import SNSLinks from "./_layout/SNSLinks.svelte";
+  //
   // title
   import { setTitle } from "$lib/route/routes";
   $: title = setTitle($page.route.id ?? "no title");
+  //
   // form
   import { enhance } from "$app/forms";
   import { afterNavigate, goto } from "$app/navigation";
@@ -41,7 +44,6 @@
     app.focus();
   });
   //
-  // const og = {};
   import type { LayoutData } from "./$types";
   export let data: LayoutData;
   let og = data.og;
@@ -76,17 +78,7 @@
       }}>
       <input type="text" name="url" bind:value={nowRouteId} />
     </form>
-    <div class="sns-link" slot="link">
-      <a class="hover-1" href="https://github.com/monax-owo/monadic">
-        <IconBrandGithub stroke={iconStrokeWidth} />
-      </a>
-      <a class="hover-1" href="https://kit.svelte.jp">
-        <IconBrandSvelte stroke={iconStrokeWidth} />
-      </a>
-      <a class="hover-1" href="https://www.youtube.com/@energymonaka/featured">
-        <IconBrandYoutube stroke={iconStrokeWidth} />
-      </a>
-    </div>
+    <SNSLinks slot="link"></SNSLinks>
   </Header>
   <slot />
 </div>
@@ -125,14 +117,6 @@
       &:focus {
         outline: var(--highlight-size) solid var(--highlight-bg);
       }
-    }
-  }
-  .sns-link {
-    display: flex;
-    flex-direction: row;
-    & a {
-      border-radius: var(--b-radius);
-      padding: 6px;
     }
   }
 </style>

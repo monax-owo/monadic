@@ -24,6 +24,11 @@
     <p>モバイル向けのスタイルを書く</p>
     <p>ogpに対応させる(+layout.svelte)</p>
     <p>色を調整する(note)</p>
+    <p>ObjectからMapに移行する(route.ts)</p>
+    <p>モバイルのときCanvasを縦にする(valorant-chat-art)</p>
+    <p>
+      モバイルのときはイベントからpixelに被っているか判定(めんどい)(valorant-chat-art)
+    </p>
     <!-- "$lib/theme/ToggleTheme.svelte" -->
   </Warn>
   <RouteLinker {routes}></RouteLinker>

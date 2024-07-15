@@ -53,6 +53,7 @@
     top: 0;
     right: 0;
     opacity: var(--opacity);
+    z-index: 99;
     pointer-events: none;
   }
 </style>

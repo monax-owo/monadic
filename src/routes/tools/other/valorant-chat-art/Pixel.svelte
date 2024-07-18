@@ -1,6 +1,6 @@
 <script lang="ts">
   import { logger } from "$lib/util/logger";
-  import { canvasArray, PC1, PC2, defaulPixelChar, draw } from "./store";
+  import { canvasArray, mainPC, altPC, defaulPixelChar, draw } from "./store";
   export let YIndex: number;
   export let XIndex: number;
   if (YIndex == null || XIndex == null) logger.error("index is not defined");
@@ -8,7 +8,7 @@
   if (char === "" || !char) logger.error("char is not defined");
   $: char = $canvasArray[YIndex][XIndex];
   const paint = () => {
-    $canvasArray[YIndex][XIndex] = $PC1;
+    $canvasArray[YIndex][XIndex] = $mainPC;
   };
   const over = () => {
     if ($draw) paint();

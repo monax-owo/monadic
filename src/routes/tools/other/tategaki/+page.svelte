@@ -116,7 +116,8 @@
   }
   .data pre {
     display: block;
-    margin: 12px 0;
+    margin: 4px 0;
+    font-size: 1rem;
     font-family: "Fira Code Variable", monospace;
   }
   .result {

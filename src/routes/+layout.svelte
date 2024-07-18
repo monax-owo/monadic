@@ -16,6 +16,9 @@
   // Noto Sans JP
   // Supports weights 100-900
   import "@fontsource-variable/noto-sans-jp";
+  // Fira Code
+  // Supports weights 300-700
+  import "@fontsource-variable/fira-code";
   // Noto Color Emoji
   import "@fontsource/noto-color-emoji";
   //
@@ -27,7 +30,7 @@
   //
   // title
   import { setTitle } from "$lib/route/routes";
-  $: title = setTitle($page.route.id ?? "no title");
+  $: title = setTitle($page.url.pathname ?? "no title");
   //
   // form
   import { enhance } from "$app/forms";

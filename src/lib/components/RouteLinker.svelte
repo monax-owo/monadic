@@ -8,7 +8,7 @@
 
 <div class="RouteLinker">
   {#each routeList as route}
-    <a href={route.link}>{route.title}</a>
+    <a href={route.path}>{route.title}</a>
   {/each}
 </div>
 

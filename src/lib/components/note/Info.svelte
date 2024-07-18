@@ -3,7 +3,7 @@
   import { isDev } from "$lib/util/dev";
   import Comment from "$components/note/Comment.svelte";
   if (!isDev) {
-    console.log(`Info.svelte here: ${$page.route.id}`);
+    console.log(`Info.svelte here: ${$page.url.pathname}`);
   }
 </script>
 

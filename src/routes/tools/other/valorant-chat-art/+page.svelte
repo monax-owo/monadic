@@ -3,21 +3,18 @@
   import { draw } from "./store";
   import { Template, Warn } from "$lib/autoimport";
   import { clickCopy } from "$lib/util/clipboard";
-  import { PC1, PC2, paintCode, canvasArray, canvasString } from "./store";
+  import { mainPC, altPC, paintCode, canvasArray, canvasString } from "./store";
 
   let canvasSize: string = "0";
   let val1: number = 0;
   let val2: number = 0;
+  const block_letter: string[] = [2591, 2592].map((v, i) => `\\u${v}`);
+  const block_letter2 = ["\u2591", "\u2592"];
   paintCode.set(["█", "░", "あ", "A", "a", "亜", "ア"]);
-  $: PC1.set($paintCode[val1]);
-  const canvasArrayToString = (canvas: Array<Array<string>>): string => {
-    let temp: string[] = [""];
-    canvas.forEach((row) => {
-      temp.push(row.join(""));
-    });
-    return temp.join("\n");
-  };
-  $: canvasString.set(canvasArrayToString($canvasArray));
+  $: mainPC.set($paintCode[val1]);
+  const matrixToString = (canvas: string[][]): string =>
+    canvas.reduce((acc, v) => acc.concat(v.join("")), [""]).join("\n");
+  $: canvasString.set(matrixToString($canvasArray));
   //
   const kp = () => {};
 </script>

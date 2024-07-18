@@ -1,13 +1,13 @@
 import { base } from "$app/paths";
 
 // base = base path
-// route = $page.url.id
-// "Link":"Name"
+// route = $page.url.pathname
+// "Path":"Name"
 
 export const routeObjToRoutes = (OBJ: object, BASE: string) => {
   return Object.entries(OBJ)
     .map((list) => [`${BASE}${list[0]}`, list[1]])
-    .map(([link, title]): Route => ({ link, title }));
+    .map(([path, title]): Route => ({ path, title }));
 };
 
 // TODO
@@ -18,8 +18,8 @@ export const routeObjToRoutes = (OBJ: object, BASE: string) => {
 // 	});
 // };
 
-export const setTitle = (route: string): string =>
-  allRoutes.find((value: Route) => value.link === route)?.title ?? "";
+export const setTitle = (routePath: string): string =>
+  allRoutes.find((v: Route) => base + v.path === routePath)?.title ?? "";
 
 const allRoutesList = {
   "/style": "Style",
@@ -37,6 +37,6 @@ const allRoutesList = {
 export const allRoutes = routeObjToRoutes(allRoutesList, base);
 
 export type Route = {
-  link: string;
+  path: string;
   title: string;
 };

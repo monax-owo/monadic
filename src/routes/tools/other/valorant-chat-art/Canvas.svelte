@@ -1,7 +1,7 @@
 <script lang="ts">
   import { rectangularArrayGen } from "$lib/util/rectangularArray";
   import Pixel from "./Pixel.svelte";
-  import { canvasArray, defaulPixelChar, PC1, draw } from "./store";
+  import { canvasArray, defaulPixelChar, mainPC, draw } from "./store";
   let col = 5;
   let row = 26;
   defaulPixelChar.set("░");

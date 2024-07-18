@@ -39,9 +39,12 @@ class Pages {
    * path,title,descを指定してページを追加する
    */
   public static add(path: string | null, title: string, desc: string) {
-    const u = page.subscribe((v) => {
-      path = v.route.id;
-    });
+    const u =
+      path == null
+        ? page.subscribe((v) => {
+            path = v.url.pathname;
+          })
+        : () => {};
     if (!path) throw logger.error("path is nullish.");
     this.addPage({ path, title, desc });
     u();

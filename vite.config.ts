@@ -18,7 +18,7 @@ export default defineConfig({
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.svelte$/, // .svelte
       ],
-      exclude: [/\/src\/lib\/components/],
+      exclude: [/[\\/]src[\\/]lib[\\/]components[\\/]/],
       imports: [
         "svelte",
         {
@@ -26,7 +26,6 @@ export default defineConfig({
           [path
             .resolve(__dirname, "./src/lib/autoimport")
             .replaceAll("\\", "/")]: ["Template", "Todo"],
-          // "$app/paths": [],
         },
       ],
     }),

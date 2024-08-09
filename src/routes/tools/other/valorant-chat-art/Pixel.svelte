@@ -36,7 +36,7 @@
 </div>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   .Pixel {
     & button {
       display: block;

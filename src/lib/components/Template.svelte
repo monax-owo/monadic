@@ -7,7 +7,7 @@
 </div>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   .Template {
     margin: 0 auto 0;
     padding: 0 16px;

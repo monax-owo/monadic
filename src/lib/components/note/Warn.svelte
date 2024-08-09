@@ -17,7 +17,7 @@
 </div>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   .Warn {
     margin: 12px 0;
     border-radius: var(--component-b-radius);

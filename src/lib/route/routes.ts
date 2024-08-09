@@ -4,6 +4,7 @@ import { base } from "$app/paths";
 // route = $page.url.pathname
 // "Path":"Name"
 
+// TODO: Mapを使うようにする
 export const routeObjToRoutes = (OBJ: object, BASE: string) => {
   return Object.entries(OBJ)
     .map((list) => [`${BASE}${list[0]}`, list[1]])
@@ -21,18 +22,20 @@ export const routeObjToRoutes = (OBJ: object, BASE: string) => {
 export const setTitle = (routePath: string): string =>
   allRoutes.find((v: Route) => base + v.path === routePath)?.title ?? "";
 
-const allRoutesList = {
-  "/style": "Style",
-  "/style/pixel": "Pixel Art CSS",
-  "/tools": "Mon tools",
-  "/tools/color/watcher": "Color Watcher",
-  "/tools/other/href": "Url Jumper",
-  "/tools/other/key-tester": "Key tester",
-  "/tools/other/test": "Test",
-  "/tools/other/valorant-chat-art": "Valorant Chat Art",
-  "/tools/hidden": "Hidden",
-  "/tools/hidden/post": "Post",
-};
+const allRoutesList = new Map(
+  Object.entries<string>({
+    "/style": "Style",
+    "/style/pixel": "Pixel Art CSS",
+    "/tools": "Mon tools",
+    "/tools/color/watcher": "Color Watcher",
+    "/tools/other/href": "Url Jumper",
+    "/tools/other/key-tester": "Key tester",
+    "/tools/other/test": "Test",
+    "/tools/other/valorant-chat-art": "Valorant Chat Art",
+    "/tools/hidden": "Hidden",
+    "/tools/hidden/post": "Post",
+  })
+);
 
 export const allRoutes = routeObjToRoutes(allRoutesList, base);
 

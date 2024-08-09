@@ -7,7 +7,7 @@
 </Template>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   .mq {
     margin: 0 auto;
     width: 8rem;

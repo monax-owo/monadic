@@ -13,7 +13,7 @@
 </div>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   .header {
     padding: 0 16px; // モバイルのときは 0 16px にする
     width: 100%;

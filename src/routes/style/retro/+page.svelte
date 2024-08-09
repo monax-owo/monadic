@@ -1,6 +1,6 @@
 <script lang="ts">
   import Template from "$components/Template.svelte";
-  import "$lib/global.scss";
+  import "$lib/style/global.scss";
   import { setDefaultTheme } from "$lib/theme/theme";
   onMount(() => {
     return () => {
@@ -22,7 +22,7 @@
 </Template>
 
 <style lang="scss">
-  @use "$lib/global.scss" as *;
+  @use "$lib/style/global.scss" as *;
   :global(:root[data-theme="retro"]) {
     --bg: #c7bfa9;
     --text: #4b4b4b;

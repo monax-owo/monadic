@@ -1,11 +1,11 @@
 <script lang="ts">
   import { logger } from "$lib/util/logger";
-  import { canvasArray, mainPC, altPC, defaulPixelChar, draw } from "./store";
+  import { canvasArray, mainPC, defaultPixelChar, draw } from "./store";
   export let YIndex: number;
   export let XIndex: number;
   if (YIndex == null || XIndex == null) logger.error("index is not defined");
-  let char: string = $defaulPixelChar;
-  if (char === "" || !char) logger.error("char is not defined");
+  let char: string = $defaultPixelChar;
+  if (!char) logger.error("char is not defined");
   $: char = $canvasArray[YIndex][XIndex];
   const paint = () => {
     $canvasArray[YIndex][XIndex] = $mainPC;

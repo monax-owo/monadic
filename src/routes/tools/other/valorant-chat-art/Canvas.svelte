@@ -1,12 +1,12 @@
 <script lang="ts">
   import { rectangularArrayGen } from "$lib/util/rectangularArray";
   import Pixel from "./Pixel.svelte";
-  import { canvasArray, defaulPixelChar, mainPC, draw } from "./store";
+  import { canvasArray, defaultPixelChar, draw } from "./store";
   let col = 5;
   let row = 26;
-  defaulPixelChar.set("░");
+  defaultPixelChar.set("░");
   const upDateCanvas = () =>
-    canvasArray.set(rectangularArrayGen(col, row, $defaulPixelChar));
+    canvasArray.set(rectangularArrayGen(col, row, $defaultPixelChar));
   upDateCanvas();
   const d = () => draw.set(true);
   const u = () => draw.set(false);

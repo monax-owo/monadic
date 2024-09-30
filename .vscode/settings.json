@@ -1,3 +1,18 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.words": [
+    "autoimport",
+    "fira",
+    "fontsource",
+    "monax",
+    "montserrat",
+    "noto",
+    "ogpgen",
+    "preact",
+    "superforms",
+    "tategaki",
+    "unplugin",
+    "valorant",
+    "Youtube"
+  ]
 }

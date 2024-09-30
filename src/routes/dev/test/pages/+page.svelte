@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Template } from "$lib/autoimport";
   import { Pages } from "$lib/route/page_manager";
-  import { page } from "$app/stores";
   Pages.add("a", "test pages", "any");
 </script>
 

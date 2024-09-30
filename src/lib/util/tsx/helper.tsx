@@ -5,7 +5,6 @@
 //   ReactDOM.createRoot(container).render(<React.StrictMode>{component}</React.StrictMode>);
 // };
 import { render } from "preact";
-import type { ComponentChildren } from "preact";
 const attachReactComponent = (container, component) => {
   render(component, container);
 };

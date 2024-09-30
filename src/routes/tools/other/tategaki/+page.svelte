@@ -16,12 +16,16 @@
   let offsetArray: Ms;
   let result: string;
 
-  const width: number = 20;
+  const _width: number = 20;
   const ROW_JOINT_CHAR = "　";
   const split = (array: string[]): Ms => {
     return array.reduce(
       (acc: Ms, v) => {
-        v === "\n" ? acc.push([]) : acc[acc.length - 1].push(v);
+        if (v === "\n") {
+          acc.push([]);
+        } else {
+          acc[acc.length - 1].push(v);
+        }
         return acc;
       },
       [[]]

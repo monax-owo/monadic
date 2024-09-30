@@ -2,7 +2,7 @@ import satori from "satori";
 import sharp from "sharp";
 import { base } from "$app/paths";
 import type { ComponentChildren } from "preact";
-const ogpUrl = (title: string) =>
+const _ogpUrl = (title: string) =>
   `${base}/api/ogp/${encodeURIComponent(title)}.png`;
 const elementGen = (title: string): ComponentChildren => {
   return (

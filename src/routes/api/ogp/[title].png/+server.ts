@@ -8,7 +8,7 @@ export const prerender = true;
 
 export const GET: RequestHandler = async ({ params }) => {
   const { title } = params;
-  if (title == undefined) logger.error("title is not defined");
+  if (!title) logger.error("title is not defined");
   const png = await ogpImageGen(title ?? "", read(NotoSansJP));
   return new Response(png, {
     headers: {

@@ -6,6 +6,7 @@ const template = (message: string) => `
 const log = (message: string) => {
   console.log(template(message));
 };
+
 // logging type
 const dev = (message: string, ...optionalParams: unknown[]) => {
   console.log(message, optionalParams);
@@ -17,8 +18,10 @@ const error = (message: string, ...optionalParams: unknown[]) => {
 const success = (message: string, ...optionalParams: unknown[]) => {
   console.log(message, optionalParams);
 };
+
 // export
 const logger = {
+  log,
   dev,
   error,
   success,

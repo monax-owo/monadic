@@ -5,7 +5,7 @@ export const prerender = true;
 type OG = { title: string; desc: string; image: string };
 export const load = (async ({ url }) => {
   // pathnameかidか一貫させる (slugを使うようになる想定でpathnameがいいかも)
-  const path = url.pathname;
+  const _path = url.pathname;
   const og: OG = {
     title: "",
     desc: "",

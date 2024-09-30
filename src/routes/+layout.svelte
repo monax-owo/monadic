@@ -75,7 +75,7 @@
       autocomplete="off"
       use:enhance={({ formData }) => {
         // let url = formData.get("url")?.toString() ?? "404";
-        goto(`${base}${formData.get("url")?.toString()}` ?? "404", {
+        goto(`${base}${formData.get("url")?.toString()}`, {
           noScroll: true,
         });
       }}>

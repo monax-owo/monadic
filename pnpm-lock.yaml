@@ -36,6 +36,9 @@ importers:
       '@eslint/js':
         specifier: ^9.11.1
         version: 9.11.1
+      '@monax-owo/style':
+        specifier: github:monax-owo/style#release
+        version: https://codeload.github.com/monax-owo/style/tar.gz/73529d7bce91802668000f75d0fb1dc0e5109988
       '@sveltejs/adapter-static':
         specifier: ^3.0.5
         version: 3.0.5(@sveltejs/kit@2.6.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(@types/node@20.14.10)(sass@1.79.4)))(svelte@4.2.19)(vite@5.4.8(@types/node@20.14.10)(sass@1.79.4)))
@@ -697,6 +700,10 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@monax-owo/style@https://codeload.github.com/monax-owo/style/tar.gz/73529d7bce91802668000f75d0fb1dc0e5109988':
+    resolution: {tarball: https://codeload.github.com/monax-owo/style/tar.gz/73529d7bce91802668000f75d0fb1dc0e5109988}
+    version: 0.1.1
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2710,6 +2717,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@monax-owo/style@https://codeload.github.com/monax-owo/style/tar.gz/73529d7bce91802668000f75d0fb1dc0e5109988': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

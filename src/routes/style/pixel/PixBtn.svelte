@@ -66,8 +66,8 @@
   }
   .pixel {
     appearance: none;
-    box-shadow: bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2),
-      bs-corner(dimgray);
+    box-shadow:
+      bs-border(rgb(199, 198, 198)), bs-border(dimgray, 2), bs-corner(dimgray);
     border: none;
     border-radius: 0%;
     background: rgb(163, 162, 162);

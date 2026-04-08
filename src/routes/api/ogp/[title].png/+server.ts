@@ -10,7 +10,7 @@ export const GET: RequestHandler = async ({ params }) => {
   const { title } = params;
   if (!title) logger.error("title is not defined");
   const png = await ogpImageGen(title ?? "", read(NotoSansJP));
-  return new Response(png, {
+  return new Response(new Blob([png]), {
     headers: {
       "Content-Type": "image/png",
     },

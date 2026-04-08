@@ -33,9 +33,6 @@
     padding: 0 16px;
     max-width: var(--Header-max-w);
     height: var(--Header-h);
-    & :global() {
-      gap: 16px;
-    }
     :global(> [slot="logo"]) {
       display: flex;
       align-items: center;
